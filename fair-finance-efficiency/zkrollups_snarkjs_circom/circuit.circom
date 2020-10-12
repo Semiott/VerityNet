@@ -15,7 +15,7 @@ template FairFinanceFactors() {
 
     // sum of differences
     credit + stake === future;
-    debit - stake === past:
+    debit - stake === past;
 
     // assign output to output variable
     out <== future + past;
