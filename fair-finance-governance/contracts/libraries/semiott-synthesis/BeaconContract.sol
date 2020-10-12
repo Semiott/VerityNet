@@ -1,7 +1,7 @@
 pragma solidity ^0.6.2;
 
-import "./IFactRegistry.sol";
-import "./PublicInputOffsets.sol";
+import "@starkware-libs/veedo/contracts/IFactRegistry.sol";
+import "@starkware-libs/veedo/contracts/PublicInputOffsets.sol";
 
 
 contract BeaconContract is PublicInputOffsets {
