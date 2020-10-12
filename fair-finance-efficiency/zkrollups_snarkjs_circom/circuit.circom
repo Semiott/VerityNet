@@ -1,23 +1,25 @@
 // create template
-template SimpleChecks() {
+template FairFinanceFactors() {
 
     // declare a variables which will store private inputs
-    signal private input a;
-    signal private input b;
-    signal private input d;
+    signal private input credit;
+    signal private input debit;
 
     // declare public input variables
-    signal input c;
+    signal input stake;
+    signal input future;
+    signal input past;
 
     // declate output variables
     signal output out;
 
-    // force a + b = c
-    a + b === c;
+    // sum of differences
+    credit + stake === future;
+    debit - stake === past:
 
     // assign output to output variable
-    out <== c + d;
+    out <== future + past;
 }
 
 // export the template
-component main = SimpleChecks();
+component main = FairFinanceFactors();
