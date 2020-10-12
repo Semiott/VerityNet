@@ -1,7 +1,7 @@
 {
   "name": "proto-governance",
   "version": "1.0.0",
-  "description": "",
+  "description": "Smart contracts for voting based on LEND token.",
   "directories": {
     "test": "test"
   },
@@ -54,11 +54,12 @@
   },
   "author": "Aave",
   "contributors": [
-    {
-      "name": "Ernesto Boado",
-      "email": "ernesto@aave.com"
-    }
+    "Ernesto Boado <ernesto@aave.com>"
   ],
   "license": "AGPL 3.0",
-  "dependencies": {}
+  "dependencies": {
+    "openzeppelin-solidity": "3.2.0"
+  },
+  "main": ".solcover.js",
+  "keywords": []
 }
