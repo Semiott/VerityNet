@@ -1,4 +1,4 @@
-pragma solidity 0.5.11;
+pragma solidity 0.6.0;
 
 library CircomLib {
   function MiMCSponge(uint256 xL_in, uint256 xR_in, uint256 k)
