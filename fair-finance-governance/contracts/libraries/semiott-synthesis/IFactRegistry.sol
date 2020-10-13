@@ -1,4 +1,4 @@
-pragma solidity ^0.5.16;
+pragma solidity ^0.6.0;
 
 /*
   The Fact Registry design pattern is a way to separate cryptographic verification from the
