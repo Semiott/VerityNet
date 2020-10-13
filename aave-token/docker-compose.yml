@@ -1,0 +1,25 @@
+version: "3.5"
+
+services:
+  contracts-env:
+    build:
+      context: ./
+    working_dir: /src
+    command: npm run run-env
+    depends_on:
+      - ganache
+    volumes:
+      - ./:/src
+    environment:
+      MNEMONIC: ${MNEMONIC}
+      ETHERSCAN_KEY: ${ETHERSCAN_KEY}
+      INFURA_KEY: ${INFURA_KEY}
+      ETHERSCAN_NETWORK: ${ETHERSCAN_NETWORK}
+
+  ganache:
+    image: trufflesuite/ganache-cli:latest
+    command: [
+      "ganache-cli",
+      "--gasLimit", "12500000",
+      "--hardfork", "istanbul"
+    ]
