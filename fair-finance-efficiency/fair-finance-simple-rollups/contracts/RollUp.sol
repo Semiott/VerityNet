@@ -4,8 +4,8 @@ import "./SafeMath.sol";
 import "./Hasher.sol";
 import "./Whitelist.sol";
 import "./MerkleTree.sol";
-import {WithdrawVerifier as WithdrawVerifier} from "./WithdrawVerifier.sol";
-import {TxVerifier as TxVerifier} from "./TxVerifier.sol";
+// import {WithdrawVerifier as WithdrawVerifier} from "./WithdrawVerifier.sol";
+// import {TxVerifier as TxVerifier} from "./TxVerifier.sol";
 
 contract RollUp {
   using SafeMath for uint256;
@@ -71,8 +71,8 @@ contract RollUp {
 
     hasher = Hasher(hasherAddress);
     balanceTree = MerkleTree(balanceTreeAddress);
-    withdrawVerifier = WithdrawVerifier(withdrawVerifierAddress);
-    txVerifier = TxVerifier(txVerifierAddress);
+    // withdrawVerifier = WithdrawVerifier(withdrawVerifierAddress);
+    // txVerifier = TxVerifier(txVerifierAddress);
 
     accuredFees = 0;
   }
