@@ -43,7 +43,7 @@ contract VeritySwap {
   function open(bytes32 _swapID, uint256 _openValue, address _openContractAddress, uint256 _closeValue, address _closeTrader, address _closeContractAddress) public onlyInvalidSwaps(_swapID) {
     // Transfer value from the opening trader to this contract.
     ERC20 AaveToken = ERC20(_openContractAddress);
-    require(_openValue <= FusionToken.allowance(msg.sender, address(this)));
+    require(_openValue <= AaveToken.allowance(msg.sender, address(this)));
     require(AaveToken.transferFrom(msg.sender, address(this), _openValue));
 
     // Store the details of the swap.
@@ -73,7 +73,7 @@ contract VeritySwap {
 
     // Transfer the opening funds from this contract to the closing trader.
     ERC20 AaveToken = ERC20(swap.openContractAddress);
-    require(FusionToken.transfer(swap.closeTrader, swap.openValue));
+    require(AaveToken.transfer(swap.closeTrader, swap.openValue));
 
     Close(_swapID);
   }
