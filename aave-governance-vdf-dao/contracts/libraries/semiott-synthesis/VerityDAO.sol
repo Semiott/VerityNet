@@ -4,13 +4,14 @@ pragma solidity ^0.5.16;
 // Justin Drake https://ethresear.ch/t/minimal-vdf-randomness-beacon/3566
 
 import "./BeaconContract.sol";
+import "@openzeppelin/contracts/GSN/GSNRecipient.sol";
 
 contract Beacon{
     function getLatestRandomness()external view returns(uint256,bytes32){}
     
 }
 
-contract VerityDAO {
+contract VerityDAO is GSNRecipient {
 
 address public BeaconContractAddress=0x79474439753C7c70011C3b00e06e559378bAD040;
 
