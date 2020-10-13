@@ -1,12 +1,10 @@
 pragma solidity 0.6.0;
 
-import "@openzeppelin/contracts/math/SafeMath.sol";
-
+import "./SafeMath.sol";
 import "./Hasher.sol";
 import "./Whitelist.sol";
 import "./MerkleTree.sol";
-import {WithdrawVerifier as WithdrawVerifier} from "./WithdrawVerifier.sol";
-import {TxVerifier as TxVerifier} from "./TxVerifier.sol";
+import {FairVerifier as FairVerifier} from "./FairVerifier.sol";
 
 contract RollUp {
   using SafeMath for uint256;
