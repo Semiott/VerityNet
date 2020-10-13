@@ -1,7 +1,6 @@
 pragma solidity 0.5.11;
 
-import "@openzeppelin-contracts/contracts/math/SafeMath.sol";
-
+import "./SafeMath.sol";
 import "./Hasher.sol";
 import "./Whitelist.sol";
 import "./MerkleTree.sol";
