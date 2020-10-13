@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: agpl-3.0
 pragma solidity 0.6.10;
 
-import "./TinlakeERC20.sol";
+import {ERC20} from "../open-zeppelin/ERC20.sol";
 import {ITransferHook} from "../interfaces/ITransferHook.sol";
 import {VersionedInitializable} from "../utils/VersionedInitializable.sol";
 
@@ -10,7 +10,7 @@ import {VersionedInitializable} from "../utils/VersionedInitializable.sol";
 * @notice implementation of the AAVE token contract
 * @author Aave
 */
-contract AaveToken is TinlakeERC20, VersionedInitializable {
+contract AaveToken is ERC20, VersionedInitializable {
 
     /// @dev snapshot of a value on a specific block, used for balances
     struct Snapshot {
@@ -42,12 +42,14 @@ contract AaveToken is TinlakeERC20, VersionedInitializable {
     /// to control all potential reentrancies by calling back the AaveToken
     ITransferHook public _aaveGovernance;
 
+    bytes32 public DOMAIN_SEPARATOR;
     bytes public constant EIP712_REVISION = bytes("1");
     bytes32 internal constant EIP712_DOMAIN = keccak256("EIP712Domain(string name,string version,uint256 chainId,address verifyingContract)");
-    
+    bytes32 public constant PERMIT_TYPEHASH = keccak256("Permit(address owner,address spender,uint256 value,uint256 nonce,uint256 deadline)");
+
     event SnapshotDone(address owner, uint128 oldValue, uint128 newValue);
 
-    constructor() TinlakeERC20(NAME, SYMBOL) public {}
+    constructor() ERC20(NAME, SYMBOL) public {}
 
     /**
     * @dev initializes the contract upon assignment to the InitializableAdminUpgradeabilityProxy
