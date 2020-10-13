@@ -15,7 +15,7 @@
 
 pragma solidity >=0.4.24;
 
-import { ERC721Metadata } from "./IERC721Metadata.sol";
+import { IERC721Metadata } from "./IERC721Metadata.sol";
 import "./ECDSA.sol";
 import "./MerkleVerifier.sol";
 
@@ -32,7 +32,7 @@ contract IdentityFactoryLike {
     function createdIdentity(address) public view returns (bool);
 }
 
-contract TinlakeERC721 is ERC721Metadata, MerkleVerifier {
+contract TinlakeERC721 is IERC721Metadata, MerkleVerifier {
 
     using ECDSA for bytes32;
 
