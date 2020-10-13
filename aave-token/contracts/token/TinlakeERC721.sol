@@ -15,7 +15,7 @@
 
 pragma solidity >=0.4.24;
 
-import { ERC721Metadata } from "./openzeppelin-solidity/token/ERC721/IERC721Metadata.sol";
+import { ERC721Metadata } from "./IERC721Metadata.sol";
 import "./openzeppelin-solidity/cryptography/ECDSA.sol";
 import "./MerkleVerifier.sol";
 
