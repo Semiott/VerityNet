@@ -1,0 +1,3 @@
+[submodule "aave-token/lib/ds-test"]
+	path = aave-token/lib/ds-test
+	url = https://github.com/dapphub/ds-test
