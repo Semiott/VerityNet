@@ -10,7 +10,7 @@
 //      added requiere error messages
 //
 
-pragma solidity ^0.5.0;
+pragma solidity ^0.6.0;
 library Pairing {
     struct G1Point {
         uint X;
