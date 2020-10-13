@@ -67,9 +67,9 @@ contract VeritySwap {
     swapStates[_swapID] = States.CLOSED;
 
     // Transfer the closing funds from the closing trader to the opening trader.
-    ERC20 FractalToken = ERC20(swap.closeContractAddress);
-    require(swap.closeValue <= FractalToken.allowance(swap.closeTrader, address(this)));
-    require(FractalToken.transferFrom(swap.closeTrader, swap.openTrader, swap.closeValue));
+    ERC20 TinklakeERC20 = ERC20(swap.closeContractAddress);
+    require(swap.closeValue <= TinklakeERC20.allowance(swap.closeTrader, address(this)));
+    require(TinklakeERC20.transferFrom(swap.closeTrader, swap.openTrader, swap.closeValue));
 
     // Transfer the opening funds from this contract to the closing trader.
     ERC20 AaveToken = ERC20(swap.openContractAddress);
