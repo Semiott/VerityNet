@@ -1,11 +1,12 @@
 pragma solidity 0.6.0;
 
-import "./SafeMath.sol";
+import "@openzeppelin/contracts/math/SafeMath.sol";
+
 import "./Hasher.sol";
 import "./Whitelist.sol";
 import "./MerkleTree.sol";
-// import {WithdrawVerifier as WithdrawVerifier} from "./WithdrawVerifier.sol";
-// import {TxVerifier as TxVerifier} from "./TxVerifier.sol";
+import {WithdrawVerifier as WithdrawVerifier} from "./WithdrawVerifier.sol";
+import {TxVerifier as TxVerifier} from "./TxVerifier.sol";
 
 contract RollUp {
   using SafeMath for uint256;
@@ -21,8 +22,8 @@ contract RollUp {
   MerkleTree balanceTree;
 
   // ZK Proofs
-  // WithdrawVerifier withdrawVerifier;
-  // TxVerifier txVerifier;
+  WithdrawVerifier withdrawVerifier;
+  TxVerifier txVerifier;
 
   // Deposit event
   event Deposit(
@@ -71,8 +72,8 @@ contract RollUp {
 
     hasher = Hasher(hasherAddress);
     balanceTree = MerkleTree(balanceTreeAddress);
-    // withdrawVerifier = WithdrawVerifier(withdrawVerifierAddress);
-    // txVerifier = TxVerifier(txVerifierAddress);
+    withdrawVerifier = WithdrawVerifier(withdrawVerifierAddress);
+    txVerifier = TxVerifier(txVerifierAddress);
 
     accuredFees = 0;
   }
