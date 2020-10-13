@@ -42,14 +42,12 @@ contract AaveToken is TinlakeERC20, VersionedInitializable {
     /// to control all potential reentrancies by calling back the AaveToken
     ITransferHook public _aaveGovernance;
 
-    bytes32 public DOMAIN_SEPARATOR;
     bytes public constant EIP712_REVISION = bytes("1");
     bytes32 internal constant EIP712_DOMAIN = keccak256("EIP712Domain(string name,string version,uint256 chainId,address verifyingContract)");
-    bytes32 public constant PERMIT_TYPEHASH = keccak256("Permit(address owner,address spender,uint256 value,uint256 nonce,uint256 deadline)");
-
+    
     event SnapshotDone(address owner, uint128 oldValue, uint128 newValue);
 
-    constructor() ERC20(NAME, SYMBOL) public {}
+    constructor() TinlakeERC20(NAME, SYMBOL) public {}
 
     /**
     * @dev initializes the contract upon assignment to the InitializableAdminUpgradeabilityProxy
