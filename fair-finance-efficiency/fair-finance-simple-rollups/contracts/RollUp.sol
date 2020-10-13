@@ -20,8 +20,7 @@ contract RollUp {
   MerkleTree balanceTree;
 
   // ZK Proofs
-  WithdrawVerifier withdrawVerifier;
-  TxVerifier txVerifier;
+  FairVerifier fairVerifier;
 
   // Deposit event
   event Deposit(
@@ -63,15 +62,13 @@ contract RollUp {
   constructor(
     address hasherAddress,
     address balanceTreeAddress,
-    address withdrawVerifierAddress,
-    address txVerifierAddress
+    address fairVerifierAddress
   ) public {
     owner = msg.sender;
 
     hasher = Hasher(hasherAddress);
     balanceTree = MerkleTree(balanceTreeAddress);
-    withdrawVerifier = WithdrawVerifier(withdrawVerifierAddress);
-    txVerifier = TxVerifier(txVerifierAddress);
+    fairVerifier = FairVerifier(fairVerifierAddress);
 
     accuredFees = 0;
   }
@@ -91,7 +88,7 @@ contract RollUp {
       revert("Proof not valid for current tree");
     }
 
-    if (!txVerifier.verifyProof(a, b, c, input)) {
+    if (!fairVerifier.verifyProof(a, b, c, input)) {
       revert("Invalid roll up proofs");
     }
 
@@ -224,7 +221,7 @@ contract RollUp {
     }
 
     // Check if proof is valid
-    bool validProof = withdrawVerifier.verifyProof(a, b, c, input);
+    bool validProof = fairVerifier.verifyProof(a, b, c, input);
     if (!validProof) {
       revert("Unauthorized to withdraw funds");
     }
