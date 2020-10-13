@@ -10,7 +10,7 @@ import {VersionedInitializable} from "../utils/VersionedInitializable.sol";
 * @notice implementation of the AAVE token contract
 * @author Aave
 */
-contract AaveToken is ERC20, TinlakeERC20, VersionedInitializable {
+contract AaveToken is ERC20, VersionedInitializable {
 
     /// @dev snapshot of a value on a specific block, used for balances
     struct Snapshot {
