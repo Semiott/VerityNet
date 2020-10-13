@@ -17,7 +17,7 @@ pragma solidity >=0.4.24;
 
 import { ERC721Metadata } from "./openzeppelin-solidity/token/ERC721/IERC721Metadata.sol";
 import "./openzeppelin-solidity/cryptography/ECDSA.sol";
-import "./merkle.sol";
+import "./MerkleVerifier.sol";
 
 contract AnchorLike {
     function getAnchorById(uint) public view returns (uint, bytes32, uint32);
