@@ -1,7 +1,7 @@
 pragma solidity ^0.6.6;
 
-import "@openzeppelin/contracts/token/ERC20/ERC20Burnable.sol";
-import "@openzeppelin/contracts/token/ERC20/ERC20Detailed.sol";
+import "@openzeppelin-contracts/contracts/token/ERC20/ERC20Burnable.sol";
+import "@openzeppelin-contracts/contracts/token/ERC20/ERC20Detailed.sol";
 import "../misc/ERC20Mintable.sol";
 
 /// @title MockToken
