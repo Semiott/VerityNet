@@ -1,8 +1,8 @@
 pragma solidity ^0.6.0;
 
-import "./ERC20.sol";
+import {ERC20} from "../open-zeppelin/ERC20.sol";
 import * as AaveToken from "./AaveToken.sol";
-import * as TinlakeToken from "./TinklakeToken.sol";
+import * as TinlakeERC20 from "./TinklakeERC20.sol";
 
 
 contract VeritySwap {
@@ -42,9 +42,9 @@ contract VeritySwap {
 
   function open(bytes32 _swapID, uint256 _openValue, address _openContractAddress, uint256 _closeValue, address _closeTrader, address _closeContractAddress) public onlyInvalidSwaps(_swapID) {
     // Transfer value from the opening trader to this contract.
-    ERC20 FusionToken = ERC20(_openContractAddress);
+    ERC20 AaveToken = ERC20(_openContractAddress);
     require(_openValue <= FusionToken.allowance(msg.sender, address(this)));
-    require(FusionToken.transferFrom(msg.sender, address(this), _openValue));
+    require(AaveToken.transferFrom(msg.sender, address(this), _openValue));
 
     // Store the details of the swap.
     Swap memory swap = Swap({
@@ -72,7 +72,7 @@ contract VeritySwap {
     require(FractalToken.transferFrom(swap.closeTrader, swap.openTrader, swap.closeValue));
 
     // Transfer the opening funds from this contract to the closing trader.
-    ERC20 FusionToken = ERC20(swap.openContractAddress);
+    ERC20 AaveToken = ERC20(swap.openContractAddress);
     require(FusionToken.transfer(swap.closeTrader, swap.openValue));
 
     Close(_swapID);
@@ -84,8 +84,8 @@ contract VeritySwap {
     swapStates[_swapID] = States.EXPIRED;
 
     // Transfer opening value from this contract back to the opening trader.
-    ERC20 FusionToken = ERC20(swap.openContractAddress);
-    require(FusionToken.transfer(swap.openTrader, swap.openValue));
+    ERC20 AaveToken = ERC20(swap.openContractAddress);
+    require(AaveToken.transfer(swap.openTrader, swap.openValue));
 
     Expire(_swapID);
   }
