@@ -15,7 +15,7 @@
 
 pragma solidity >=0.5.15;
 
-contract ERC20 {
+contract TinlakeERC20 {
     // --- Auth ---
     mapping (address => uint) public wards;
     function rely(address usr) public auth { wards[usr] = 1; }
