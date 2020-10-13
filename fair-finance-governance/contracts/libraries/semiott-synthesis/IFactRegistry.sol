@@ -1,4 +1,4 @@
-pragma solidity ^0.6.0;
+pragma solidity ^0.5.16;
 
 /*
   The Fact Registry design pattern is a way to separate cryptographic verification from the
@@ -12,7 +12,8 @@ pragma solidity ^0.6.0;
   For further reading on the Fact Registry design pattern see this
   `StarkWare blog post <https://medium.com/starkware/the-fact-registry-a64aafb598b6>`_.
 */
-abstract contract IFactRegistry {
+
+contract IFactRegistry {
     
-    function isValid(bytes32 fact) view  virtual public returns (bool);
+    function isValid(bytes32 fact) view  public returns (bool);
 }
