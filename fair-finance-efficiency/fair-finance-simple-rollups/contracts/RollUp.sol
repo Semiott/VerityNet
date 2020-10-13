@@ -21,8 +21,8 @@ contract RollUp {
   MerkleTree balanceTree;
 
   // ZK Proofs
-  WithdrawVerifier withdrawVerifier;
-  TxVerifier txVerifier;
+  // WithdrawVerifier withdrawVerifier;
+  // TxVerifier txVerifier;
 
   // Deposit event
   event Deposit(
