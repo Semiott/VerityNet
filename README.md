@@ -10,7 +10,7 @@ Financial Fairness Algorithms and Architectures built on AAVE Tokens with Centri
 - RANDAO Secured using StarkWare Veedo VDF
 - AAVE Protocol Governance using RANDAO 
 - Chainlink Market Adapter Validation using Staking Validators
-- AAVE Market Adaptors using Chainlink Market Adapters
+- AAVE Market Adaptors using Chainlink External Adapters
 
 # Value Proposition
 People can use VerityNet to verify if the Loans are tokenized based on valid proofs and they can verify the Loan Token Swap. They can also use VerityNet to swap between NFT collateral backed loans and fungible collateral backed loans in a seamless manner. The following are the innovative components of VerityNet.
