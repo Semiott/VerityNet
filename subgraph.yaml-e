@@ -8,7 +8,7 @@ dataSources:
     name: Gravity
     network: mainnet
     source:
-      address: '0xA3798954cc18710626b898130a24927D9839F6A9'
+      address: '0x2E645469f354BB4F5c8a05B3b30A929361cf77eC'
       abi: Gravity
     mapping:
       kind: ethereum/events
