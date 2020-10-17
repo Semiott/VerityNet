@@ -1,3 +1,6 @@
 [submodule "aave-token/lib/ds-test"]
 	path = aave-token/lib/ds-test
 	url = https://github.com/dapphub/ds-test
+[submodule "semiott-verity-graph/verity-graph"]
+	path = semiott-verity-graph/verity-graph
+	url = https://github.com/Semiott/VerityNet/
