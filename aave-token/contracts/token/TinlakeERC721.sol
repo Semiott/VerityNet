@@ -32,7 +32,7 @@ abstract contract IdentityFactoryLike {
     function createdIdentity(address) public view returns (bool);
 }
 
-contract TinlakeERC721 is IERC721Metadata, MerkleVerifier {
+abstract contract TinlakeERC721 is IERC721Metadata, MerkleVerifier {
 
     using ECDSA for bytes32;
 
