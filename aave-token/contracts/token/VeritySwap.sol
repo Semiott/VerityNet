@@ -2,7 +2,7 @@ pragma solidity ^0.6.0;
 
 import {ERC20} from "../open-zeppelin/ERC20.sol";
 import * as AaveToken from "./AaveToken.sol";
-import * as TinlakeERC20 from "./TinklakeERC20.sol";
+import * as TinlakeERC20 from "./TinlakeERC20.sol";
 
 
 contract VeritySwap {
