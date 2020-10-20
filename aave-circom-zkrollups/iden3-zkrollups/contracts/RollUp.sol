@@ -189,7 +189,7 @@ contract RollUp {
     uint256[2] memory a,
     uint256[2][2] memory b,
     uint256[2] memory c,
-    uint256[4] memory input
+    uint256[3] memory input
   ) public {
     // Inputs are the public signal
     uint256 publicKeyX = input[0];
@@ -209,7 +209,7 @@ contract RollUp {
     uint256[2] memory a,
     uint256[2][2] memory b,
     uint256[2] memory c,
-    uint256[3] memory input
+    uint256[4] memory input
   ) public {
     // Inputs are the public signal
     uint256 publicKeyX = input[0];
