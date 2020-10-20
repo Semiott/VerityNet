@@ -2,18 +2,17 @@ pragma solidity 0.6.0;
 
 library CircomLib {
  
-/* 
+
  function MiMCSponge(uint256 xL_in, uint256 xR_in, uint256 k)
     public
     pure
     returns (uint256 xL, uint256 xR);
-} */
+ 
 
-abstract contract Hasher {
   function hashMulti(uint256[] memory array, uint256 key)
     public
     pure
-    returns (uint256)
+    returns ( uint256)
   {
     uint256 k = 21888242871839275222246405745257275088548364400416034343698204186575808495617;
     uint256 R = 0;
