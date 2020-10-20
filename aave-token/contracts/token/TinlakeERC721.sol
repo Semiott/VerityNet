@@ -20,16 +20,16 @@ import "./ECDSA.sol";
 import "./MerkleVerifier.sol";
 
 abstract contract AnchorLike {
-    function getAnchorById(uint) public view returns (uint, bytes32, uint32);
+    function getAnchorById(uint) public view virtual returns (uint, bytes32, uint32);
 }
 
 abstract contract KeyManagerLike {
-    function keyHasPurpose(bytes32, uint) public view returns (bool);
-    function getKey(bytes32) public view returns (bytes32, uint[] memory, uint32);
+    function keyHasPurpose(bytes32, uint) public view virtual returns (bool);
+    function getKey(bytes32) public view virtual returns (bytes32, uint[] memory, uint32);
 }
 
 abstract contract IdentityFactoryLike {
-    function createdIdentity(address) public view returns (bool);
+    function createdIdentity(address) public view virtual returns (bool);
 }
 
 abstract contract TinlakeERC721 is IERC721Metadata, MerkleVerifier {
