@@ -1,8 +1,8 @@
 pragma solidity >=0.4.25 <0.6.0;
 
-import "@openzeppelin-solidity/contracts/math/SafeMath.sol";
-import "@openzeppelin-solidity/contracts/ownership/Ownable.sol";
-import "@openzeppelin-solidity/contracts/access/roles/MinterRole.sol";
+import "@openzeppelin/contracts/math/SafeMath.sol";
+import "@openzeppelin/contracts/ownership/Ownable.sol";
+import "@openzeppelin/contracts/access/roles/MinterRole.sol";
 
 /**
  * @title QVVoting
