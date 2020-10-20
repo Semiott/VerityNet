@@ -9,7 +9,7 @@ library CircomLib {
     returns (uint256 xL, uint256 xR);
 } */
 
-contract Hasher {
+abstract contract Hasher {
   function hashMulti(uint256[] memory array, uint256 key)
     public
     pure
