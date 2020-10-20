@@ -136,7 +136,7 @@ abstract contract TinlakeERC721 is IERC721Metadata, MerkleVerifier {
         }
     }
 
-    function tokenURI( uint token_id) external view returns (string memory) {
+    function tokenURI( uint token_id) external view override returns (string memory) {
         return string(abi.encodePacked(uri, "0x", uintToHexStr(uint(address(this))), "/0x", uintToHexStr(token_id)));
     }
 
