@@ -22,5 +22,5 @@ People can use VerityNet to verify if the Loans are tokenized based on valid pro
 - Fairness Finance Data Feeds based Consensus Oracles powered by Chainlink VRF powered Validators and Staking
 - Zero-Knowledge Proof based Rollups for privacy-preserving transaction verification and batch aggregated deployment
 - Gas efficient Meta Transactions using Gas Station Network and Biconomy Reference Implementation
-- Centrifuge Tinlake Architecture for the Seamless integration between Borrowers and Lenders for NFT Collaterals
+- Centrifuge Tinlake Architecture for the integration between Borrowers and Lenders for NFT Collaterals
 
