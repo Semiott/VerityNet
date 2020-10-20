@@ -1,4 +1,4 @@
-pragma solidity ˆ0.5.11;
+pragma solidity 0.5.11;
 
 import "./Hasher.sol";
 import "./Whitelist.sol";
