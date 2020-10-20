@@ -19,16 +19,16 @@ import { IERC721Metadata } from "./IERC721Metadata.sol";
 import "./ECDSA.sol";
 import "./MerkleVerifier.sol";
 
-contract AnchorLike {
+abstract contract AnchorLike {
     function getAnchorById(uint) public view returns (uint, bytes32, uint32);
 }
 
-contract KeyManagerLike {
+abstract contract KeyManagerLike {
     function keyHasPurpose(bytes32, uint) public view returns (bool);
     function getKey(bytes32) public view returns (bytes32, uint[] memory, uint32);
 }
 
-contract IdentityFactoryLike {
+abstract contract IdentityFactoryLike {
     function createdIdentity(address) public view returns (bool);
 }
 
