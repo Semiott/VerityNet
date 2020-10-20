@@ -54,7 +54,7 @@ abstract contract TinlakeERC721 is IERC721Metadata, MerkleVerifier {
     // solium-disable-next-line
     uint constant internal SIGNING_PURPOSE = 0x774a43710604e3ce8db630136980a6ba5a65b5e6686ee51009ed5f3fded6ea7e;
 
-    constructor (string memory name, string memory symbol, address anchors_, address identity_, address identity_factory_) IERC721Metadata(name, symbol) public {
+    constructor (string memory name, string memory symbol, address anchors_, address identity_, address identity_factory_) IERC721Metadata() public {
         anchors = AnchorLike(anchors_);
         key_manager = KeyManagerLike(identity_);
         identity_factory = IdentityFactoryLike(identity_factory_);
@@ -189,8 +189,8 @@ abstract contract TinlakeERC721 is IERC721Metadata, MerkleVerifier {
    * @param usr address deposit address of token
    * @param tkn uint tokenID
    */
-    function _mint(address usr, uint tkn) internal {
+    /* function _mint(address usr, uint tkn) internal {
         super._mint(usr, tkn);
         emit Minted(usr, tkn);
-    }
+    } */
 }
