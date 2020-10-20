@@ -3,7 +3,7 @@ pragma solidity ^0.5.16;
 // Experimenting RANDAO + VDF on version 1.0
 // Justin Drake https://ethresear.ch/t/minimal-vdf-randomness-beacon/3566
 
-import "./library/semiott/BeaconContract.sol";
+import "./BeaconContract.sol";
 import "@openzeppelin/contracts/GSN/GSNRecipient.sol";
 
 contract Beacon{
