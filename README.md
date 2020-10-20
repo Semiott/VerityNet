@@ -18,9 +18,9 @@ Financial Fairness Algorithms and Architectures built on AAVE Tokens with Centri
 People can use VerityNet to verify if the Loans are tokenized based on valid proofs and they can verify the Loan Token Swap. They can also use VerityNet to swap between NFT collateral backed loans and fungible collateral backed loans in a seamless manner. The following are the innovative components of VerityNet.
 
 - Fairness Finance Proof of Collaterals based on ZK Snarks built on Circom and SnarkJS
-- Fairness Finance DAO for the Governance of AAVE Lending Protocol using RANDAO powered by Starkware VDF
-- Fairness Finance Data Feeds based Consensus Oracles powered by Chainlink VRF powered Validators and Staking
-- Zero-Knowledge Proof based Rollups for privacy-preserving transaction verification and batch aggregated deployment
+- Fairness Finance DAO for the Governance of AAVE Protocol using RANDAO powered by Starkware VDF
+- Fairness Finance Data Feeds based Consensus Oracles powered by Chainlink VRF Validators and Staking
+- Zero-Knowledge Proof Rollups for privacy-preserving transaction transfer and scaling
 - Gas efficient Meta Transactions using Gas Station Network and Biconomy Reference Implementation
-- Centrifuge Tinlake Architecture for the integration between Borrowers and Lenders for NFT Collaterals
+- Centrifuge Tinlake Architecture for the integration between Borrowers and Lenders for NFT
 
