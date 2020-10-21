@@ -2,7 +2,7 @@ pragma solidity ^0.5.16;
 pragma experimental ABIEncoderV2;
 
 import "./QuadVoting.sol";
-import "./QuadVotingVerifier.sol";
+import "./QuadVoteTallyVerifier.sol";
 
 contract Comp {
     /// @notice EIP-20 token name for this token
