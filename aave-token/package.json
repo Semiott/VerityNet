@@ -90,6 +90,7 @@
   ],
   "license": "AGPLv3",
   "dependencies": {
+    "@openzeppelin/cli": "^2.8.2",
     "tmp-promise": "^3.0.2"
   }
 }
