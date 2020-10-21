@@ -21,10 +21,6 @@ address public BeaconContractAddress=0x79474439753C7c70011C3b00e06e559378bAD040;
 using Counters for Counters.Counter;
   Counters.Counter private _tokenIds;
 
-function initialize() public initializer {
-    GSNRecipient.initialize();
-  }
-
     struct Participant {
         uint256   secret;
         bytes32   commitment;
@@ -324,7 +320,10 @@ function initialize() public initializer {
     uint256 nonce,
     bytes calldata approvalData,
     uint256 maxPossibleCharge
-  ) external view returns (uint256, bytes memory) {
+  ) external view override returns (uint256, bytes memory) {
     return _approveRelayedCall();
   }
+  
+  function _preRelayedCall(bytes memory context) internal override returns (bytes32) {}
+  function _postRelayedCall(bytes memory context, bool, uint256 actualCharge, bytes32) internal override {}
 }
