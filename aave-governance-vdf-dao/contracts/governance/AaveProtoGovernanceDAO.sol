@@ -320,10 +320,10 @@ using Counters for Counters.Counter;
     uint256 nonce,
     bytes calldata approvalData,
     uint256 maxPossibleCharge
-  ) external view override returns (uint256, bytes memory) {
+  ) external view returns (uint256, bytes memory) {
     return _approveRelayedCall();
   }
   
-  function _preRelayedCall(bytes memory context) internal override returns (bytes32) {}
-  function _postRelayedCall(bytes memory context, bool, uint256 actualCharge, bytes32) internal override {}
+  function _preRelayedCall(bytes memory context) internal returns (bytes32) {}
+  function _postRelayedCall(bytes memory context, bool, uint256 actualCharge, bytes32) internal {}
 }
