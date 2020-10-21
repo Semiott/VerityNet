@@ -15,7 +15,7 @@
 
 pragma solidity >=0.5.15;
 
-contract /TinlakeToken {
+contract TinlakeToken {
     // --- Auth ---
     mapping (address => uint) public wards;
     function rely(address usr) public auth { wards[usr] = 1; }
