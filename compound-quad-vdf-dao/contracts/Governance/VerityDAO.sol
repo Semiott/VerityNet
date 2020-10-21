@@ -14,7 +14,7 @@ contract Beacon{
     
 }
 
-contract AaveProtoGovernanceQuadDAO is Initializable, GSNRecipient {
+contract VerityDAO is Initializable, GSNRecipient {
 
 address public BeaconContractAddress=0x79474439753C7c70011C3b00e06e559378bAD040;
 
@@ -29,7 +29,7 @@ using Counters for Counters.Counter;
         bool      rewarded;
     }
 
-    struct FractalNetwork {
+    struct VerityNetwork {
         address caddr;
         uint256 bountypot;
     }
@@ -46,7 +46,7 @@ using Counters for Counters.Counter;
         uint32    commitNum;
         uint32    revealsNum;
 
-        mapping (address => FractalNetwork) FractalGroups;
+        mapping (address => VerityNetwork) VerityGroups;
         mapping (address => Participant) participants;
         mapping (bytes32 => bool) commitments;
     }
@@ -106,7 +106,7 @@ using Counters for Counters.Counter;
         c.commitBalkline = _commitBalkline;
         c.commitDeadline = _commitDeadline;
         c.bountypot = msg.value;
-        c.FractalGroups[msg.sender] = FractalNetwork(msg.sender, msg.value);
+        c.VerityGroups[msg.sender] = VerityNetwork(msg.sender, msg.value);
         emit LogCampaignAdded(_campaignID, msg.sender, _bnum, _deposit, _commitBalkline, _commitDeadline, msg.value);
     }
 
@@ -115,8 +115,8 @@ using Counters for Counters.Counter;
     function follow(uint256 _campaignID)
         external payable returns (bool) {
         Campaign storage c = campaigns[_campaignID];
-        FractalNetwork storage FractalNode = c.FractalGroups[msg.sender];
-        return followCampaign(_campaignID, c, FractalNode);
+        VerityNetwork storage VerityNode = c.VerityGroups[msg.sender];
+        return followCampaign(_campaignID, c, VerityNode);
     }
 
     modifier checkFollowPhase(uint256 _bnum, uint16 _commitDeadline) {
@@ -127,11 +127,11 @@ using Counters for Counters.Counter;
     function followCampaign(
         uint256 _campaignID,
         Campaign storage c,
-        FractalNetwork storage FractalNode
+        VerityNetwork storage VerityNode
     ) checkFollowPhase(c.bnum, c.commitDeadline)
-        blankAddress(FractalNode.caddr) internal returns (bool) {
+        blankAddress(VerityNode.caddr) internal returns (bool) {
         c.bountypot += msg.value;
-        c.FractalGroups[msg.sender] = FractalNetwork(msg.sender, msg.value);
+        c.VerityGroups[msg.sender] = VerityNetwork(msg.sender, msg.value);
         emit LogFollow(_campaignID, msg.sender, msg.value);
         return true;
     }
@@ -304,9 +304,9 @@ using Counters for Counters.Counter;
         internal
         bountyPhase(c.bnum)
         campaignFailed(c.commitNum, c.revealsNum)
-        beConsumer(c.FractalGroups[msg.sender].caddr) {
-        uint256 bountypot = c.FractalGroups[msg.sender].bountypot;
-        c.FractalGroups[msg.sender].bountypot = 0;
+        beConsumer(c.VerityGroups[msg.sender].caddr) {
+        uint256 bountypot = c.VerityGroups[msg.sender].bountypot;
+        c.VerityGroups[msg.sender].bountypot = 0;
         msg.sender.transfer(bountypot);
     }
     
