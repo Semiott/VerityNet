@@ -8,7 +8,7 @@ import "@openzeppelin/contracts/access/roles/MinterRole.sol";
  * @title QVVoting
  * @dev the manager for proposals / votes
  */
-contract AaveProtoQuadVoting is Ownable, MinterRole {
+contract QuadVoting is Ownable, MinterRole {
     using SafeMath for uint256;
 
     uint256 private _totalSupply;
