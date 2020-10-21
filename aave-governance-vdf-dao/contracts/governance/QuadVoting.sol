@@ -3,13 +3,12 @@ pragma solidity >=0.4.25 <0.6.0;
 import "@openzeppelin/contracts/math/SafeMath.sol";
 import "@openzeppelin/contracts/ownership/Ownable.sol";
 import "@openzeppelin/contracts/access/roles/MinterRole.sol";
-import "./QuadVotingVerifier.sol";
 
 /**
  * @title QVVoting
  * @dev the manager for proposals / votes
  */
-contract QuadVoting is Ownable, MinterRole, QuadVotingVerifier {
+contract QuadVoting is Ownable, MinterRole {
     using SafeMath for uint256;
 
     uint256 private _totalSupply;
