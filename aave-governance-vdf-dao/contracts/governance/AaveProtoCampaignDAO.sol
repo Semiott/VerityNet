@@ -14,7 +14,7 @@ contract Beacon{
     
 }
 
-contract AaveProtoVoteAggregatorDAO is Initializable, GSNRecipient {
+contract AaveProtoCampaignDAO is Initializable, GSNRecipient {
 
 address public BeaconContractAddress=0x79474439753C7c70011C3b00e06e559378bAD040;
 
