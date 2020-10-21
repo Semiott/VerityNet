@@ -5,7 +5,7 @@ import "./components/AvailabilityVerifiers.sol";
 import "./components/Freezable.sol";
 import "./components/MainGovernance.sol";
 import "./components/Operator.sol";
-import "./components/StarkExTokens.sol";
+import "./components/StarkExToken.sol";
 import "./components/TinlakeToken.sol";
 import "./components/Users.sol";
 import "./components/Verifiers.sol";
