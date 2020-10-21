@@ -5,7 +5,8 @@ import "./components/AvailabilityVerifiers.sol";
 import "./components/Freezable.sol";
 import "./components/MainGovernance.sol";
 import "./components/Operator.sol";
-import "./components/Tokens.sol";
+import "./components/StarkExTokens.sol";
+import "./components/TinlakeToken.sol";
 import "./components/Users.sol";
 import "./components/Verifiers.sol";
 import "./interactions/Deposits.sol";
@@ -23,7 +24,8 @@ contract StarkExchange is
     AvailabilityVerifiers,
     Operator,
     Freezable,
-    Tokens,
+    StarkExToken,
+    TinlakeToken,
     Users,
     StateRoot,
     Deposits,
