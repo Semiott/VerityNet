@@ -17,15 +17,15 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"isFrozen\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/MFreezable.sol\":\"MFreezable\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/MFreezable.sol\":{\"keccak256\":\"0x76e65ee04382334f25fd8c73a34f0f89e00c4c9fbdd8782ab971e900848b07ad\",\"urls\":[\"bzz-raw://afe657ac427e57bc51f37827f6a764bf469a799250fb4479de7a078fb0872f84\",\"dweb:/ipfs/QmXxoW47FTKnGaaZ946dTEk9bFpwEmZ1ZW7z84BBmdi3Gx\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"isFrozen\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/MFreezable.sol\":\"MFreezable\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/MFreezable.sol\":{\"keccak256\":\"0x76e65ee04382334f25fd8c73a34f0f89e00c4c9fbdd8782ab971e900848b07ad\",\"urls\":[\"bzz-raw://afe657ac427e57bc51f37827f6a764bf469a799250fb4479de7a078fb0872f84\",\"dweb:/ipfs/QmXxoW47FTKnGaaZ946dTEk9bFpwEmZ1ZW7z84BBmdi3Gx\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "pragma solidity ^0.5.2;\n\ncontract MFreezable {\n    /*\n      Forbids calling the function if the exchange is frozen.\n    */\n    modifier notFrozen()\n    {\n        // Pure modifier declarations are not supported. Instead we provide\n        // a dummy definition.\n        revert(\"UNIMPLEMENTED\");\n        _;\n    }\n\n    /*\n      Allows calling the function only if the exchange is frozen.\n    */\n    modifier onlyFrozen()\n    {\n        // Pure modifier declarations are not supported. Instead we provide\n        // a dummy definition.\n        revert(\"UNIMPLEMENTED\");\n        _;\n    }\n\n    /*\n      Freezes the exchange.\n    */\n    function freeze()\n        internal;\n\n    /*\n      Returns true if the exchange is frozen.\n    */\n    function isFrozen()\n        external view\n        returns (bool);\n\n}\n",
-  "sourcePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/MFreezable.sol",
+  "sourcePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/MFreezable.sol",
   "ast": {
-    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/MFreezable.sol",
+    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/MFreezable.sol",
     "exportedSymbols": {
       "MFreezable": [
         4987
@@ -323,7 +323,7 @@
     "src": "0:798:31"
   },
   "legacyAST": {
-    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/MFreezable.sol",
+    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/MFreezable.sol",
     "exportedSymbols": {
       "MFreezable": [
         4987
@@ -626,7 +626,7 @@
   },
   "networks": {},
   "schemaVersion": "3.3.1",
-  "updatedAt": "2020-10-21T18:42:18.122Z",
+  "updatedAt": "2020-10-21T21:01:22.953Z",
   "devdoc": {
     "methods": {}
   },

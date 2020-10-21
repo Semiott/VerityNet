@@ -1,15 +1,15 @@
 {
   "contractName": "MApprovalChain",
   "abi": [],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/MApprovalChain.sol\":\"MApprovalChain\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/components/GovernanceStorage.sol\":{\"keccak256\":\"0x67fb34740c25832ca4ebe572796b37744173dc6e41bedd89bcf0f86939195400\",\"urls\":[\"bzz-raw://4a4e89a296039dd310be02621be7caf655cd0962369156dce4733031ab2058eb\",\"dweb:/ipfs/QmXQT5hMWxUfRSxDURvKNdEkLUvDPyVSw8ia1NirtFzL3k\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/components/MainStorage.sol\":{\"keccak256\":\"0x714158b6b75b3da83c885e683ca772d104076c825bf8163dfe0d2901ea3c5796\",\"urls\":[\"bzz-raw://e4f33e90aef3cec159bdd2619afc7915392b610be661b070aeceb9ac4656faf2\",\"dweb:/ipfs/QmP7sHr4y1MLw7NUDvLp7YnQawYAKUJ4j1um2BBCFfq2MU\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/IFactRegistry.sol\":{\"keccak256\":\"0x7f4e47365a887730d676a98fa96cee9273abf09655bafe2a224c9a9398732214\",\"urls\":[\"bzz-raw://21223482a9890cd6ba8c733d891923fc12ca1c9d6f147212f77a2f8a0a0af52d\",\"dweb:/ipfs/QmWH8jxhSRVaEMyEY4XjwBPSGNZKM9xY2a7zh2bycKgUjH\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/MApprovalChain.sol\":{\"keccak256\":\"0xb66336a0e5bc2f47be763f6ac478b3fc28fd75eb95bc8818e898431454adc6f8\",\"urls\":[\"bzz-raw://66452a84081bf629520f3fbd6a466e124a9086b0dc82e1e4018ec3cc01466f6d\",\"dweb:/ipfs/Qmawd9BSrJ2P89VRViQb4CoBwYBYPXUJhasb6UyWH3MENm\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/upgrade/ProxyStorage.sol\":{\"keccak256\":\"0x8328396a028395d9483b5e445c4ebd5c8b81aaa771b3f1ecbabb8d473fa0c229\",\"urls\":[\"bzz-raw://695e9498cd3f33b420a98a84af3b4634df224dc927cdae153498c5a77edf839c\",\"dweb:/ipfs/QmYhoTao3CDwzbAQeLU1u5oRR2X3PQgBVfk9BVkBkPdoiV\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/MApprovalChain.sol\":\"MApprovalChain\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/components/GovernanceStorage.sol\":{\"keccak256\":\"0x67fb34740c25832ca4ebe572796b37744173dc6e41bedd89bcf0f86939195400\",\"urls\":[\"bzz-raw://4a4e89a296039dd310be02621be7caf655cd0962369156dce4733031ab2058eb\",\"dweb:/ipfs/QmXQT5hMWxUfRSxDURvKNdEkLUvDPyVSw8ia1NirtFzL3k\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/components/MainStorage.sol\":{\"keccak256\":\"0x714158b6b75b3da83c885e683ca772d104076c825bf8163dfe0d2901ea3c5796\",\"urls\":[\"bzz-raw://e4f33e90aef3cec159bdd2619afc7915392b610be661b070aeceb9ac4656faf2\",\"dweb:/ipfs/QmP7sHr4y1MLw7NUDvLp7YnQawYAKUJ4j1um2BBCFfq2MU\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/IFactRegistry.sol\":{\"keccak256\":\"0x7f4e47365a887730d676a98fa96cee9273abf09655bafe2a224c9a9398732214\",\"urls\":[\"bzz-raw://21223482a9890cd6ba8c733d891923fc12ca1c9d6f147212f77a2f8a0a0af52d\",\"dweb:/ipfs/QmWH8jxhSRVaEMyEY4XjwBPSGNZKM9xY2a7zh2bycKgUjH\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/MApprovalChain.sol\":{\"keccak256\":\"0xb66336a0e5bc2f47be763f6ac478b3fc28fd75eb95bc8818e898431454adc6f8\",\"urls\":[\"bzz-raw://66452a84081bf629520f3fbd6a466e124a9086b0dc82e1e4018ec3cc01466f6d\",\"dweb:/ipfs/Qmawd9BSrJ2P89VRViQb4CoBwYBYPXUJhasb6UyWH3MENm\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/upgrade/ProxyStorage.sol\":{\"keccak256\":\"0x8328396a028395d9483b5e445c4ebd5c8b81aaa771b3f1ecbabb8d473fa0c229\",\"urls\":[\"bzz-raw://695e9498cd3f33b420a98a84af3b4634df224dc927cdae153498c5a77edf839c\",\"dweb:/ipfs/QmYhoTao3CDwzbAQeLU1u5oRR2X3PQgBVfk9BVkBkPdoiV\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "pragma solidity ^0.5.2;\n\nimport \"../components/MainStorage.sol\";\n\n/*\n  Implements a data structure that supports instant registration\n  and slow time-locked removal of entries.\n*/\ncontract MApprovalChain is MainStorage {\n    uint256 constant ENTRY_NOT_FOUND = uint256(~0);\n\n    /*\n      Adds the given verifier (entry) to the chain.\n      Fails if the size of the chain is already >= maxLength.\n      Fails if identifier is not identical to the value returned from entry.identify().\n    */\n    function addEntry(\n        ApprovalChainData storage chain, address entry, uint256 maxLength, string memory identifier)\n        internal;\n\n    /*\n      Returns the index of the verifier in the list if it exists and returns ENTRY_NOT_FOUND\n      otherwise.\n    */\n    function findEntry(address[] storage list, address entry)\n        internal view returns (uint256);\n\n    /*\n      Same as findEntry(), except that it reverts if the verifier is not found.\n    */\n    function safeFindEntry(address[] storage list, address entry)\n        internal view returns (uint256 idx);\n\n    /*\n      Updates the unlockedForRemovalTime field of the given verifier to\n        current time + removalDelay.\n      Reverts if the verifier is not found.\n    */\n    function announceRemovalIntent(\n        ApprovalChainData storage chain, address entry, uint256 removalDelay)\n        internal;\n\n    /*\n      Removes a verifier assuming the expected time has passed.\n    */\n    function removeEntry(ApprovalChainData storage chain, address entry)\n        internal;\n\n    /*\n      Verifies a given fact on all existing verifiers.\n      Reverts if the fact is not accepted by one or more verifiers.\n    */\n    function verifyFact(\n        ApprovalChainData storage chain, bytes32 fact, string memory noVerifiersErrorMessage,\n        string memory invalidFactErrorMessage)\n        internal view;\n}\n",
-  "sourcePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/MApprovalChain.sol",
+  "sourcePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/MApprovalChain.sol",
   "ast": {
-    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/MApprovalChain.sol",
+    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/MApprovalChain.sol",
     "exportedSymbols": {
       "MApprovalChain": [
         4960
@@ -30,7 +30,7 @@
         "src": "0:23:30"
       },
       {
-        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/components/MainStorage.sol",
+        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/components/MainStorage.sol",
         "file": "../components/MainStorage.sol",
         "id": 4893,
         "nodeType": "ImportDirective",
@@ -883,7 +883,7 @@
     "src": "0:1865:30"
   },
   "legacyAST": {
-    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/MApprovalChain.sol",
+    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/MApprovalChain.sol",
     "exportedSymbols": {
       "MApprovalChain": [
         4960
@@ -904,7 +904,7 @@
         "src": "0:23:30"
       },
       {
-        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/components/MainStorage.sol",
+        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/components/MainStorage.sol",
         "file": "../components/MainStorage.sol",
         "id": 4893,
         "nodeType": "ImportDirective",
@@ -1762,7 +1762,7 @@
   },
   "networks": {},
   "schemaVersion": "3.3.1",
-  "updatedAt": "2020-10-21T18:42:18.121Z",
+  "updatedAt": "2020-10-21T21:01:22.951Z",
   "devdoc": {
     "methods": {}
   },

@@ -32,15 +32,15 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"newVaultRoot\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"heightVaultTree\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"sequenceNumber\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"opaqueAvailabilityProofs\",\"type\":\"bytes\"}],\"name\":\"verifyAvailabilityProof\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/IAvailabilityVerifier.sol\":\"IAvailabilityVerifier\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/IAvailabilityVerifier.sol\":{\"keccak256\":\"0xd645fe7e228bd1d55729cd334030d171dc3781673fec6077f3d4373d7b7e2f0f\",\"urls\":[\"bzz-raw://f3b444847f3f87c71fbc2d822bf024972ff0d0599ddeb633a7367909bdb85bc3\",\"dweb:/ipfs/QmY81Z8UVKagwSwkvbarrTcf6RFux1De1rxWuTnQ2pQ2bQ\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"newVaultRoot\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"heightVaultTree\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"sequenceNumber\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"opaqueAvailabilityProofs\",\"type\":\"bytes\"}],\"name\":\"verifyAvailabilityProof\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/IAvailabilityVerifier.sol\":\"IAvailabilityVerifier\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/IAvailabilityVerifier.sol\":{\"keccak256\":\"0xd645fe7e228bd1d55729cd334030d171dc3781673fec6077f3d4373d7b7e2f0f\",\"urls\":[\"bzz-raw://f3b444847f3f87c71fbc2d822bf024972ff0d0599ddeb633a7367909bdb85bc3\",\"dweb:/ipfs/QmY81Z8UVKagwSwkvbarrTcf6RFux1De1rxWuTnQ2pQ2bQ\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "pragma solidity ^0.5.2;\n\ncontract IAvailabilityVerifier {\n    function verifyAvailabilityProof(\n        uint256 newVaultRoot,\n        uint256 heightVaultTree,\n        uint256 sequenceNumber,\n        bytes calldata opaqueAvailabilityProofs\n    )\n        external view;\n}\n",
-  "sourcePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/IAvailabilityVerifier.sol",
+  "sourcePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/IAvailabilityVerifier.sol",
   "ast": {
-    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/IAvailabilityVerifier.sol",
+    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/IAvailabilityVerifier.sol",
     "exportedSymbols": {
       "IAvailabilityVerifier": [
         4768
@@ -213,7 +213,7 @@
     "src": "0:270:23"
   },
   "legacyAST": {
-    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/IAvailabilityVerifier.sol",
+    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/IAvailabilityVerifier.sol",
     "exportedSymbols": {
       "IAvailabilityVerifier": [
         4768
@@ -391,7 +391,7 @@
   },
   "networks": {},
   "schemaVersion": "3.3.1",
-  "updatedAt": "2020-10-21T18:42:18.113Z",
+  "updatedAt": "2020-10-21T21:01:22.890Z",
   "devdoc": {
     "methods": {}
   },

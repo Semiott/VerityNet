@@ -138,15 +138,15 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"sequenceNumber\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"batchId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"vaultRoot\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"orderRoot\",\"type\":\"uint256\"}],\"name\":\"LogRootUpdate\",\"type\":\"event\"},{\"constant\":true,\"inputs\":[],\"name\":\"getLastBatchId\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"batchId\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getOrderRoot\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"root\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getOrderTreeHeight\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"height\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getSequenceNumber\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"seq\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getVaultRoot\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"root\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getVaultTreeHeight\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"height\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"isFrozen\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interactions/StateRoot.sol\":\"StateRoot\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/components/GovernanceStorage.sol\":{\"keccak256\":\"0x67fb34740c25832ca4ebe572796b37744173dc6e41bedd89bcf0f86939195400\",\"urls\":[\"bzz-raw://4a4e89a296039dd310be02621be7caf655cd0962369156dce4733031ab2058eb\",\"dweb:/ipfs/QmXQT5hMWxUfRSxDURvKNdEkLUvDPyVSw8ia1NirtFzL3k\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/components/MainStorage.sol\":{\"keccak256\":\"0x714158b6b75b3da83c885e683ca772d104076c825bf8163dfe0d2901ea3c5796\",\"urls\":[\"bzz-raw://e4f33e90aef3cec159bdd2619afc7915392b610be661b070aeceb9ac4656faf2\",\"dweb:/ipfs/QmP7sHr4y1MLw7NUDvLp7YnQawYAKUJ4j1um2BBCFfq2MU\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interactions/FullWithdrawals.sol\":{\"keccak256\":\"0x1b1dce8ee545df07b4ed6944de3b401867b634975920dd989cd228a65253c975\",\"urls\":[\"bzz-raw://140f28ba95bcf38bcb39a279cf0f0800e3eb1edc1edb36fe696fbb530b6daeb7\",\"dweb:/ipfs/QmckFZMuq2n3DHtGG41WR6TRRrGFwzEFTotUZCMt1B88wZ\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interactions/StateRoot.sol\":{\"keccak256\":\"0x2bda9c8f48d4433a6bc848ebd7d5df227d86c6c546603bbc5dec3c23980ad6c8\",\"urls\":[\"bzz-raw://135560bde5974acb93efc348c3cc6859cc733f56c65d08a9f2ab72caaafbfce0\",\"dweb:/ipfs/QmNowdFEqDHQrzoh7en8broQ8M5JqXci93p7hyUbpUdtKJ\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/IFactRegistry.sol\":{\"keccak256\":\"0x7f4e47365a887730d676a98fa96cee9273abf09655bafe2a224c9a9398732214\",\"urls\":[\"bzz-raw://21223482a9890cd6ba8c733d891923fc12ca1c9d6f147212f77a2f8a0a0af52d\",\"dweb:/ipfs/QmWH8jxhSRVaEMyEY4XjwBPSGNZKM9xY2a7zh2bycKgUjH\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/IVerifierActions.sol\":{\"keccak256\":\"0x3f12f4388cfa557612abef06776b3e48a08a3bcd9d59c46d40dcd0b5d17e5ac4\",\"urls\":[\"bzz-raw://68ed66c3408e0755570e5ca6b75893db60e37e4f04bf3744f5d21c13c61c9028\",\"dweb:/ipfs/QmZKbZ3e9kDUZeBfN7dCfnAoRS5fNYkv5gYGqXrF3uqWTz\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/MFreezable.sol\":{\"keccak256\":\"0x76e65ee04382334f25fd8c73a34f0f89e00c4c9fbdd8782ab971e900848b07ad\",\"urls\":[\"bzz-raw://afe657ac427e57bc51f37827f6a764bf469a799250fb4479de7a078fb0872f84\",\"dweb:/ipfs/QmXxoW47FTKnGaaZ946dTEk9bFpwEmZ1ZW7z84BBmdi3Gx\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/MOperator.sol\":{\"keccak256\":\"0x09c51ee9501dfcedd305e3bbbfa4c28fb5e8c7a32c9cb93b0e3ac8d22545a511\",\"urls\":[\"bzz-raw://043c072477fca8916f465d8218dce22ac909b752c90c1e66e36d0ce456e23b73\",\"dweb:/ipfs/QmUza17b2gvsDx8YtC1HNHJS5fKRzvyiqQc7vRi6ABBx45\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/MStateRoot.sol\":{\"keccak256\":\"0x2c07ab6dece226d7842a677cc7f6374c815a4f55f88737b77ef4dc2f287a9c66\",\"urls\":[\"bzz-raw://0e8428b11d3c33a5e4bfa73bb16581afa0710021a7efe1459001e14c5640e91a\",\"dweb:/ipfs/QmPnYwUBYoVjptvcC2fVQ7naJ5N3S3A9DFjyqskjk1kfs8\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/MTokens.sol\":{\"keccak256\":\"0xea41c75acefd9a8b428bad9f16341119c19e7d7e3e90a6b2ae9278d71f8d4b41\",\"urls\":[\"bzz-raw://680907e6ee268bca109eaba776d4e3c7787f98a0e28fd095a65971e5137cbbcf\",\"dweb:/ipfs/QmWx8PLmwTXMHhoBqCUs5BaQzmSL9fNtMH6Zk8vu2FNc1H\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/MUsers.sol\":{\"keccak256\":\"0x68507e0f768e990a9de0584518fa61f627d5bb460e358a1ebec2cc66b1f2a75a\",\"urls\":[\"bzz-raw://2bbae0e0741da70f81bcadcc79b8870bfdc27dae1bf26bf6f18a1f252479d208\",\"dweb:/ipfs/QmW3RAoVCKijgN5JXDqYghrGMDASGQhfUvUsYaykavsQvo\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/libraries/LibConstants.sol\":{\"keccak256\":\"0x0905a5105cf06fd14f9a8eefba38f312133847a2b5e9484a43fa40257bd2dc6c\",\"urls\":[\"bzz-raw://809c68f2b559249e80850ad3679f808d185c47787f226b69f717a50b2e5ad87a\",\"dweb:/ipfs/QmVrCxxwst8wjrY8WPCRby2uFi2v9jLkxC17Bb9Hq2EjtT\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/upgrade/ProxyStorage.sol\":{\"keccak256\":\"0x8328396a028395d9483b5e445c4ebd5c8b81aaa771b3f1ecbabb8d473fa0c229\",\"urls\":[\"bzz-raw://695e9498cd3f33b420a98a84af3b4634df224dc927cdae153498c5a77edf839c\",\"dweb:/ipfs/QmYhoTao3CDwzbAQeLU1u5oRR2X3PQgBVfk9BVkBkPdoiV\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"sequenceNumber\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"batchId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"vaultRoot\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"orderRoot\",\"type\":\"uint256\"}],\"name\":\"LogRootUpdate\",\"type\":\"event\"},{\"constant\":true,\"inputs\":[],\"name\":\"getLastBatchId\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"batchId\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getOrderRoot\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"root\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getOrderTreeHeight\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"height\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getSequenceNumber\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"seq\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getVaultRoot\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"root\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getVaultTreeHeight\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"height\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"isFrozen\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interactions/StateRoot.sol\":\"StateRoot\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/components/GovernanceStorage.sol\":{\"keccak256\":\"0x67fb34740c25832ca4ebe572796b37744173dc6e41bedd89bcf0f86939195400\",\"urls\":[\"bzz-raw://4a4e89a296039dd310be02621be7caf655cd0962369156dce4733031ab2058eb\",\"dweb:/ipfs/QmXQT5hMWxUfRSxDURvKNdEkLUvDPyVSw8ia1NirtFzL3k\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/components/MainStorage.sol\":{\"keccak256\":\"0x714158b6b75b3da83c885e683ca772d104076c825bf8163dfe0d2901ea3c5796\",\"urls\":[\"bzz-raw://e4f33e90aef3cec159bdd2619afc7915392b610be661b070aeceb9ac4656faf2\",\"dweb:/ipfs/QmP7sHr4y1MLw7NUDvLp7YnQawYAKUJ4j1um2BBCFfq2MU\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interactions/FullWithdrawals.sol\":{\"keccak256\":\"0x1b1dce8ee545df07b4ed6944de3b401867b634975920dd989cd228a65253c975\",\"urls\":[\"bzz-raw://140f28ba95bcf38bcb39a279cf0f0800e3eb1edc1edb36fe696fbb530b6daeb7\",\"dweb:/ipfs/QmckFZMuq2n3DHtGG41WR6TRRrGFwzEFTotUZCMt1B88wZ\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interactions/StateRoot.sol\":{\"keccak256\":\"0x2bda9c8f48d4433a6bc848ebd7d5df227d86c6c546603bbc5dec3c23980ad6c8\",\"urls\":[\"bzz-raw://135560bde5974acb93efc348c3cc6859cc733f56c65d08a9f2ab72caaafbfce0\",\"dweb:/ipfs/QmNowdFEqDHQrzoh7en8broQ8M5JqXci93p7hyUbpUdtKJ\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/IFactRegistry.sol\":{\"keccak256\":\"0x7f4e47365a887730d676a98fa96cee9273abf09655bafe2a224c9a9398732214\",\"urls\":[\"bzz-raw://21223482a9890cd6ba8c733d891923fc12ca1c9d6f147212f77a2f8a0a0af52d\",\"dweb:/ipfs/QmWH8jxhSRVaEMyEY4XjwBPSGNZKM9xY2a7zh2bycKgUjH\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/IVerifierActions.sol\":{\"keccak256\":\"0x3f12f4388cfa557612abef06776b3e48a08a3bcd9d59c46d40dcd0b5d17e5ac4\",\"urls\":[\"bzz-raw://68ed66c3408e0755570e5ca6b75893db60e37e4f04bf3744f5d21c13c61c9028\",\"dweb:/ipfs/QmZKbZ3e9kDUZeBfN7dCfnAoRS5fNYkv5gYGqXrF3uqWTz\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/MFreezable.sol\":{\"keccak256\":\"0x76e65ee04382334f25fd8c73a34f0f89e00c4c9fbdd8782ab971e900848b07ad\",\"urls\":[\"bzz-raw://afe657ac427e57bc51f37827f6a764bf469a799250fb4479de7a078fb0872f84\",\"dweb:/ipfs/QmXxoW47FTKnGaaZ946dTEk9bFpwEmZ1ZW7z84BBmdi3Gx\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/MOperator.sol\":{\"keccak256\":\"0x09c51ee9501dfcedd305e3bbbfa4c28fb5e8c7a32c9cb93b0e3ac8d22545a511\",\"urls\":[\"bzz-raw://043c072477fca8916f465d8218dce22ac909b752c90c1e66e36d0ce456e23b73\",\"dweb:/ipfs/QmUza17b2gvsDx8YtC1HNHJS5fKRzvyiqQc7vRi6ABBx45\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/MStateRoot.sol\":{\"keccak256\":\"0x2c07ab6dece226d7842a677cc7f6374c815a4f55f88737b77ef4dc2f287a9c66\",\"urls\":[\"bzz-raw://0e8428b11d3c33a5e4bfa73bb16581afa0710021a7efe1459001e14c5640e91a\",\"dweb:/ipfs/QmPnYwUBYoVjptvcC2fVQ7naJ5N3S3A9DFjyqskjk1kfs8\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/MTokens.sol\":{\"keccak256\":\"0xea41c75acefd9a8b428bad9f16341119c19e7d7e3e90a6b2ae9278d71f8d4b41\",\"urls\":[\"bzz-raw://680907e6ee268bca109eaba776d4e3c7787f98a0e28fd095a65971e5137cbbcf\",\"dweb:/ipfs/QmWx8PLmwTXMHhoBqCUs5BaQzmSL9fNtMH6Zk8vu2FNc1H\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/MUsers.sol\":{\"keccak256\":\"0x68507e0f768e990a9de0584518fa61f627d5bb460e358a1ebec2cc66b1f2a75a\",\"urls\":[\"bzz-raw://2bbae0e0741da70f81bcadcc79b8870bfdc27dae1bf26bf6f18a1f252479d208\",\"dweb:/ipfs/QmW3RAoVCKijgN5JXDqYghrGMDASGQhfUvUsYaykavsQvo\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/libraries/LibConstants.sol\":{\"keccak256\":\"0x0905a5105cf06fd14f9a8eefba38f312133847a2b5e9484a43fa40257bd2dc6c\",\"urls\":[\"bzz-raw://809c68f2b559249e80850ad3679f808d185c47787f226b69f717a50b2e5ad87a\",\"dweb:/ipfs/QmVrCxxwst8wjrY8WPCRby2uFi2v9jLkxC17Bb9Hq2EjtT\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/upgrade/ProxyStorage.sol\":{\"keccak256\":\"0x8328396a028395d9483b5e445c4ebd5c8b81aaa771b3f1ecbabb8d473fa0c229\",\"urls\":[\"bzz-raw://695e9498cd3f33b420a98a84af3b4634df224dc927cdae153498c5a77edf839c\",\"dweb:/ipfs/QmYhoTao3CDwzbAQeLU1u5oRR2X3PQgBVfk9BVkBkPdoiV\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "pragma solidity ^0.5.2;\n\nimport \"../interfaces/IFactRegistry.sol\";\nimport \"../interfaces/MFreezable.sol\";\nimport \"../interactions/FullWithdrawals.sol\";\nimport \"../interfaces/MStateRoot.sol\";\nimport \"../components/MainStorage.sol\";\n\n/*\n  Implements IVerifierActions.rootUpdate\n  Uses MFreezable.\n*/\ncontract StateRoot is MainStorage, MFreezable, MStateRoot\n{\n    event LogRootUpdate(\n        uint256 sequenceNumber,\n        uint256 batchId,\n        uint256 vaultRoot,\n        uint256 orderRoot\n    );\n\n    function initialize (\n        uint256 initialSequenceNumber,\n        uint256 initialVaultRoot,\n        uint256 initialOrderRoot,\n        uint256 initialVaultTreeHeight,\n        uint256 initialOrderTreeHeight\n    )\n        internal\n    {\n        sequenceNumber = initialSequenceNumber;\n        vaultRoot = initialVaultRoot;\n        orderRoot = initialOrderRoot;\n        vaultTreeHeight = initialVaultTreeHeight;\n        orderTreeHeight = initialOrderTreeHeight;\n    }\n\n    function getVaultRoot()\n        public view\n        returns (uint256 root)\n    {\n        root = vaultRoot;\n    }\n\n    function getVaultTreeHeight()\n        public view\n        returns (uint256 height) {\n        height = vaultTreeHeight;\n    }\n\n    function getOrderRoot()\n        external view\n        returns (uint256 root)\n    {\n        root = orderRoot;\n    }\n\n    function getOrderTreeHeight()\n        external view\n        returns (uint256 height) {\n        height = orderTreeHeight;\n    }\n\n    function getSequenceNumber()\n        external view\n        returns (uint256 seq)\n    {\n        seq = sequenceNumber;\n    }\n\n    function getLastBatchId()\n        external view\n        returns (uint256 batchId)\n    {\n        batchId = lastBatchId;\n    }\n\n    /*\n      Update state roots. Verify that the old roots and heights match.\n    */\n    function rootUpdate(\n        uint256 oldVaultRoot,\n        uint256 newVaultRoot,\n        uint256 oldOrderRoot,\n        uint256 newOrderRoot,\n        uint256 vaultTreeHeightSent,\n        uint256 orderTreeHeightSent,\n        uint256 batchId\n    )\n        internal\n        notFrozen()\n    {\n        // Assert that the old state is correct.\n        require(oldVaultRoot == vaultRoot, \"VAULT_ROOT_INCORRECT\");\n        require(oldOrderRoot == orderRoot, \"ORDER_ROOT_INCORRECT\");\n\n        // Assert that heights are correct.\n        require(vaultTreeHeight == vaultTreeHeightSent, \"VAULT_HEIGHT_INCORRECT\");\n        require(orderTreeHeight == orderTreeHeightSent, \"ORDER_HEIGHT_INCORRECT\");\n\n        // Update state.\n        vaultRoot = newVaultRoot;\n        orderRoot = newOrderRoot;\n        sequenceNumber = sequenceNumber + 1;\n        lastBatchId = batchId;\n\n        // Log update.\n        emit LogRootUpdate(sequenceNumber, batchId, vaultRoot, orderRoot);\n    }\n}\n",
-  "sourcePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interactions/StateRoot.sol",
+  "sourcePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interactions/StateRoot.sol",
   "ast": {
-    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interactions/StateRoot.sol",
+    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interactions/StateRoot.sol",
     "exportedSymbols": {
       "StateRoot": [
         4179
@@ -167,7 +167,7 @@
         "src": "0:23:20"
       },
       {
-        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/IFactRegistry.sol",
+        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/IFactRegistry.sol",
         "file": "../interfaces/IFactRegistry.sol",
         "id": 3991,
         "nodeType": "ImportDirective",
@@ -178,7 +178,7 @@
         "unitAlias": ""
       },
       {
-        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/MFreezable.sol",
+        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/MFreezable.sol",
         "file": "../interfaces/MFreezable.sol",
         "id": 3992,
         "nodeType": "ImportDirective",
@@ -189,7 +189,7 @@
         "unitAlias": ""
       },
       {
-        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interactions/FullWithdrawals.sol",
+        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interactions/FullWithdrawals.sol",
         "file": "../interactions/FullWithdrawals.sol",
         "id": 3993,
         "nodeType": "ImportDirective",
@@ -200,7 +200,7 @@
         "unitAlias": ""
       },
       {
-        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/MStateRoot.sol",
+        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/MStateRoot.sol",
         "file": "../interfaces/MStateRoot.sol",
         "id": 3994,
         "nodeType": "ImportDirective",
@@ -211,7 +211,7 @@
         "unitAlias": ""
       },
       {
-        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/components/MainStorage.sol",
+        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/components/MainStorage.sol",
         "file": "../components/MainStorage.sol",
         "id": 3995,
         "nodeType": "ImportDirective",
@@ -2467,7 +2467,7 @@
     "src": "0:2781:20"
   },
   "legacyAST": {
-    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interactions/StateRoot.sol",
+    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interactions/StateRoot.sol",
     "exportedSymbols": {
       "StateRoot": [
         4179
@@ -2488,7 +2488,7 @@
         "src": "0:23:20"
       },
       {
-        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/IFactRegistry.sol",
+        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/IFactRegistry.sol",
         "file": "../interfaces/IFactRegistry.sol",
         "id": 3991,
         "nodeType": "ImportDirective",
@@ -2499,7 +2499,7 @@
         "unitAlias": ""
       },
       {
-        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/MFreezable.sol",
+        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/MFreezable.sol",
         "file": "../interfaces/MFreezable.sol",
         "id": 3992,
         "nodeType": "ImportDirective",
@@ -2510,7 +2510,7 @@
         "unitAlias": ""
       },
       {
-        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interactions/FullWithdrawals.sol",
+        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interactions/FullWithdrawals.sol",
         "file": "../interactions/FullWithdrawals.sol",
         "id": 3993,
         "nodeType": "ImportDirective",
@@ -2521,7 +2521,7 @@
         "unitAlias": ""
       },
       {
-        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/MStateRoot.sol",
+        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/MStateRoot.sol",
         "file": "../interfaces/MStateRoot.sol",
         "id": 3994,
         "nodeType": "ImportDirective",
@@ -2532,7 +2532,7 @@
         "unitAlias": ""
       },
       {
-        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/components/MainStorage.sol",
+        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/components/MainStorage.sol",
         "file": "../components/MainStorage.sol",
         "id": 3995,
         "nodeType": "ImportDirective",
@@ -4793,7 +4793,7 @@
   },
   "networks": {},
   "schemaVersion": "3.3.1",
-  "updatedAt": "2020-10-21T18:42:18.085Z",
+  "updatedAt": "2020-10-21T21:01:22.878Z",
   "devdoc": {
     "methods": {}
   },

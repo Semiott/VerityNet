@@ -1,15 +1,15 @@
 {
   "contractName": "GovernanceStorage",
   "abi": [],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/components/GovernanceStorage.sol\":\"GovernanceStorage\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/components/GovernanceStorage.sol\":{\"keccak256\":\"0x67fb34740c25832ca4ebe572796b37744173dc6e41bedd89bcf0f86939195400\",\"urls\":[\"bzz-raw://4a4e89a296039dd310be02621be7caf655cd0962369156dce4733031ab2058eb\",\"dweb:/ipfs/QmXQT5hMWxUfRSxDURvKNdEkLUvDPyVSw8ia1NirtFzL3k\"]}},\"version\":1}",
-  "bytecode": "0x6080604052348015600f57600080fd5b50603e80601d6000396000f3fe6080604052600080fdfea265627a7a7231582034620414127707ae3d059d6c88f9efd4159c0e4c9246d4baf8c5bc580873b60a64736f6c63430005100032",
-  "deployedBytecode": "0x6080604052600080fdfea265627a7a7231582034620414127707ae3d059d6c88f9efd4159c0e4c9246d4baf8c5bc580873b60a64736f6c63430005100032",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/components/GovernanceStorage.sol\":\"GovernanceStorage\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/components/GovernanceStorage.sol\":{\"keccak256\":\"0x67fb34740c25832ca4ebe572796b37744173dc6e41bedd89bcf0f86939195400\",\"urls\":[\"bzz-raw://4a4e89a296039dd310be02621be7caf655cd0962369156dce4733031ab2058eb\",\"dweb:/ipfs/QmXQT5hMWxUfRSxDURvKNdEkLUvDPyVSw8ia1NirtFzL3k\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603e80601d6000396000f3fe6080604052600080fdfea265627a7a723158205d8055ed72cb4864eb392a3b99e877b1ffb494ce264a68ecc14092197df7889a64736f6c63430005100032",
+  "deployedBytecode": "0x6080604052600080fdfea265627a7a723158205d8055ed72cb4864eb392a3b99e877b1ffb494ce264a68ecc14092197df7889a64736f6c63430005100032",
   "sourceMap": "117:323:9:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;117:323:9;;;;;;;",
   "deployedSourceMap": "117:323:9:-;;;;;",
   "source": "pragma solidity ^0.5.2;\n\n/*\n  Holds the governance slots for ALL entities, including proxy and the main contract.\n*/\ncontract GovernanceStorage {\n\n    struct GovernanceInfoStruct {\n        mapping (address => bool) effectiveGovernors;\n        address candidateGovernor;\n        bool initialized;\n    }\n\n    // A map from a Governor tag to its own GovernanceInfoStruct.\n    mapping (string => GovernanceInfoStruct) internal governanceInfo;\n}\n",
-  "sourcePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/components/GovernanceStorage.sol",
+  "sourcePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/components/GovernanceStorage.sol",
   "ast": {
-    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/components/GovernanceStorage.sol",
+    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/components/GovernanceStorage.sol",
     "exportedSymbols": {
       "GovernanceStorage": [
         1433
@@ -206,7 +206,7 @@
     "src": "0:441:9"
   },
   "legacyAST": {
-    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/components/GovernanceStorage.sol",
+    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/components/GovernanceStorage.sol",
     "exportedSymbols": {
       "GovernanceStorage": [
         1433
@@ -408,7 +408,7 @@
   },
   "networks": {},
   "schemaVersion": "3.3.1",
-  "updatedAt": "2020-10-21T18:42:18.036Z",
+  "updatedAt": "2020-10-21T21:01:22.827Z",
   "devdoc": {
     "methods": {}
   },

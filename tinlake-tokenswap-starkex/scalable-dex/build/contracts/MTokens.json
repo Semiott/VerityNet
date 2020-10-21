@@ -1,15 +1,15 @@
 {
   "contractName": "MTokens",
   "abi": [],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/MTokens.sol\":\"MTokens\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/MTokens.sol\":{\"keccak256\":\"0xea41c75acefd9a8b428bad9f16341119c19e7d7e3e90a6b2ae9278d71f8d4b41\",\"urls\":[\"bzz-raw://680907e6ee268bca109eaba776d4e3c7787f98a0e28fd095a65971e5137cbbcf\",\"dweb:/ipfs/QmWx8PLmwTXMHhoBqCUs5BaQzmSL9fNtMH6Zk8vu2FNc1H\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/MTokens.sol\":\"MTokens\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/MTokens.sol\":{\"keccak256\":\"0xea41c75acefd9a8b428bad9f16341119c19e7d7e3e90a6b2ae9278d71f8d4b41\",\"urls\":[\"bzz-raw://680907e6ee268bca109eaba776d4e3c7787f98a0e28fd095a65971e5137cbbcf\",\"dweb:/ipfs/QmWx8PLmwTXMHhoBqCUs5BaQzmSL9fNtMH6Zk8vu2FNc1H\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "pragma solidity ^0.5.2;\n\ncontract MTokens {\n    function toQuantized(\n        uint256 tokenId,\n        uint256 amount\n    )\n        internal view\n        returns (uint256 quantizedAmount);\n\n    function fromQuantized(\n        uint256 tokenId,\n        uint256 quantizedAmount\n    )\n        internal view\n        returns (uint256 amount);\n\n    function isEther(\n        uint256 tokenId)\n        internal view returns (bool);\n\n    function transferIn(\n        uint256 tokenId,\n        uint256 quantizedAmount\n    )\n        internal;\n\n    function transferOut(\n        uint256 tokenId,\n        uint256 quantizedAmount\n    )\n        internal;\n}\n",
-  "sourcePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/MTokens.sol",
+  "sourcePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/MTokens.sol",
   "ast": {
-    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/MTokens.sol",
+    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/MTokens.sol",
     "exportedSymbols": {
       "MTokens": [
         5074
@@ -505,7 +505,7 @@
     "src": "0:640:35"
   },
   "legacyAST": {
-    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/MTokens.sol",
+    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/MTokens.sol",
     "exportedSymbols": {
       "MTokens": [
         5074
@@ -1006,7 +1006,7 @@
   },
   "networks": {},
   "schemaVersion": "3.3.1",
-  "updatedAt": "2020-10-21T18:42:18.126Z",
+  "updatedAt": "2020-10-21T21:01:22.964Z",
   "devdoc": {
     "methods": {}
   },

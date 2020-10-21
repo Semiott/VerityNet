@@ -44,15 +44,15 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"starkKey\",\"type\":\"uint256\"}],\"name\":\"getEtherKey\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"etherKey\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"etherKey\",\"type\":\"address\"}],\"name\":\"getStarkKey\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"starkKey\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/MUsers.sol\":\"MUsers\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/MUsers.sol\":{\"keccak256\":\"0x68507e0f768e990a9de0584518fa61f627d5bb460e358a1ebec2cc66b1f2a75a\",\"urls\":[\"bzz-raw://2bbae0e0741da70f81bcadcc79b8870bfdc27dae1bf26bf6f18a1f252479d208\",\"dweb:/ipfs/QmW3RAoVCKijgN5JXDqYghrGMDASGQhfUvUsYaykavsQvo\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"starkKey\",\"type\":\"uint256\"}],\"name\":\"getEtherKey\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"etherKey\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"etherKey\",\"type\":\"address\"}],\"name\":\"getStarkKey\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"starkKey\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/MUsers.sol\":\"MUsers\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/MUsers.sol\":{\"keccak256\":\"0x68507e0f768e990a9de0584518fa61f627d5bb460e358a1ebec2cc66b1f2a75a\",\"urls\":[\"bzz-raw://2bbae0e0741da70f81bcadcc79b8870bfdc27dae1bf26bf6f18a1f252479d208\",\"dweb:/ipfs/QmW3RAoVCKijgN5JXDqYghrGMDASGQhfUvUsYaykavsQvo\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "pragma solidity ^0.5.2;\n\ncontract MUsers {\n    function getStarkKey(\n        address etherKey\n    )\n        public view\n        returns (uint256 starkKey);\n\n    function getEtherKey(\n        uint256 starkKey\n    )\n        external view\n        returns (address etherKey);\n}\n",
-  "sourcePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/MUsers.sol",
+  "sourcePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/MUsers.sol",
   "ast": {
-    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/MUsers.sol",
+    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/MUsers.sol",
     "exportedSymbols": {
       "MUsers": [
         5091
@@ -257,7 +257,7 @@
     "src": "0:274:36"
   },
   "legacyAST": {
-    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/MUsers.sol",
+    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/MUsers.sol",
     "exportedSymbols": {
       "MUsers": [
         5091
@@ -467,7 +467,7 @@
   },
   "networks": {},
   "schemaVersion": "3.3.1",
-  "updatedAt": "2020-10-21T18:42:18.128Z",
+  "updatedAt": "2020-10-21T21:01:22.965Z",
   "devdoc": {
     "methods": {}
   },

@@ -1,15 +1,15 @@
 {
   "contractName": "MainStorage",
   "abi": [],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/components/MainStorage.sol\":\"MainStorage\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/components/GovernanceStorage.sol\":{\"keccak256\":\"0x67fb34740c25832ca4ebe572796b37744173dc6e41bedd89bcf0f86939195400\",\"urls\":[\"bzz-raw://4a4e89a296039dd310be02621be7caf655cd0962369156dce4733031ab2058eb\",\"dweb:/ipfs/QmXQT5hMWxUfRSxDURvKNdEkLUvDPyVSw8ia1NirtFzL3k\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/components/MainStorage.sol\":{\"keccak256\":\"0x714158b6b75b3da83c885e683ca772d104076c825bf8163dfe0d2901ea3c5796\",\"urls\":[\"bzz-raw://e4f33e90aef3cec159bdd2619afc7915392b610be661b070aeceb9ac4656faf2\",\"dweb:/ipfs/QmP7sHr4y1MLw7NUDvLp7YnQawYAKUJ4j1um2BBCFfq2MU\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/IFactRegistry.sol\":{\"keccak256\":\"0x7f4e47365a887730d676a98fa96cee9273abf09655bafe2a224c9a9398732214\",\"urls\":[\"bzz-raw://21223482a9890cd6ba8c733d891923fc12ca1c9d6f147212f77a2f8a0a0af52d\",\"dweb:/ipfs/QmWH8jxhSRVaEMyEY4XjwBPSGNZKM9xY2a7zh2bycKgUjH\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/upgrade/ProxyStorage.sol\":{\"keccak256\":\"0x8328396a028395d9483b5e445c4ebd5c8b81aaa771b3f1ecbabb8d473fa0c229\",\"urls\":[\"bzz-raw://695e9498cd3f33b420a98a84af3b4634df224dc927cdae153498c5a77edf839c\",\"dweb:/ipfs/QmYhoTao3CDwzbAQeLU1u5oRR2X3PQgBVfk9BVkBkPdoiV\"]}},\"version\":1}",
-  "bytecode": "0x6080604052348015600f57600080fd5b50603e80601d6000396000f3fe6080604052600080fdfea265627a7a723158205f2faf91f3554286d79359542ea6cc1d828492fa2d53d36774cfdeef1e060a6e64736f6c63430005100032",
-  "deployedBytecode": "0x6080604052600080fdfea265627a7a723158205f2faf91f3554286d79359542ea6cc1d828492fa2d53d36774cfdeef1e060a6e64736f6c63430005100032",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/components/MainStorage.sol\":\"MainStorage\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/components/GovernanceStorage.sol\":{\"keccak256\":\"0x67fb34740c25832ca4ebe572796b37744173dc6e41bedd89bcf0f86939195400\",\"urls\":[\"bzz-raw://4a4e89a296039dd310be02621be7caf655cd0962369156dce4733031ab2058eb\",\"dweb:/ipfs/QmXQT5hMWxUfRSxDURvKNdEkLUvDPyVSw8ia1NirtFzL3k\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/components/MainStorage.sol\":{\"keccak256\":\"0x714158b6b75b3da83c885e683ca772d104076c825bf8163dfe0d2901ea3c5796\",\"urls\":[\"bzz-raw://e4f33e90aef3cec159bdd2619afc7915392b610be661b070aeceb9ac4656faf2\",\"dweb:/ipfs/QmP7sHr4y1MLw7NUDvLp7YnQawYAKUJ4j1um2BBCFfq2MU\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/IFactRegistry.sol\":{\"keccak256\":\"0x7f4e47365a887730d676a98fa96cee9273abf09655bafe2a224c9a9398732214\",\"urls\":[\"bzz-raw://21223482a9890cd6ba8c733d891923fc12ca1c9d6f147212f77a2f8a0a0af52d\",\"dweb:/ipfs/QmWH8jxhSRVaEMyEY4XjwBPSGNZKM9xY2a7zh2bycKgUjH\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/upgrade/ProxyStorage.sol\":{\"keccak256\":\"0x8328396a028395d9483b5e445c4ebd5c8b81aaa771b3f1ecbabb8d473fa0c229\",\"urls\":[\"bzz-raw://695e9498cd3f33b420a98a84af3b4634df224dc927cdae153498c5a77edf839c\",\"dweb:/ipfs/QmYhoTao3CDwzbAQeLU1u5oRR2X3PQgBVfk9BVkBkPdoiV\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603e80601d6000396000f3fe6080604052600080fdfea265627a7a723158209b96abf578bcfcd4b9cf4c5665f5012e839232a283379235e77cd83d19cebc1864736f6c63430005100032",
+  "deployedBytecode": "0x6080604052600080fdfea265627a7a723158209b96abf578bcfcd4b9cf4c5665f5012e839232a283379235e77cd83d19cebc1864736f6c63430005100032",
   "sourceMap": "169:3245:11:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;169:3245:11;;;;;;;",
   "deployedSourceMap": "169:3245:11:-;;;;;",
   "source": "pragma solidity ^0.5.2;\n\nimport \"../interfaces/IFactRegistry.sol\";\nimport \"../upgrade/ProxyStorage.sol\";\n\n/*\n  Holds ALL the main contract state (storage) variables.\n*/\ncontract MainStorage is ProxyStorage {\n\n    // Structure representing a list of verifiers (validity/availability).\n    // A statement is valid only if all the verifiers in the list agree on it.\n    // Adding a verifier to the list is immediate - this is used for fast resolution of\n    // any soundness issues.\n    // Removing from the list is time-locked, to ensure that any user of the system\n    // not content with the announced removal has ample time to leave the system before it is\n    // removed.\n    struct ApprovalChainData {\n        address[] list;\n        // Represents the time after which the verifier with the given address can be removed.\n        // Removal of the verifier with address A is allowed only in the case the value\n        // of unlockedForRemovalTime[A] != 0 and unlockedForRemovalTime[A] < (current time).\n        mapping (address => uint256) unlockedForRemovalTime;\n    }\n\n    IFactRegistry escapeVerifier_;\n\n    // Global dex-frozen flag.\n    bool stateFrozen;\n\n    // Time when unFreeze can be successfully called (UNFREEZE_DELAY after freeze).\n    uint256 unFreezeTime;\n\n    // Pending deposits.\n    // A map STARK key => token id => vault id => quantized amount.\n    mapping (uint256 => mapping (uint256 => mapping (uint256 => uint256))) pendingDeposits;\n\n    // Cancellation requests.\n    // A map STARK key => token id => vault id => request timestamp.\n    mapping (uint256 => mapping (uint256 => mapping (uint256 => uint256))) cancellationRequests;\n\n    // Pending withdrawals.\n    // A map STARK key => token id => quantized amount.\n    mapping (uint256 => mapping (uint256 => uint256)) pendingWithdrawals;\n\n    // vault_id => escape used boolean.\n    mapping (uint256 => bool) escapesUsed;\n\n    // Number of escapes that were performed when frozen.\n    uint256 escapesUsedCount;\n\n    // Full withdrawal requests: stark key => vaultId => requestTime.\n    // stark key => vaultId => requestTime.\n    mapping (uint256 => mapping (uint256 => uint256)) fullWithdrawalRequests;\n\n    // State sequence number.\n    uint256 sequenceNumber;\n\n    // Vaults Tree Root & Height.\n    uint256 vaultRoot;\n    uint256 vaultTreeHeight;\n\n    // Order Tree Root & Height.\n    uint256 orderRoot;\n    uint256 orderTreeHeight;\n\n    // True if and only if the address is allowed to add tokens.\n    mapping (address => bool) tokenAdmins;\n\n    // True if and only if the address is allowed to register users.\n    mapping (address => bool) userAdmins;\n\n    // True if and only if the address is an operator (allowed to update state).\n    mapping (address => bool) operators;\n\n    // Mapping of token ID to asset data.\n    mapping (uint256 => bytes) tokenIdToAssetData;\n\n    // Mapping of registered token IDs.\n    mapping (uint256 => bool) registeredTokenId;\n\n    // Mapping from token ID to quantum.\n    mapping (uint256 => uint256) tokenIdToQuantum;\n\n    // Correspondence between addresses and STARK public keys.\n    mapping (address => uint256) starkKeys;\n    mapping (uint256 => address) etherKeys;\n\n    // Timelocked state transition and availability verification chain.\n    ApprovalChainData verifiersChain;\n    ApprovalChainData availabilityVerifiersChain;\n\n    // Batch id of last accepted proof.\n    uint256 lastBatchId;\n}\n",
-  "sourcePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/components/MainStorage.sol",
+  "sourcePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/components/MainStorage.sol",
   "ast": {
-    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/components/MainStorage.sol",
+    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/components/MainStorage.sol",
     "exportedSymbols": {
       "MainStorage": [
         1601
@@ -30,7 +30,7 @@
         "src": "0:23:11"
       },
       {
-        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/IFactRegistry.sol",
+        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/IFactRegistry.sol",
         "file": "../interfaces/IFactRegistry.sol",
         "id": 1501,
         "nodeType": "ImportDirective",
@@ -41,7 +41,7 @@
         "unitAlias": ""
       },
       {
-        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/upgrade/ProxyStorage.sol",
+        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/upgrade/ProxyStorage.sol",
         "file": "../upgrade/ProxyStorage.sol",
         "id": 1502,
         "nodeType": "ImportDirective",
@@ -1207,7 +1207,7 @@
     "src": "0:3415:11"
   },
   "legacyAST": {
-    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/components/MainStorage.sol",
+    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/components/MainStorage.sol",
     "exportedSymbols": {
       "MainStorage": [
         1601
@@ -1228,7 +1228,7 @@
         "src": "0:23:11"
       },
       {
-        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/IFactRegistry.sol",
+        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/IFactRegistry.sol",
         "file": "../interfaces/IFactRegistry.sol",
         "id": 1501,
         "nodeType": "ImportDirective",
@@ -1239,7 +1239,7 @@
         "unitAlias": ""
       },
       {
-        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/upgrade/ProxyStorage.sol",
+        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/upgrade/ProxyStorage.sol",
         "file": "../upgrade/ProxyStorage.sol",
         "id": 1502,
         "nodeType": "ImportDirective",
@@ -2410,7 +2410,7 @@
   },
   "networks": {},
   "schemaVersion": "3.3.1",
-  "updatedAt": "2020-10-21T18:42:18.039Z",
+  "updatedAt": "2020-10-21T21:01:22.829Z",
   "devdoc": {
     "methods": {}
   },

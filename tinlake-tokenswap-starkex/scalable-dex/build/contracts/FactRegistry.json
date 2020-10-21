@@ -38,15 +38,15 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"hasRegisteredFact\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"fact\",\"type\":\"bytes32\"}],\"name\":\"isValid\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/FactRegistry.sol\":\"FactRegistry\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/FactRegistry.sol\":{\"keccak256\":\"0x4fde6e25741935beb8a703bb9ca02610fad07bd7f5910264755ef03cdd587b2e\",\"urls\":[\"bzz-raw://8800e20553d44f0ec308e246032382a562a899dd7d0a689faa284a973ddb6511\",\"dweb:/ipfs/QmYn92XHvAVKHRH5rVLdMoraZv3eSrEcoH6UkH3sQxepVg\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/IFactRegistry.sol\":{\"keccak256\":\"0x7f4e47365a887730d676a98fa96cee9273abf09655bafe2a224c9a9398732214\",\"urls\":[\"bzz-raw://21223482a9890cd6ba8c733d891923fc12ca1c9d6f147212f77a2f8a0a0af52d\",\"dweb:/ipfs/QmWH8jxhSRVaEMyEY4XjwBPSGNZKM9xY2a7zh2bycKgUjH\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/IQueryableFactRegistry.sol\":{\"keccak256\":\"0xafd25334915b194bf743d05a8d1fc5431d08b9473489afe9e7807fa969b73a51\",\"urls\":[\"bzz-raw://766c3a42089372363f1b09d239ff5a85133179547055cae4db3c4ddd2bbf9517\",\"dweb:/ipfs/Qme7DFmZD3Agw2cY6gpDDUVSV3JhEYoNUrd2Tz9LdChAv1\"]}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b5061010f806100206000396000f3fe6080604052348015600f57600080fd5b506004361060325760003560e01c80636a938567146037578063d6354e1514607a575b600080fd5b606060048036036020811015604b57600080fd5b8101908080359060200190929190505050609a565b604051808215151515815260200191505060405180910390f35b608060c3565b604051808215151515815260200191505060405180910390f35b600080600083815260200190815260200160002060009054906101000a900460ff169050919050565b6000600160009054906101000a900460ff1690509056fea265627a7a72315820dc6edd5b5d8ac0835f1368e0c4a10622894487e6f945c892258b399c167833c464736f6c63430005100032",
-  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060325760003560e01c80636a938567146037578063d6354e1514607a575b600080fd5b606060048036036020811015604b57600080fd5b8101908080359060200190929190505050609a565b604051808215151515815260200191505060405180910390f35b608060c3565b604051808215151515815260200191505060405180910390f35b600080600083815260200190815260200160002060009054906101000a900460ff169050919050565b6000600160009054906101000a900460ff1690509056fea265627a7a72315820dc6edd5b5d8ac0835f1368e0c4a10622894487e6f945c892258b399c167833c464736f6c63430005100032",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"hasRegisteredFact\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"fact\",\"type\":\"bytes32\"}],\"name\":\"isValid\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/FactRegistry.sol\":\"FactRegistry\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/FactRegistry.sol\":{\"keccak256\":\"0x4fde6e25741935beb8a703bb9ca02610fad07bd7f5910264755ef03cdd587b2e\",\"urls\":[\"bzz-raw://8800e20553d44f0ec308e246032382a562a899dd7d0a689faa284a973ddb6511\",\"dweb:/ipfs/QmYn92XHvAVKHRH5rVLdMoraZv3eSrEcoH6UkH3sQxepVg\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/IFactRegistry.sol\":{\"keccak256\":\"0x7f4e47365a887730d676a98fa96cee9273abf09655bafe2a224c9a9398732214\",\"urls\":[\"bzz-raw://21223482a9890cd6ba8c733d891923fc12ca1c9d6f147212f77a2f8a0a0af52d\",\"dweb:/ipfs/QmWH8jxhSRVaEMyEY4XjwBPSGNZKM9xY2a7zh2bycKgUjH\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/IQueryableFactRegistry.sol\":{\"keccak256\":\"0xafd25334915b194bf743d05a8d1fc5431d08b9473489afe9e7807fa969b73a51\",\"urls\":[\"bzz-raw://766c3a42089372363f1b09d239ff5a85133179547055cae4db3c4ddd2bbf9517\",\"dweb:/ipfs/Qme7DFmZD3Agw2cY6gpDDUVSV3JhEYoNUrd2Tz9LdChAv1\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5061010f806100206000396000f3fe6080604052348015600f57600080fd5b506004361060325760003560e01c80636a938567146037578063d6354e1514607a575b600080fd5b606060048036036020811015604b57600080fd5b8101908080359060200190929190505050609a565b604051808215151515815260200191505060405180910390f35b608060c3565b604051808215151515815260200191505060405180910390f35b600080600083815260200190815260200160002060009054906101000a900460ff169050919050565b6000600160009054906101000a900460ff1690509056fea265627a7a7231582016459e6f421c95df733e3ec118cc1510c18e3782623bb6520b3d76e211ddc65364736f6c63430005100032",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060325760003560e01c80636a938567146037578063d6354e1514607a575b600080fd5b606060048036036020811015604b57600080fd5b8101908080359060200190929190505050609a565b604051808215151515815260200191505060405180910390f35b608060c3565b604051808215151515815260200191505060405180910390f35b600080600083815260200190815260200160002060009054906101000a900460ff169050919050565b6000600160009054906101000a900460ff1690509056fea265627a7a7231582016459e6f421c95df733e3ec118cc1510c18e3782623bb6520b3d76e211ddc65364736f6c63430005100032",
   "sourceMap": "76:937:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;76:937:0;;;;;;;",
   "deployedSourceMap": "76:937:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;76:937:0;;;;;;;;;;;;;;;;;;;;;;;;380:121;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;380:121:0;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;892:118;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;380:121;449:4;476:12;:18;489:4;476:18;;;;;;;;;;;;;;;;;;;;;469:25;;380:121;;;:::o;892:118::-;959:4;986:17;;;;;;;;;;;979:24;;892:118;:::o",
   "source": "pragma solidity ^0.5.2;\n\nimport \"./interfaces/IQueryableFactRegistry.sol\";\n\ncontract FactRegistry is IQueryableFactRegistry {\n    // Mapping: fact hash -> true.\n    mapping (bytes32 => bool) private verifiedFact;\n\n    // Indicates whether the Fact Registry has at least one fact registered.\n    bool anyFactRegistered;\n\n    /*\n      Checks if a fact has been verified.\n    */\n    function isValid(bytes32 fact)\n        external view\n        returns(bool)\n    {\n        return verifiedFact[fact];\n    }\n\n    function registerFact(\n        bytes32 factHash\n        )\n        internal\n    {\n        // This function stores the testiment hash in the mapping.\n        verifiedFact[factHash] = true;\n\n        // Mark first time off.\n        if (!anyFactRegistered) {\n            anyFactRegistered = true;\n        }\n    }\n\n    /*\n      Indicates whether at least one fact was registered.\n    */\n    function hasRegisteredFact()\n        external view\n        returns(bool)\n    {\n        return anyFactRegistered;\n    }\n\n}\n",
-  "sourcePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/FactRegistry.sol",
+  "sourcePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/FactRegistry.sol",
   "ast": {
-    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/FactRegistry.sol",
+    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/FactRegistry.sol",
     "exportedSymbols": {
       "FactRegistry": [
         51
@@ -67,7 +67,7 @@
         "src": "0:23:0"
       },
       {
-        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/IQueryableFactRegistry.sol",
+        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/IQueryableFactRegistry.sol",
         "file": "./interfaces/IQueryableFactRegistry.sol",
         "id": 2,
         "nodeType": "ImportDirective",
@@ -636,7 +636,7 @@
     "src": "0:1014:0"
   },
   "legacyAST": {
-    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/FactRegistry.sol",
+    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/FactRegistry.sol",
     "exportedSymbols": {
       "FactRegistry": [
         51
@@ -657,7 +657,7 @@
         "src": "0:23:0"
       },
       {
-        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/IQueryableFactRegistry.sol",
+        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/IQueryableFactRegistry.sol",
         "file": "./interfaces/IQueryableFactRegistry.sol",
         "id": 2,
         "nodeType": "ImportDirective",
@@ -1231,7 +1231,7 @@
   },
   "networks": {},
   "schemaVersion": "3.3.1",
-  "updatedAt": "2020-10-21T18:42:18.007Z",
+  "updatedAt": "2020-10-21T21:01:22.769Z",
   "devdoc": {
     "methods": {}
   },

@@ -22,15 +22,15 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256[]\",\"name\":\"publicInput\",\"type\":\"uint256[]\"},{\"internalType\":\"uint256[]\",\"name\":\"applicationData\",\"type\":\"uint256[]\"}],\"name\":\"updateState\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/IVerifierActions.sol\":\"IVerifierActions\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/IVerifierActions.sol\":{\"keccak256\":\"0x3f12f4388cfa557612abef06776b3e48a08a3bcd9d59c46d40dcd0b5d17e5ac4\",\"urls\":[\"bzz-raw://68ed66c3408e0755570e5ca6b75893db60e37e4f04bf3744f5d21c13c61c9028\",\"dweb:/ipfs/QmZKbZ3e9kDUZeBfN7dCfnAoRS5fNYkv5gYGqXrF3uqWTz\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256[]\",\"name\":\"publicInput\",\"type\":\"uint256[]\"},{\"internalType\":\"uint256[]\",\"name\":\"applicationData\",\"type\":\"uint256[]\"}],\"name\":\"updateState\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/IVerifierActions.sol\":\"IVerifierActions\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/IVerifierActions.sol\":{\"keccak256\":\"0x3f12f4388cfa557612abef06776b3e48a08a3bcd9d59c46d40dcd0b5d17e5ac4\",\"urls\":[\"bzz-raw://68ed66c3408e0755570e5ca6b75893db60e37e4f04bf3744f5d21c13c61c9028\",\"dweb:/ipfs/QmZKbZ3e9kDUZeBfN7dCfnAoRS5fNYkv5gYGqXrF3uqWTz\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "pragma solidity ^0.5.2;\n\n/*\n  Interface containing actions a verifier can invoke on the state.\n  The contract containing the state should implement these and verify correctness.\n*/\ncontract IVerifierActions {\n\n    function updateState(\n        uint256[] calldata publicInput,\n        uint256[] calldata applicationData\n    )\n        external;\n    /*\n      Update state roots\n      Verify that the old roots match.\n      Implemented in the StateRoot contract.\n    */\n    function rootUpdate(\n        uint256 oldVaultRoot,\n        uint256 newVaultRoot,\n        uint256 oldOrderRoot,\n        uint256 newOrderRoot,\n        uint256 vaultTreeHeightSent,\n        uint256 orderTreeHeightSent,\n        uint256 batchId\n    )\n        internal;\n\n\n    /*\n      Transfers funds from the on-chain deposit area to the off-chain area.\n      Implemented in the Deposits contracts.\n    */\n    function acceptDeposit(\n        uint256 starkKey,\n        uint256 vaultId,\n        uint256 tokenId,\n        uint256 quantizedAmount\n    )\n        internal;\n\n    /*\n      Transfers funds from the off-chain area to the on-chain withdrawal area.\n      Implemented in the Withdrawals contracts.\n    */\n    function acceptWithdrawal(\n        uint256 starkKey,\n        uint256 tokenId,\n        uint256 quantizedAmount\n    )\n        internal;\n\n    /*\n      Implemented in the FullWithdrawal contracts.\n    */\n    function clearFullWithdrawalRequest(\n        uint256 starkKey,\n        uint256 vaultId\n    )\n        internal;\n}\n",
-  "sourcePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/IVerifierActions.sol",
+  "sourcePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/IVerifierActions.sol",
   "ast": {
-    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/IVerifierActions.sol",
+    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/IVerifierActions.sol",
     "exportedSymbols": {
       "IVerifierActions": [
         4882
@@ -699,7 +699,7 @@
     "src": "0:1493:28"
   },
   "legacyAST": {
-    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/IVerifierActions.sol",
+    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/IVerifierActions.sol",
     "exportedSymbols": {
       "IVerifierActions": [
         4882
@@ -1373,7 +1373,7 @@
   },
   "networks": {},
   "schemaVersion": "3.3.1",
-  "updatedAt": "2020-10-21T18:42:18.118Z",
+  "updatedAt": "2020-10-21T21:01:22.946Z",
   "devdoc": {
     "methods": {}
   },

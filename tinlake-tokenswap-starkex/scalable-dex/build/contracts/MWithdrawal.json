@@ -1,15 +1,15 @@
 {
   "contractName": "MWithdrawal",
   "abi": [],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/MWithdrawal.sol\":\"MWithdrawal\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/MWithdrawal.sol\":{\"keccak256\":\"0x8ae809bc1dffaad18bfa804efae4ec67dc89ac198322da2ca2bd03adc3a69f64\",\"urls\":[\"bzz-raw://2647e6b12854ca2035678241a57bb5716cd95f49cb678f61e5ed541813240e8f\",\"dweb:/ipfs/QmcsB7wHZAUF5Np6s7Pz1XbPnjkqUgaP417eAsqChPgh7o\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/MWithdrawal.sol\":\"MWithdrawal\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/MWithdrawal.sol\":{\"keccak256\":\"0x8ae809bc1dffaad18bfa804efae4ec67dc89ac198322da2ca2bd03adc3a69f64\",\"urls\":[\"bzz-raw://2647e6b12854ca2035678241a57bb5716cd95f49cb678f61e5ed541813240e8f\",\"dweb:/ipfs/QmcsB7wHZAUF5Np6s7Pz1XbPnjkqUgaP417eAsqChPgh7o\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "pragma solidity ^0.5.2;\n\ncontract MWithdrawal {\n    function allowWithdrawal(\n        uint256 starkKey,\n        uint256 tokenId,\n        uint256 quantizedAmount\n    )\n        internal;\n\n}\n",
-  "sourcePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/MWithdrawal.sol",
+  "sourcePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/MWithdrawal.sol",
   "ast": {
-    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/MWithdrawal.sol",
+    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/MWithdrawal.sol",
     "exportedSymbols": {
       "MWithdrawal": [
         5103
@@ -156,7 +156,7 @@
     "src": "0:188:37"
   },
   "legacyAST": {
-    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/MWithdrawal.sol",
+    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/MWithdrawal.sol",
     "exportedSymbols": {
       "MWithdrawal": [
         5103
@@ -308,7 +308,7 @@
   },
   "networks": {},
   "schemaVersion": "3.3.1",
-  "updatedAt": "2020-10-21T18:42:18.129Z",
+  "updatedAt": "2020-10-21T21:01:22.966Z",
   "devdoc": {
     "methods": {}
   },

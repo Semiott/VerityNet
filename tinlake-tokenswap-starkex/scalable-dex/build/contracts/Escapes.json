@@ -77,15 +77,15 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"starkKey\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"vaultId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"quantizedAmount\",\"type\":\"uint256\"}],\"name\":\"escape\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getVaultRoot\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"root\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getVaultTreeHeight\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"height\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"isFrozen\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{},\"notice\":\"Escaping the exchange is the last resort for users that wish to withdraw their funds without relying on off-chain exchange services. The Escape functionality may only be invoked once the contract has become frozen. This will be as the result of an unserviced full withdraw request (see :sol:mod:`FullWithdrawals`). At that point, any escaper entity may perform an escape operation as follows: 1. Escapers must obtain a Merkle path of a vault to be evicted with respect to the frozen vault tree root. Typically, once the exchange is frozen, such data will be made public or would be obtainable from an exchange API, depending on the data availability approach used by the exchange. 2. Escapers call the :sol:mod:`EscapeVerifier` contract with the Merkle proof for the vault to be evicted. If the proof is valid, this results in the registration of such proof. 3. Escapers call :sol:func:`escape` function with the same parameters as submitted to the :sol:mod:`EscapeVerifier` (i.e. the vault ID, Stark Key of the vault owner, the token ID and the vault balance), sans the Merkle proof. If a proof was accepted for the same parameters by the :sol:mod:`EscapeVerifier`, and no prior escape call was made for the vault, the contract adds the vault balance to an on-chain pending withdrawals account under the Stark Key of the vault owner and the appropriate token ID. 4. The owner of the vault may then withdraw this amount from the pending withdrawals account by calling the normal withdraw function (see :sol:mod:`Withdrawals`) to transfer the funds to the users Eth or ERC20 account (depending on the token type). Note that while anyone can perform the initial steps of the escape operation (including the exchange operator, for example), only the owner of the vault may perform the final step of transfersing the funds. Uses MFreezable, MStateRoot and MWithdrawal.\"}},\"settings\":{\"compilationTarget\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interactions/Escapes.sol\":\"Escapes\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/components/GovernanceStorage.sol\":{\"keccak256\":\"0x67fb34740c25832ca4ebe572796b37744173dc6e41bedd89bcf0f86939195400\",\"urls\":[\"bzz-raw://4a4e89a296039dd310be02621be7caf655cd0962369156dce4733031ab2058eb\",\"dweb:/ipfs/QmXQT5hMWxUfRSxDURvKNdEkLUvDPyVSw8ia1NirtFzL3k\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/components/MainStorage.sol\":{\"keccak256\":\"0x714158b6b75b3da83c885e683ca772d104076c825bf8163dfe0d2901ea3c5796\",\"urls\":[\"bzz-raw://e4f33e90aef3cec159bdd2619afc7915392b610be661b070aeceb9ac4656faf2\",\"dweb:/ipfs/QmP7sHr4y1MLw7NUDvLp7YnQawYAKUJ4j1um2BBCFfq2MU\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interactions/Escapes.sol\":{\"keccak256\":\"0x16ec1c965e36dec1efbbab0456381862f3c1c643acc24985b3294cc4167caae8\",\"urls\":[\"bzz-raw://b1a43486c649120940a9897ae455f333bfb93195dee1d13374e369550004887a\",\"dweb:/ipfs/QmVdz9BVnWGbk1RpTJ6FXVYfHp645HtxUGdnqkiyKcLyDd\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/IFactRegistry.sol\":{\"keccak256\":\"0x7f4e47365a887730d676a98fa96cee9273abf09655bafe2a224c9a9398732214\",\"urls\":[\"bzz-raw://21223482a9890cd6ba8c733d891923fc12ca1c9d6f147212f77a2f8a0a0af52d\",\"dweb:/ipfs/QmWH8jxhSRVaEMyEY4XjwBPSGNZKM9xY2a7zh2bycKgUjH\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/IVerifierActions.sol\":{\"keccak256\":\"0x3f12f4388cfa557612abef06776b3e48a08a3bcd9d59c46d40dcd0b5d17e5ac4\",\"urls\":[\"bzz-raw://68ed66c3408e0755570e5ca6b75893db60e37e4f04bf3744f5d21c13c61c9028\",\"dweb:/ipfs/QmZKbZ3e9kDUZeBfN7dCfnAoRS5fNYkv5gYGqXrF3uqWTz\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/MFreezable.sol\":{\"keccak256\":\"0x76e65ee04382334f25fd8c73a34f0f89e00c4c9fbdd8782ab971e900848b07ad\",\"urls\":[\"bzz-raw://afe657ac427e57bc51f37827f6a764bf469a799250fb4479de7a078fb0872f84\",\"dweb:/ipfs/QmXxoW47FTKnGaaZ946dTEk9bFpwEmZ1ZW7z84BBmdi3Gx\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/MStateRoot.sol\":{\"keccak256\":\"0x2c07ab6dece226d7842a677cc7f6374c815a4f55f88737b77ef4dc2f287a9c66\",\"urls\":[\"bzz-raw://0e8428b11d3c33a5e4bfa73bb16581afa0710021a7efe1459001e14c5640e91a\",\"dweb:/ipfs/QmPnYwUBYoVjptvcC2fVQ7naJ5N3S3A9DFjyqskjk1kfs8\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/MTokens.sol\":{\"keccak256\":\"0xea41c75acefd9a8b428bad9f16341119c19e7d7e3e90a6b2ae9278d71f8d4b41\",\"urls\":[\"bzz-raw://680907e6ee268bca109eaba776d4e3c7787f98a0e28fd095a65971e5137cbbcf\",\"dweb:/ipfs/QmWx8PLmwTXMHhoBqCUs5BaQzmSL9fNtMH6Zk8vu2FNc1H\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/MUsers.sol\":{\"keccak256\":\"0x68507e0f768e990a9de0584518fa61f627d5bb460e358a1ebec2cc66b1f2a75a\",\"urls\":[\"bzz-raw://2bbae0e0741da70f81bcadcc79b8870bfdc27dae1bf26bf6f18a1f252479d208\",\"dweb:/ipfs/QmW3RAoVCKijgN5JXDqYghrGMDASGQhfUvUsYaykavsQvo\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/MWithdrawal.sol\":{\"keccak256\":\"0x8ae809bc1dffaad18bfa804efae4ec67dc89ac198322da2ca2bd03adc3a69f64\",\"urls\":[\"bzz-raw://2647e6b12854ca2035678241a57bb5716cd95f49cb678f61e5ed541813240e8f\",\"dweb:/ipfs/QmcsB7wHZAUF5Np6s7Pz1XbPnjkqUgaP417eAsqChPgh7o\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/libraries/LibConstants.sol\":{\"keccak256\":\"0x0905a5105cf06fd14f9a8eefba38f312133847a2b5e9484a43fa40257bd2dc6c\",\"urls\":[\"bzz-raw://809c68f2b559249e80850ad3679f808d185c47787f226b69f717a50b2e5ad87a\",\"dweb:/ipfs/QmVrCxxwst8wjrY8WPCRby2uFi2v9jLkxC17Bb9Hq2EjtT\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/upgrade/ProxyStorage.sol\":{\"keccak256\":\"0x8328396a028395d9483b5e445c4ebd5c8b81aaa771b3f1ecbabb8d473fa0c229\",\"urls\":[\"bzz-raw://695e9498cd3f33b420a98a84af3b4634df224dc927cdae153498c5a77edf839c\",\"dweb:/ipfs/QmYhoTao3CDwzbAQeLU1u5oRR2X3PQgBVfk9BVkBkPdoiV\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"starkKey\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"vaultId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"quantizedAmount\",\"type\":\"uint256\"}],\"name\":\"escape\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getVaultRoot\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"root\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getVaultTreeHeight\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"height\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"isFrozen\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{},\"notice\":\"Escaping the exchange is the last resort for users that wish to withdraw their funds without relying on off-chain exchange services. The Escape functionality may only be invoked once the contract has become frozen. This will be as the result of an unserviced full withdraw request (see :sol:mod:`FullWithdrawals`). At that point, any escaper entity may perform an escape operation as follows: 1. Escapers must obtain a Merkle path of a vault to be evicted with respect to the frozen vault tree root. Typically, once the exchange is frozen, such data will be made public or would be obtainable from an exchange API, depending on the data availability approach used by the exchange. 2. Escapers call the :sol:mod:`EscapeVerifier` contract with the Merkle proof for the vault to be evicted. If the proof is valid, this results in the registration of such proof. 3. Escapers call :sol:func:`escape` function with the same parameters as submitted to the :sol:mod:`EscapeVerifier` (i.e. the vault ID, Stark Key of the vault owner, the token ID and the vault balance), sans the Merkle proof. If a proof was accepted for the same parameters by the :sol:mod:`EscapeVerifier`, and no prior escape call was made for the vault, the contract adds the vault balance to an on-chain pending withdrawals account under the Stark Key of the vault owner and the appropriate token ID. 4. The owner of the vault may then withdraw this amount from the pending withdrawals account by calling the normal withdraw function (see :sol:mod:`Withdrawals`) to transfer the funds to the users Eth or ERC20 account (depending on the token type). Note that while anyone can perform the initial steps of the escape operation (including the exchange operator, for example), only the owner of the vault may perform the final step of transfersing the funds. Uses MFreezable, MStateRoot and MWithdrawal.\"}},\"settings\":{\"compilationTarget\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interactions/Escapes.sol\":\"Escapes\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/components/GovernanceStorage.sol\":{\"keccak256\":\"0x67fb34740c25832ca4ebe572796b37744173dc6e41bedd89bcf0f86939195400\",\"urls\":[\"bzz-raw://4a4e89a296039dd310be02621be7caf655cd0962369156dce4733031ab2058eb\",\"dweb:/ipfs/QmXQT5hMWxUfRSxDURvKNdEkLUvDPyVSw8ia1NirtFzL3k\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/components/MainStorage.sol\":{\"keccak256\":\"0x714158b6b75b3da83c885e683ca772d104076c825bf8163dfe0d2901ea3c5796\",\"urls\":[\"bzz-raw://e4f33e90aef3cec159bdd2619afc7915392b610be661b070aeceb9ac4656faf2\",\"dweb:/ipfs/QmP7sHr4y1MLw7NUDvLp7YnQawYAKUJ4j1um2BBCFfq2MU\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interactions/Escapes.sol\":{\"keccak256\":\"0x16ec1c965e36dec1efbbab0456381862f3c1c643acc24985b3294cc4167caae8\",\"urls\":[\"bzz-raw://b1a43486c649120940a9897ae455f333bfb93195dee1d13374e369550004887a\",\"dweb:/ipfs/QmVdz9BVnWGbk1RpTJ6FXVYfHp645HtxUGdnqkiyKcLyDd\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/IFactRegistry.sol\":{\"keccak256\":\"0x7f4e47365a887730d676a98fa96cee9273abf09655bafe2a224c9a9398732214\",\"urls\":[\"bzz-raw://21223482a9890cd6ba8c733d891923fc12ca1c9d6f147212f77a2f8a0a0af52d\",\"dweb:/ipfs/QmWH8jxhSRVaEMyEY4XjwBPSGNZKM9xY2a7zh2bycKgUjH\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/IVerifierActions.sol\":{\"keccak256\":\"0x3f12f4388cfa557612abef06776b3e48a08a3bcd9d59c46d40dcd0b5d17e5ac4\",\"urls\":[\"bzz-raw://68ed66c3408e0755570e5ca6b75893db60e37e4f04bf3744f5d21c13c61c9028\",\"dweb:/ipfs/QmZKbZ3e9kDUZeBfN7dCfnAoRS5fNYkv5gYGqXrF3uqWTz\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/MFreezable.sol\":{\"keccak256\":\"0x76e65ee04382334f25fd8c73a34f0f89e00c4c9fbdd8782ab971e900848b07ad\",\"urls\":[\"bzz-raw://afe657ac427e57bc51f37827f6a764bf469a799250fb4479de7a078fb0872f84\",\"dweb:/ipfs/QmXxoW47FTKnGaaZ946dTEk9bFpwEmZ1ZW7z84BBmdi3Gx\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/MStateRoot.sol\":{\"keccak256\":\"0x2c07ab6dece226d7842a677cc7f6374c815a4f55f88737b77ef4dc2f287a9c66\",\"urls\":[\"bzz-raw://0e8428b11d3c33a5e4bfa73bb16581afa0710021a7efe1459001e14c5640e91a\",\"dweb:/ipfs/QmPnYwUBYoVjptvcC2fVQ7naJ5N3S3A9DFjyqskjk1kfs8\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/MTokens.sol\":{\"keccak256\":\"0xea41c75acefd9a8b428bad9f16341119c19e7d7e3e90a6b2ae9278d71f8d4b41\",\"urls\":[\"bzz-raw://680907e6ee268bca109eaba776d4e3c7787f98a0e28fd095a65971e5137cbbcf\",\"dweb:/ipfs/QmWx8PLmwTXMHhoBqCUs5BaQzmSL9fNtMH6Zk8vu2FNc1H\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/MUsers.sol\":{\"keccak256\":\"0x68507e0f768e990a9de0584518fa61f627d5bb460e358a1ebec2cc66b1f2a75a\",\"urls\":[\"bzz-raw://2bbae0e0741da70f81bcadcc79b8870bfdc27dae1bf26bf6f18a1f252479d208\",\"dweb:/ipfs/QmW3RAoVCKijgN5JXDqYghrGMDASGQhfUvUsYaykavsQvo\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/MWithdrawal.sol\":{\"keccak256\":\"0x8ae809bc1dffaad18bfa804efae4ec67dc89ac198322da2ca2bd03adc3a69f64\",\"urls\":[\"bzz-raw://2647e6b12854ca2035678241a57bb5716cd95f49cb678f61e5ed541813240e8f\",\"dweb:/ipfs/QmcsB7wHZAUF5Np6s7Pz1XbPnjkqUgaP417eAsqChPgh7o\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/libraries/LibConstants.sol\":{\"keccak256\":\"0x0905a5105cf06fd14f9a8eefba38f312133847a2b5e9484a43fa40257bd2dc6c\",\"urls\":[\"bzz-raw://809c68f2b559249e80850ad3679f808d185c47787f226b69f717a50b2e5ad87a\",\"dweb:/ipfs/QmVrCxxwst8wjrY8WPCRby2uFi2v9jLkxC17Bb9Hq2EjtT\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/upgrade/ProxyStorage.sol\":{\"keccak256\":\"0x8328396a028395d9483b5e445c4ebd5c8b81aaa771b3f1ecbabb8d473fa0c229\",\"urls\":[\"bzz-raw://695e9498cd3f33b420a98a84af3b4634df224dc927cdae153498c5a77edf839c\",\"dweb:/ipfs/QmYhoTao3CDwzbAQeLU1u5oRR2X3PQgBVfk9BVkBkPdoiV\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "pragma solidity ^0.5.2;\n\nimport \"../libraries/LibConstants.sol\";\nimport \"../interfaces/IVerifierActions.sol\";\nimport \"../interfaces/MFreezable.sol\";\nimport \"../interfaces/MUsers.sol\";\nimport \"../interfaces/MTokens.sol\";\nimport \"../interfaces/IFactRegistry.sol\";\nimport \"../interfaces/MStateRoot.sol\";\nimport \"../interfaces/MWithdrawal.sol\";\nimport \"../components/MainStorage.sol\";\n\n/**\n  Escaping the exchange is the last resort for users that wish to withdraw their funds without\n  relying on off-chain exchange services. The Escape functionality may only be invoked once the\n  contract has become frozen. This will be as the result of an unserviced full withdraw request\n  (see :sol:mod:`FullWithdrawals`). At that point, any escaper entity may perform an escape\n  operation as follows:\n\n  1. Escapers must obtain a Merkle path of a vault to be evicted with respect to the frozen vault tree root. Typically, once the exchange is frozen, such data will be made public or would be obtainable from an exchange API, depending on the data availability approach used by the exchange.\n  2. Escapers call the :sol:mod:`EscapeVerifier` contract with the Merkle proof for the vault to be evicted. If the proof is valid, this results in the registration of such proof.\n  3. Escapers call :sol:func:`escape` function with the same parameters as submitted to the :sol:mod:`EscapeVerifier` (i.e. the vault ID, Stark Key of the vault owner, the token ID and the vault balance), sans the Merkle proof. If a proof was accepted for the same parameters by the :sol:mod:`EscapeVerifier`, and no prior escape call was made for the vault, the contract adds the vault balance to an on-chain pending withdrawals account under the Stark Key of the vault owner and the appropriate token ID.\n  4. The owner of the vault may then withdraw this amount from the pending withdrawals account by calling the normal withdraw function (see :sol:mod:`Withdrawals`) to transfer the funds to the users Eth or ERC20 account (depending on the token type).\n\n  Note that while anyone can perform the initial steps of the escape operation (including the\n  exchange operator, for example), only the owner of the vault may perform the final step of\n  transfersing the funds.\n\n  Uses MFreezable, MStateRoot and MWithdrawal.\n*/\ncontract Escapes is MainStorage, MFreezable, MStateRoot, MWithdrawal {\n    function initialize (\n        IFactRegistry escapeVerifier\n    ) internal\n    {\n        escapeVerifier_ = escapeVerifier;\n    }\n\n    /*\n      Escape when the contract is frozen.\n    */\n    function escape(\n        uint256 starkKey,\n        uint256 vaultId,\n        uint256 tokenId,\n        uint256 quantizedAmount\n    )\n        external\n        onlyFrozen()\n    {\n        require(escapesUsed[vaultId] == false, \"ESCAPE_ALREADY_USED\");\n\n        // Escape can be used only once.\n        escapesUsed[vaultId] = true;\n        escapesUsedCount += 1;\n\n        bytes32 claimHash = keccak256(\n            abi.encode(\n        starkKey, tokenId, quantizedAmount, getVaultRoot(), getVaultTreeHeight(), vaultId));\n\n        require(escapeVerifier_.isValid(claimHash) == true, \"ESCAPE_LACKS_PROOF\");\n\n        allowWithdrawal(starkKey, tokenId, quantizedAmount);\n    }\n}\n",
-  "sourcePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interactions/Escapes.sol",
+  "sourcePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interactions/Escapes.sol",
   "ast": {
-    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interactions/Escapes.sol",
+    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interactions/Escapes.sol",
     "exportedSymbols": {
       "Escapes": [
         3812
@@ -106,7 +106,7 @@
         "src": "0:23:18"
       },
       {
-        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/libraries/LibConstants.sol",
+        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/libraries/LibConstants.sol",
         "file": "../libraries/LibConstants.sol",
         "id": 3720,
         "nodeType": "ImportDirective",
@@ -117,7 +117,7 @@
         "unitAlias": ""
       },
       {
-        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/IVerifierActions.sol",
+        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/IVerifierActions.sol",
         "file": "../interfaces/IVerifierActions.sol",
         "id": 3721,
         "nodeType": "ImportDirective",
@@ -128,7 +128,7 @@
         "unitAlias": ""
       },
       {
-        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/MFreezable.sol",
+        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/MFreezable.sol",
         "file": "../interfaces/MFreezable.sol",
         "id": 3722,
         "nodeType": "ImportDirective",
@@ -139,7 +139,7 @@
         "unitAlias": ""
       },
       {
-        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/MUsers.sol",
+        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/MUsers.sol",
         "file": "../interfaces/MUsers.sol",
         "id": 3723,
         "nodeType": "ImportDirective",
@@ -150,7 +150,7 @@
         "unitAlias": ""
       },
       {
-        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/MTokens.sol",
+        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/MTokens.sol",
         "file": "../interfaces/MTokens.sol",
         "id": 3724,
         "nodeType": "ImportDirective",
@@ -161,7 +161,7 @@
         "unitAlias": ""
       },
       {
-        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/IFactRegistry.sol",
+        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/IFactRegistry.sol",
         "file": "../interfaces/IFactRegistry.sol",
         "id": 3725,
         "nodeType": "ImportDirective",
@@ -172,7 +172,7 @@
         "unitAlias": ""
       },
       {
-        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/MStateRoot.sol",
+        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/MStateRoot.sol",
         "file": "../interfaces/MStateRoot.sol",
         "id": 3726,
         "nodeType": "ImportDirective",
@@ -183,7 +183,7 @@
         "unitAlias": ""
       },
       {
-        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/MWithdrawal.sol",
+        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/MWithdrawal.sol",
         "file": "../interfaces/MWithdrawal.sol",
         "id": 3727,
         "nodeType": "ImportDirective",
@@ -194,7 +194,7 @@
         "unitAlias": ""
       },
       {
-        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/components/MainStorage.sol",
+        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/components/MainStorage.sol",
         "file": "../components/MainStorage.sol",
         "id": 3728,
         "nodeType": "ImportDirective",
@@ -1361,7 +1361,7 @@
     "src": "0:3214:18"
   },
   "legacyAST": {
-    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interactions/Escapes.sol",
+    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interactions/Escapes.sol",
     "exportedSymbols": {
       "Escapes": [
         3812
@@ -1382,7 +1382,7 @@
         "src": "0:23:18"
       },
       {
-        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/libraries/LibConstants.sol",
+        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/libraries/LibConstants.sol",
         "file": "../libraries/LibConstants.sol",
         "id": 3720,
         "nodeType": "ImportDirective",
@@ -1393,7 +1393,7 @@
         "unitAlias": ""
       },
       {
-        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/IVerifierActions.sol",
+        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/IVerifierActions.sol",
         "file": "../interfaces/IVerifierActions.sol",
         "id": 3721,
         "nodeType": "ImportDirective",
@@ -1404,7 +1404,7 @@
         "unitAlias": ""
       },
       {
-        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/MFreezable.sol",
+        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/MFreezable.sol",
         "file": "../interfaces/MFreezable.sol",
         "id": 3722,
         "nodeType": "ImportDirective",
@@ -1415,7 +1415,7 @@
         "unitAlias": ""
       },
       {
-        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/MUsers.sol",
+        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/MUsers.sol",
         "file": "../interfaces/MUsers.sol",
         "id": 3723,
         "nodeType": "ImportDirective",
@@ -1426,7 +1426,7 @@
         "unitAlias": ""
       },
       {
-        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/MTokens.sol",
+        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/MTokens.sol",
         "file": "../interfaces/MTokens.sol",
         "id": 3724,
         "nodeType": "ImportDirective",
@@ -1437,7 +1437,7 @@
         "unitAlias": ""
       },
       {
-        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/IFactRegistry.sol",
+        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/IFactRegistry.sol",
         "file": "../interfaces/IFactRegistry.sol",
         "id": 3725,
         "nodeType": "ImportDirective",
@@ -1448,7 +1448,7 @@
         "unitAlias": ""
       },
       {
-        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/MStateRoot.sol",
+        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/MStateRoot.sol",
         "file": "../interfaces/MStateRoot.sol",
         "id": 3726,
         "nodeType": "ImportDirective",
@@ -1459,7 +1459,7 @@
         "unitAlias": ""
       },
       {
-        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/MWithdrawal.sol",
+        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/interfaces/MWithdrawal.sol",
         "file": "../interfaces/MWithdrawal.sol",
         "id": 3727,
         "nodeType": "ImportDirective",
@@ -1470,7 +1470,7 @@
         "unitAlias": ""
       },
       {
-        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/components/MainStorage.sol",
+        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/components/MainStorage.sol",
         "file": "../components/MainStorage.sol",
         "id": 3728,
         "nodeType": "ImportDirective",
@@ -2642,7 +2642,7 @@
   },
   "networks": {},
   "schemaVersion": "3.3.1",
-  "updatedAt": "2020-10-21T18:42:18.079Z",
+  "updatedAt": "2020-10-21T21:01:22.872Z",
   "devdoc": {
     "methods": {}
   },

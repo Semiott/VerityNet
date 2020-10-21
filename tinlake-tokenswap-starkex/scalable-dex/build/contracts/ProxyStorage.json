@@ -1,15 +1,15 @@
 {
   "contractName": "ProxyStorage",
   "abi": [],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/upgrade/ProxyStorage.sol\":\"ProxyStorage\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/components/GovernanceStorage.sol\":{\"keccak256\":\"0x67fb34740c25832ca4ebe572796b37744173dc6e41bedd89bcf0f86939195400\",\"urls\":[\"bzz-raw://4a4e89a296039dd310be02621be7caf655cd0962369156dce4733031ab2058eb\",\"dweb:/ipfs/QmXQT5hMWxUfRSxDURvKNdEkLUvDPyVSw8ia1NirtFzL3k\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/upgrade/ProxyStorage.sol\":{\"keccak256\":\"0x8328396a028395d9483b5e445c4ebd5c8b81aaa771b3f1ecbabb8d473fa0c229\",\"urls\":[\"bzz-raw://695e9498cd3f33b420a98a84af3b4634df224dc927cdae153498c5a77edf839c\",\"dweb:/ipfs/QmYhoTao3CDwzbAQeLU1u5oRR2X3PQgBVfk9BVkBkPdoiV\"]}},\"version\":1}",
-  "bytecode": "0x6080604052348015600f57600080fd5b50603e80601d6000396000f3fe6080604052600080fdfea265627a7a72315820b47a4dac03bd690128b7d3005e211d4d9151cbabbc565cbb81e8b3d5cd6425de64736f6c63430005100032",
-  "deployedBytecode": "0x6080604052600080fdfea265627a7a72315820b47a4dac03bd690128b7d3005e211d4d9151cbabbc565cbb81e8b3d5cd6425de64736f6c63430005100032",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/upgrade/ProxyStorage.sol\":\"ProxyStorage\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/components/GovernanceStorage.sol\":{\"keccak256\":\"0x67fb34740c25832ca4ebe572796b37744173dc6e41bedd89bcf0f86939195400\",\"urls\":[\"bzz-raw://4a4e89a296039dd310be02621be7caf655cd0962369156dce4733031ab2058eb\",\"dweb:/ipfs/QmXQT5hMWxUfRSxDURvKNdEkLUvDPyVSw8ia1NirtFzL3k\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/upgrade/ProxyStorage.sol\":{\"keccak256\":\"0x8328396a028395d9483b5e445c4ebd5c8b81aaa771b3f1ecbabb8d473fa0c229\",\"urls\":[\"bzz-raw://695e9498cd3f33b420a98a84af3b4634df224dc927cdae153498c5a77edf839c\",\"dweb:/ipfs/QmYhoTao3CDwzbAQeLU1u5oRR2X3PQgBVfk9BVkBkPdoiV\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603e80601d6000396000f3fe6080604052600080fdfea265627a7a7231582090952561d78aa551ccfe8eb60c24d939bb1d088e676912d50f5af0d164f0a7b364736f6c63430005100032",
+  "deployedBytecode": "0x6080604052600080fdfea265627a7a7231582090952561d78aa551ccfe8eb60c24d939bb1d088e676912d50f5af0d164f0a7b364736f6c63430005100032",
   "sourceMap": "239:781:43:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;239:781:43;;;;;;;",
   "deployedSourceMap": "239:781:43:-;;;;;",
   "source": "pragma solidity ^0.5.2;\n\nimport \"../components/GovernanceStorage.sol\";\n\n/*\n  Holds the Proxy-specific state variables.\n  This contract is inherited by the GovernanceStorage (and indirectly by MainStorage)\n  to prevent collision hazard.\n*/\ncontract ProxyStorage is GovernanceStorage {\n\n    // Stores the hash of the initialization vector of the added implementation.\n    // Upon upgradeTo the implementation, the initialization vector is verified\n    // to be identical to the one submitted when adding the implementaion.\n    mapping (address => bytes32) internal initializationHash;\n\n    // The time after which we can switch to the implementation.\n    mapping (address => uint256) internal enabledTime;\n\n    // A central storage of the flags whether implementation has been initialized.\n    // Note - it can be used flexibly enough to accomodate multiple level of initialization\n    // (i.e. using different key salting schemes for different initialization levels).\n    mapping (bytes32 => bool) internal initialized;\n}\n",
-  "sourcePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/upgrade/ProxyStorage.sol",
+  "sourcePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/upgrade/ProxyStorage.sol",
   "ast": {
-    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/upgrade/ProxyStorage.sol",
+    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/upgrade/ProxyStorage.sol",
     "exportedSymbols": {
       "ProxyStorage": [
         5783
@@ -30,7 +30,7 @@
         "src": "0:23:43"
       },
       {
-        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/components/GovernanceStorage.sol",
+        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/components/GovernanceStorage.sol",
         "file": "../components/GovernanceStorage.sol",
         "id": 5768,
         "nodeType": "ImportDirective",
@@ -218,7 +218,7 @@
     "src": "0:1021:43"
   },
   "legacyAST": {
-    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/upgrade/ProxyStorage.sol",
+    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/upgrade/ProxyStorage.sol",
     "exportedSymbols": {
       "ProxyStorage": [
         5783
@@ -239,7 +239,7 @@
         "src": "0:23:43"
       },
       {
-        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/components/GovernanceStorage.sol",
+        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/tinlake-tokenswap-starkex/scalable-dex/contracts/components/GovernanceStorage.sol",
         "file": "../components/GovernanceStorage.sol",
         "id": 5768,
         "nodeType": "ImportDirective",
@@ -432,7 +432,7 @@
   },
   "networks": {},
   "schemaVersion": "3.3.1",
-  "updatedAt": "2020-10-21T18:42:18.149Z",
+  "updatedAt": "2020-10-21T21:01:22.980Z",
   "devdoc": {
     "methods": {}
   },
