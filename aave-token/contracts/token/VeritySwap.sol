@@ -3,9 +3,9 @@ pragma solidity ^0.6.0;
 import {ERC20} from "../open-zeppelin/ERC20.sol";
 import * as AaveToken from "./AaveToken.sol";
 import * as TinlakeERC20 from "./TinlakeERC20.sol";
+import "@openzeppelin/contracts-ethereum-package/contracts/GSN/GSNRecipient.sol";
 
-
-contract VeritySwap {
+contract VeritySwap is GSNRecipient {
 
   struct Swap {
     uint256 openValue;
@@ -90,8 +90,36 @@ contract VeritySwap {
     Expire(_swapID);
   }
 
-  function check(bytes32 _swapID) public view returns (uint256 openValue, address openContractAddress, uint256 closeValue, address closeTrader, address closeContractAddress) {
+  function check(bytes32 _swapID) public view returns (
+    uint256 openValue, 
+    address openContractAddress, 
+    uint256 closeValue, 
+    address closeTrader, 
+    address closeContractAddress) {
     Swap memory swap = swaps[_swapID];
-    return (swap.openValue, swap.openContractAddress, swap.closeValue, swap.closeTrader, swap.closeContractAddress);
+      return (
+      swap.openValue, 
+      swap.openContractAddress, 
+      swap.closeValue, 
+      swap.closeTrader, 
+      swap.closeContractAddress);
   }
+  
+  function acceptRelayedCall(
+    address relay,
+    address from,
+    bytes calldata encodedFunction,
+    uint256 transactionFee,
+    uint256 gasPrice,
+    uint256 gasLimit,
+    uint256 nonce,
+    bytes calldata approvalData,
+    uint256 maxPossibleCharge
+  ) external view returns (uint256, bytes memory) {
+      return _approveRelayedCall();
+  }
+
+  function _preRelayedCall(bytes memory context) internal returns (bytes32) {}
+  function _postRelayedCall(bytes memory context, bool, uint256 actualCharge, bytes32) internal {}
+  
 }
