@@ -58,6 +58,7 @@
   ],
   "license": "AGPL 3.0",
   "dependencies": {
+    "@openzeppelin/cli": "^2.8.2",
     "openzeppelin-solidity": "3.2.0"
   },
   "main": ".solcover.js",
