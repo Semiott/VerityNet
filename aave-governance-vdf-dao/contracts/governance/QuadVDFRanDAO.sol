@@ -14,7 +14,7 @@ contract Beacon{
     
 }
 
-contract AaveProtoGovernanceQuadDAO is Initializable, GSNRecipient {
+contract QuadVDFRanDAO is Initializable, GSNRecipient {
 
 address public BeaconContractAddress=0x79474439753C7c70011C3b00e06e559378bAD040;
 
