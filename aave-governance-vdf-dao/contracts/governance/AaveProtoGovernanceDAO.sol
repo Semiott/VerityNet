@@ -5,6 +5,7 @@ pragma solidity ^0.5.16;
 
 import "./BeaconContract.sol";
 import "@openzeppelin/contracts/GSN/GSNRecipient.sol";
+import "@openzeppelin/contracts/drafts/Counters.sol";
 import "@openzeppelin/upgrades/contracts/Initializable.sol";
 
 
@@ -15,11 +16,14 @@ contract Beacon{
 
 contract AaveProtoGovernanceQuadDAO is Initializable, GSNRecipient {
 
+address public BeaconContractAddress=0x79474439753C7c70011C3b00e06e559378bAD040;
+
+using Counters for Counters.Counter;
+  Counters.Counter private _tokenIds;
+
 function initialize() public initializer {
     GSNRecipient.initialize();
   }
-
-address public BeaconContractAddress=0x79474439753C7c70011C3b00e06e559378bAD040;
 
     struct Participant {
         uint256   secret;
