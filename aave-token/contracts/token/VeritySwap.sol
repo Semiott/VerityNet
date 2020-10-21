@@ -3,7 +3,8 @@ pragma solidity ^0.6.0;
 import {ERC20} from "../open-zeppelin/ERC20.sol";
 import * as AaveToken from "./AaveToken.sol";
 import * as TinlakeERC20 from "./TinlakeERC20.sol";
-import "@openzeppelin/contracts-ethereum-package/contracts/GSN/GSNRecipient.sol";
+import "@openzeppelin/contracts/GSN/GSNRecipient.sol";
+import "@openzeppelin/upgrades/contracts/Initializable.sol";
 
 contract VeritySwap is GSNRecipient {
 
