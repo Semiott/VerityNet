@@ -9,6 +9,9 @@ import "../interfaces/IAssetVotingWeightProvider.sol";
 import "../interfaces/IProposalExecutor.sol";
 import "../interfaces/IAaveProtoGovernance.sol";
 
+import "./QuadVoting.sol";
+import "./QuadVotingVerifier.sol";
+
 
 /// @title AaveProtoGovernance
 /// @author Aave
