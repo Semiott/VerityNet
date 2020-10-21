@@ -5,13 +5,19 @@ pragma solidity ^0.5.16;
 
 import "./BeaconContract.sol";
 import "@openzeppelin/contracts/GSN/GSNRecipient.sol";
+import "@openzeppelin/upgrades/contracts/Initializable.sol";
+
 
 contract Beacon{
     function getLatestRandomness()external view returns(uint256,bytes32){}
     
 }
 
-contract AaveProtoGovernanceQuadDAO is GSNRecipient {
+contract AaveProtoGovernanceQuadDAO is Initializable, GSNRecipient {
+
+function initialize() public initializer {
+    GSNRecipient.initialize();
+  }
 
 address public BeaconContractAddress=0x79474439753C7c70011C3b00e06e559378bAD040;
 
@@ -162,7 +168,6 @@ address public BeaconContractAddress=0x79474439753C7c70011C3b00e06e559378bAD040;
         }
     }
 
-    // For test
     function getCommitment(uint256 _campaignID) external view returns (bytes32) {
         Campaign storage c = campaigns[_campaignID];
         Participant storage p = c.participants[msg.sender];
@@ -304,4 +309,18 @@ address public BeaconContractAddress=0x79474439753C7c70011C3b00e06e559378bAD040;
         c.FractalGroups[msg.sender].bountypot = 0;
         msg.sender.transfer(bountypot);
     }
+    
+    function acceptRelayedCall(
+    address relay,
+    address from,
+    bytes calldata encodedFunction,
+    uint256 transactionFee,
+    uint256 gasPrice,
+    uint256 gasLimit,
+    uint256 nonce,
+    bytes calldata approvalData,
+    uint256 maxPossibleCharge
+  ) external view returns (uint256, bytes memory) {
+    return _approveRelayedCall();
+  }
 }
