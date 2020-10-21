@@ -41,7 +41,7 @@ import "./MainStorage.sol";
   Implements MTokens.
   Uses MGovernance.
 */
-contract Tokens is MainStorage, LibConstants, MGovernance, MTokens {
+contract StarkExToken is MainStorage, LibConstants, MGovernance, MTokens {
     bytes4 constant internal ERC20_SELECTOR = bytes4(keccak256("ERC20Token(address)"));
     bytes4 constant internal ETH_SELECTOR = bytes4(keccak256("ETH()"));
 
