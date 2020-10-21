@@ -1,6 +1,9 @@
 pragma solidity ^0.5.16;
 pragma experimental ABIEncoderV2;
 
+import "./QuadVoting.sol";
+import "./QuadVotingVerifier.sol";
+
 contract Comp {
     /// @notice EIP-20 token name for this token
     string public constant name = "Compound";
