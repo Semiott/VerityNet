@@ -1,0 +1,2490 @@
+{
+  "contractName": "Freezable",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [],
+      "name": "LogFrozen",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [],
+      "name": "LogUnFrozen",
+      "type": "event"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "DEPOSIT_CANCEL_DELAY",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "FREEZE_GRACE_PERIOD",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "MAX_VERIFIER_COUNT",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "UNFREEZE_DELAY",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "VERIFIER_REMOVAL_DELAY",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "isFrozen",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "frozen",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "unFreeze",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[],\"name\":\"LogFrozen\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[],\"name\":\"LogUnFrozen\",\"type\":\"event\"},{\"constant\":true,\"inputs\":[],\"name\":\"DEPOSIT_CANCEL_DELAY\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"FREEZE_GRACE_PERIOD\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"MAX_VERIFIER_COUNT\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"UNFREEZE_DELAY\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"VERIFIER_REMOVAL_DELAY\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"isFrozen\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"frozen\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"unFreeze\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/components/Freezable.sol\":\"Freezable\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/components/Freezable.sol\":{\"keccak256\":\"0xb80f1a77e6f8abd1e0d2c6d0c65a4a29e7e287afd3bde80206b0c1785150fe2e\",\"urls\":[\"bzz-raw://713f62dd8401d13706e36ebd84db2c0824caa06cef7836d744167851fb597fb2\",\"dweb:/ipfs/QmPzwdzpDuVpEgb1FcE5bJgvETJSo8L63KpCxHvio7R66T\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/components/GovernanceStorage.sol\":{\"keccak256\":\"0x67fb34740c25832ca4ebe572796b37744173dc6e41bedd89bcf0f86939195400\",\"urls\":[\"bzz-raw://4a4e89a296039dd310be02621be7caf655cd0962369156dce4733031ab2058eb\",\"dweb:/ipfs/QmXQT5hMWxUfRSxDURvKNdEkLUvDPyVSw8ia1NirtFzL3k\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/components/MainStorage.sol\":{\"keccak256\":\"0x714158b6b75b3da83c885e683ca772d104076c825bf8163dfe0d2901ea3c5796\",\"urls\":[\"bzz-raw://e4f33e90aef3cec159bdd2619afc7915392b610be661b070aeceb9ac4656faf2\",\"dweb:/ipfs/QmP7sHr4y1MLw7NUDvLp7YnQawYAKUJ4j1um2BBCFfq2MU\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/IFactRegistry.sol\":{\"keccak256\":\"0x7f4e47365a887730d676a98fa96cee9273abf09655bafe2a224c9a9398732214\",\"urls\":[\"bzz-raw://21223482a9890cd6ba8c733d891923fc12ca1c9d6f147212f77a2f8a0a0af52d\",\"dweb:/ipfs/QmWH8jxhSRVaEMyEY4XjwBPSGNZKM9xY2a7zh2bycKgUjH\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/MFreezable.sol\":{\"keccak256\":\"0x76e65ee04382334f25fd8c73a34f0f89e00c4c9fbdd8782ab971e900848b07ad\",\"urls\":[\"bzz-raw://afe657ac427e57bc51f37827f6a764bf469a799250fb4479de7a078fb0872f84\",\"dweb:/ipfs/QmXxoW47FTKnGaaZ946dTEk9bFpwEmZ1ZW7z84BBmdi3Gx\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/MGovernance.sol\":{\"keccak256\":\"0x3872018f4f55249e9e6953d6d5632647404071e7671a07f403172230fe4ca42c\",\"urls\":[\"bzz-raw://47f3dfb21c81c0bd28094b7814b1bbbf371d37a89d8c95cd989dec7fb8299be1\",\"dweb:/ipfs/QmfFb67L91g5hApjGcQFsZBUDW9qLw9KFbrapqSxwPLDmT\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/libraries/LibConstants.sol\":{\"keccak256\":\"0x0905a5105cf06fd14f9a8eefba38f312133847a2b5e9484a43fa40257bd2dc6c\",\"urls\":[\"bzz-raw://809c68f2b559249e80850ad3679f808d185c47787f226b69f717a50b2e5ad87a\",\"dweb:/ipfs/QmVrCxxwst8wjrY8WPCRby2uFi2v9jLkxC17Bb9Hq2EjtT\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/upgrade/ProxyStorage.sol\":{\"keccak256\":\"0x8328396a028395d9483b5e445c4ebd5c8b81aaa771b3f1ecbabb8d473fa0c229\",\"urls\":[\"bzz-raw://695e9498cd3f33b420a98a84af3b4634df224dc927cdae153498c5a77edf839c\",\"dweb:/ipfs/QmYhoTao3CDwzbAQeLU1u5oRR2X3PQgBVfk9BVkBkPdoiV\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506102ad806100206000396000f3fe608060405234801561001057600080fd5b506004361061007c5760003560e01c80637cf12b901161005b5780637cf12b90146100df578063993f3639146100e9578063b766311214610107578063e6de6282146101255761007c565b80627175421461008157806333eeb1471461009f57806377e84e0d146100c1575b600080fd5b610089610143565b6040518082815260200191505060405180910390f35b6100a761014a565b604051808215151515815260200191505060405180910390f35b6100c9610161565b6040518082815260200191505060405180910390f35b6100e7610168565b005b6100f161025f565b6040518082815260200191505060405180910390f35b61010f610267565b6040518082815260200191505060405180910390f35b61012d610273565b6040518082815260200191505060405180910390f35b62093a8081565b6000600460149054906101000a900460ff16905090565b6201518081565b60011515600460149054906101000a900460ff161515146101f1576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260108152602001807f53544154455f4e4f545f46524f5a454e0000000000000000000000000000000081525060200191505060405180910390fd5b6040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252600d8152602001807f554e494d504c454d454e5445440000000000000000000000000000000000000081525060200191505060405180910390fd5b6301e1338081565b621baf8062093a800181565b60408156fea265627a7a72315820a8a1059b6415a09b4ba030cc3d1a90df80612a6837166d5b4a6fec445de9679864736f6c63430005100032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061007c5760003560e01c80637cf12b901161005b5780637cf12b90146100df578063993f3639146100e9578063b766311214610107578063e6de6282146101255761007c565b80627175421461008157806333eeb1471461009f57806377e84e0d146100c1575b600080fd5b610089610143565b6040518082815260200191505060405180910390f35b6100a761014a565b604051808215151515815260200191505060405180910390f35b6100c9610161565b6040518082815260200191505060405180910390f35b6100e7610168565b005b6100f161025f565b6040518082815260200191505060405180910390f35b61010f610267565b6040518082815260200191505060405180910390f35b61012d610273565b6040518082815260200191505060405180910390f35b62093a8081565b6000600460149054906101000a900460ff16905090565b6201518081565b60011515600460149054906101000a900460ff161515146101f1576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260108152602001807f53544154455f4e4f545f46524f5a454e0000000000000000000000000000000081525060200191505060405180910390fd5b6040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252600d8152602001807f554e494d504c454d454e5445440000000000000000000000000000000000000081525060200191505060405180910390fd5b6301e1338081565b621baf8062093a800181565b60408156fea265627a7a72315820a8a1059b6415a09b4ba030cc3d1a90df80612a6837166d5b4a6fec445de9679864736f6c63430005100032",
+  "sourceMap": "204:1191:7:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;204:1191:7;;;;;;;",
+  "deployedSourceMap": "204:1191:7:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;204:1191:7;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;609:52:38;;;:::i;:::-;;;;;;;;;;;;;;;;;;;547:109:7;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;422:53:38;;;:::i;:::-;;;;;;;;;;;;;;;;;;;944:448:7;;;:::i;:::-;;836:49:38;;;:::i;:::-;;;;;;;;;;;;;;;;;;;1087:80;;;:::i;:::-;;;;;;;;;;;;;;;;;;;947:56;;;:::i;:::-;;;;;;;;;;;;;;;;;;;609:52;655:6;609:52;:::o;547:109:7:-;606:11;638;;;;;;;;;;;629:20;;547:109;:::o;422:53:38:-;469:6;422:53;:::o;944:448:7:-;498:4;483:19;;:11;;;;;;;;;;;:19;;;475:48;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;267:23:32;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;836:49:38;877:8;836:49;:::o;1087:80::-;1159:7;655:6;1136:31;1087:80;:::o;947:56::-;1000:2;947:56;:::o",
+  "source": "pragma solidity ^0.5.2;\n\nimport \"../libraries/LibConstants.sol\";\nimport \"../interfaces/MFreezable.sol\";\nimport \"../interfaces/MGovernance.sol\";\nimport \"./MainStorage.sol\";\n\n/*\n  Implements MFreezable.\n*/\ncontract Freezable is MainStorage, LibConstants, MGovernance, MFreezable {\n    event LogFrozen();\n    event LogUnFrozen();\n\n    modifier notFrozen()\n    {\n        require(stateFrozen == false, \"STATE_IS_FROZEN\");\n        _;\n    }\n\n    modifier onlyFrozen()\n    {\n        require(stateFrozen == true, \"STATE_NOT_FROZEN\");\n        _;\n    }\n\n    function isFrozen()\n        external view\n        returns (bool frozen) {\n        frozen = stateFrozen;\n    }\n\n    function freeze()\n        internal\n        notFrozen()\n    {\n        // solium-disable-next-line security/no-block-members\n        unFreezeTime = now + UNFREEZE_DELAY;\n\n        // Update state.\n        stateFrozen = true;\n\n        // Log event.\n        emit LogFrozen();\n    }\n\n    function unFreeze()\n        external\n        onlyFrozen()\n        onlyGovernance()\n    {\n        // solium-disable-next-line security/no-block-members\n        require(now >= unFreezeTime, \"UNFREEZE_NOT_ALLOWED_YET\");\n\n        // Update state.\n        stateFrozen = false;\n\n        // Increment roots to invalidate them, w/o losing information.\n        vaultRoot += 1;\n        orderRoot += 1;\n\n        // Log event.\n        emit LogUnFrozen();\n    }\n\n}\n",
+  "sourcePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/components/Freezable.sol",
+  "ast": {
+    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/components/Freezable.sol",
+    "exportedSymbols": {
+      "Freezable": [
+        1137
+      ]
+    },
+    "id": 1138,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1039,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:7"
+      },
+      {
+        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/libraries/LibConstants.sol",
+        "file": "../libraries/LibConstants.sol",
+        "id": 1040,
+        "nodeType": "ImportDirective",
+        "scope": 1138,
+        "sourceUnit": 5152,
+        "src": "25:39:7",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/MFreezable.sol",
+        "file": "../interfaces/MFreezable.sol",
+        "id": 1041,
+        "nodeType": "ImportDirective",
+        "scope": 1138,
+        "sourceUnit": 4988,
+        "src": "65:38:7",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/MGovernance.sol",
+        "file": "../interfaces/MGovernance.sol",
+        "id": 1042,
+        "nodeType": "ImportDirective",
+        "scope": 1138,
+        "sourceUnit": 4999,
+        "src": "104:39:7",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/components/MainStorage.sol",
+        "file": "./MainStorage.sol",
+        "id": 1043,
+        "nodeType": "ImportDirective",
+        "scope": 1138,
+        "sourceUnit": 1602,
+        "src": "144:27:7",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 1044,
+              "name": "MainStorage",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1601,
+              "src": "226:11:7",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_MainStorage_$1601",
+                "typeString": "contract MainStorage"
+              }
+            },
+            "id": 1045,
+            "nodeType": "InheritanceSpecifier",
+            "src": "226:11:7"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 1046,
+              "name": "LibConstants",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 5151,
+              "src": "239:12:7",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_LibConstants_$5151",
+                "typeString": "contract LibConstants"
+              }
+            },
+            "id": 1047,
+            "nodeType": "InheritanceSpecifier",
+            "src": "239:12:7"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 1048,
+              "name": "MGovernance",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 4998,
+              "src": "253:11:7",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_MGovernance_$4998",
+                "typeString": "contract MGovernance"
+              }
+            },
+            "id": 1049,
+            "nodeType": "InheritanceSpecifier",
+            "src": "253:11:7"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 1050,
+              "name": "MFreezable",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 4987,
+              "src": "266:10:7",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_MFreezable_$4987",
+                "typeString": "contract MFreezable"
+              }
+            },
+            "id": 1051,
+            "nodeType": "InheritanceSpecifier",
+            "src": "266:10:7"
+          }
+        ],
+        "contractDependencies": [
+          1433,
+          1601,
+          4987,
+          4998,
+          5151,
+          5783
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1137,
+        "linearizedBaseContracts": [
+          1137,
+          4987,
+          4998,
+          5151,
+          1601,
+          5783,
+          1433
+        ],
+        "name": "Freezable",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 1053,
+            "name": "LogFrozen",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 1052,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "298:2:7"
+            },
+            "src": "283:18:7"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 1055,
+            "name": "LogUnFrozen",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 1054,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "323:2:7"
+            },
+            "src": "306:20:7"
+          },
+          {
+            "body": {
+              "id": 1065,
+              "nodeType": "Block",
+              "src": "357:76:7",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        "id": 1060,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "id": 1058,
+                          "name": "stateFrozen",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1516,
+                          "src": "375:11:7",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "hexValue": "66616c7365",
+                          "id": 1059,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "bool",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "390:5:7",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          },
+                          "value": "false"
+                        },
+                        "src": "375:20:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "53544154455f49535f46524f5a454e",
+                        "id": 1061,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "397:17:7",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_bc3cb7df81b7e2f730e17e980231159241d01a6f1ea346d4d4a5f696130a6c53",
+                          "typeString": "literal_string \"STATE_IS_FROZEN\""
+                        },
+                        "value": "STATE_IS_FROZEN"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_bc3cb7df81b7e2f730e17e980231159241d01a6f1ea346d4d4a5f696130a6c53",
+                          "typeString": "literal_string \"STATE_IS_FROZEN\""
+                        }
+                      ],
+                      "id": 1057,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        5801,
+                        5802
+                      ],
+                      "referencedDeclaration": 5802,
+                      "src": "367:7:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 1062,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "367:48:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1063,
+                  "nodeType": "ExpressionStatement",
+                  "src": "367:48:7"
+                },
+                {
+                  "id": 1064,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "425:1:7"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1066,
+            "name": "notFrozen",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 1056,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "350:2:7"
+            },
+            "src": "332:101:7",
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 1076,
+              "nodeType": "Block",
+              "src": "465:76:7",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        "id": 1071,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "id": 1069,
+                          "name": "stateFrozen",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1516,
+                          "src": "483:11:7",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "hexValue": "74727565",
+                          "id": 1070,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "bool",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "498:4:7",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          },
+                          "value": "true"
+                        },
+                        "src": "483:19:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "53544154455f4e4f545f46524f5a454e",
+                        "id": 1072,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "504:18:7",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_da0bb0df12917375f53fad2aade3778c5c519429d9702fb0e9cf3730ae95a0ce",
+                          "typeString": "literal_string \"STATE_NOT_FROZEN\""
+                        },
+                        "value": "STATE_NOT_FROZEN"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_da0bb0df12917375f53fad2aade3778c5c519429d9702fb0e9cf3730ae95a0ce",
+                          "typeString": "literal_string \"STATE_NOT_FROZEN\""
+                        }
+                      ],
+                      "id": 1068,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        5801,
+                        5802
+                      ],
+                      "referencedDeclaration": 5802,
+                      "src": "475:7:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 1073,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "475:48:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1074,
+                  "nodeType": "ExpressionStatement",
+                  "src": "475:48:7"
+                },
+                {
+                  "id": 1075,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "533:1:7"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1077,
+            "name": "onlyFrozen",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 1067,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "458:2:7"
+            },
+            "src": "439:102:7",
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 1086,
+              "nodeType": "Block",
+              "src": "619:37:7",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1084,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 1082,
+                      "name": "frozen",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1080,
+                      "src": "629:6:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 1083,
+                      "name": "stateFrozen",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1516,
+                      "src": "638:11:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "src": "629:20:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 1085,
+                  "nodeType": "ExpressionStatement",
+                  "src": "629:20:7"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1087,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isFrozen",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1078,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "564:2:7"
+            },
+            "returnParameters": {
+              "id": 1081,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1080,
+                  "name": "frozen",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1087,
+                  "src": "606:11:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 1079,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "606:4:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "605:13:7"
+            },
+            "scope": 1137,
+            "src": "547:109:7",
+            "stateMutability": "view",
+            "superFunction": 4986,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 1105,
+              "nodeType": "Block",
+              "src": "721:217:7",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1096,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 1092,
+                      "name": "unFreezeTime",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1518,
+                      "src": "793:12:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "commonType": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "id": 1095,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "leftExpression": {
+                        "argumentTypes": null,
+                        "id": 1093,
+                        "name": "now",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5800,
+                        "src": "808:3:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "nodeType": "BinaryOperation",
+                      "operator": "+",
+                      "rightExpression": {
+                        "argumentTypes": null,
+                        "id": 1094,
+                        "name": "UNFREEZE_DELAY",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5114,
+                        "src": "814:14:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "src": "808:20:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "793:35:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 1097,
+                  "nodeType": "ExpressionStatement",
+                  "src": "793:35:7"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1100,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 1098,
+                      "name": "stateFrozen",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1516,
+                      "src": "864:11:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "74727565",
+                      "id": 1099,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "878:4:7",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "true"
+                    },
+                    "src": "864:18:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 1101,
+                  "nodeType": "ExpressionStatement",
+                  "src": "864:18:7"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "id": 1102,
+                      "name": "LogFrozen",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1053,
+                      "src": "920:9:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$__$returns$__$",
+                        "typeString": "function ()"
+                      }
+                    },
+                    "id": 1103,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "920:11:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1104,
+                  "nodeType": "EmitStatement",
+                  "src": "915:16:7"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1106,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": [],
+                "id": 1090,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 1089,
+                  "name": "notFrozen",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 1066,
+                  "src": "705:9:7",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "705:11:7"
+              }
+            ],
+            "name": "freeze",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1088,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "677:2:7"
+            },
+            "returnParameters": {
+              "id": 1091,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "721:0:7"
+            },
+            "scope": 1137,
+            "src": "662:276:7",
+            "stateMutability": "nonpayable",
+            "superFunction": 4981,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 1135,
+              "nodeType": "Block",
+              "src": "1031:361:7",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 1116,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "id": 1114,
+                          "name": "now",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 5800,
+                          "src": "1111:3:7",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": ">=",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "id": 1115,
+                          "name": "unFreezeTime",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1518,
+                          "src": "1118:12:7",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "src": "1111:19:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "554e465245455a455f4e4f545f414c4c4f5745445f594554",
+                        "id": 1117,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1132:26:7",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_f42b07b5c6949f268a36e2220d5da580ea5ac5ae4b31e0d29e2a2419d19313b7",
+                          "typeString": "literal_string \"UNFREEZE_NOT_ALLOWED_YET\""
+                        },
+                        "value": "UNFREEZE_NOT_ALLOWED_YET"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_f42b07b5c6949f268a36e2220d5da580ea5ac5ae4b31e0d29e2a2419d19313b7",
+                          "typeString": "literal_string \"UNFREEZE_NOT_ALLOWED_YET\""
+                        }
+                      ],
+                      "id": 1113,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        5801,
+                        5802
+                      ],
+                      "referencedDeclaration": 5802,
+                      "src": "1103:7:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 1118,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1103:56:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1119,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1103:56:7"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1122,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 1120,
+                      "name": "stateFrozen",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1516,
+                      "src": "1195:11:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "66616c7365",
+                      "id": 1121,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1209:5:7",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "false"
+                    },
+                    "src": "1195:19:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 1123,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1195:19:7"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1126,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 1124,
+                      "name": "vaultRoot",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1556,
+                      "src": "1296:9:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "+=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "31",
+                      "id": 1125,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1309:1:7",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_1_by_1",
+                        "typeString": "int_const 1"
+                      },
+                      "value": "1"
+                    },
+                    "src": "1296:14:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 1127,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1296:14:7"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1130,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 1128,
+                      "name": "orderRoot",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1560,
+                      "src": "1320:9:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "+=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "31",
+                      "id": 1129,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1333:1:7",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_1_by_1",
+                        "typeString": "int_const 1"
+                      },
+                      "value": "1"
+                    },
+                    "src": "1320:14:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 1131,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1320:14:7"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "id": 1132,
+                      "name": "LogUnFrozen",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1055,
+                      "src": "1372:11:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$__$returns$__$",
+                        "typeString": "function ()"
+                      }
+                    },
+                    "id": 1133,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1372:13:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1134,
+                  "nodeType": "EmitStatement",
+                  "src": "1367:18:7"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1136,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": [],
+                "id": 1109,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 1108,
+                  "name": "onlyFrozen",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 1077,
+                  "src": "989:10:7",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "989:12:7"
+              },
+              {
+                "arguments": [],
+                "id": 1111,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 1110,
+                  "name": "onlyGovernance",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 4997,
+                  "src": "1010:14:7",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1010:16:7"
+              }
+            ],
+            "name": "unFreeze",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1107,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "961:2:7"
+            },
+            "returnParameters": {
+              "id": 1112,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1031:0:7"
+            },
+            "scope": 1137,
+            "src": "944:448:7",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 1138,
+        "src": "204:1191:7"
+      }
+    ],
+    "src": "0:1396:7"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/components/Freezable.sol",
+    "exportedSymbols": {
+      "Freezable": [
+        1137
+      ]
+    },
+    "id": 1138,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1039,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:7"
+      },
+      {
+        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/libraries/LibConstants.sol",
+        "file": "../libraries/LibConstants.sol",
+        "id": 1040,
+        "nodeType": "ImportDirective",
+        "scope": 1138,
+        "sourceUnit": 5152,
+        "src": "25:39:7",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/MFreezable.sol",
+        "file": "../interfaces/MFreezable.sol",
+        "id": 1041,
+        "nodeType": "ImportDirective",
+        "scope": 1138,
+        "sourceUnit": 4988,
+        "src": "65:38:7",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/MGovernance.sol",
+        "file": "../interfaces/MGovernance.sol",
+        "id": 1042,
+        "nodeType": "ImportDirective",
+        "scope": 1138,
+        "sourceUnit": 4999,
+        "src": "104:39:7",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/components/MainStorage.sol",
+        "file": "./MainStorage.sol",
+        "id": 1043,
+        "nodeType": "ImportDirective",
+        "scope": 1138,
+        "sourceUnit": 1602,
+        "src": "144:27:7",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 1044,
+              "name": "MainStorage",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1601,
+              "src": "226:11:7",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_MainStorage_$1601",
+                "typeString": "contract MainStorage"
+              }
+            },
+            "id": 1045,
+            "nodeType": "InheritanceSpecifier",
+            "src": "226:11:7"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 1046,
+              "name": "LibConstants",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 5151,
+              "src": "239:12:7",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_LibConstants_$5151",
+                "typeString": "contract LibConstants"
+              }
+            },
+            "id": 1047,
+            "nodeType": "InheritanceSpecifier",
+            "src": "239:12:7"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 1048,
+              "name": "MGovernance",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 4998,
+              "src": "253:11:7",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_MGovernance_$4998",
+                "typeString": "contract MGovernance"
+              }
+            },
+            "id": 1049,
+            "nodeType": "InheritanceSpecifier",
+            "src": "253:11:7"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 1050,
+              "name": "MFreezable",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 4987,
+              "src": "266:10:7",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_MFreezable_$4987",
+                "typeString": "contract MFreezable"
+              }
+            },
+            "id": 1051,
+            "nodeType": "InheritanceSpecifier",
+            "src": "266:10:7"
+          }
+        ],
+        "contractDependencies": [
+          1433,
+          1601,
+          4987,
+          4998,
+          5151,
+          5783
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1137,
+        "linearizedBaseContracts": [
+          1137,
+          4987,
+          4998,
+          5151,
+          1601,
+          5783,
+          1433
+        ],
+        "name": "Freezable",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 1053,
+            "name": "LogFrozen",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 1052,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "298:2:7"
+            },
+            "src": "283:18:7"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 1055,
+            "name": "LogUnFrozen",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 1054,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "323:2:7"
+            },
+            "src": "306:20:7"
+          },
+          {
+            "body": {
+              "id": 1065,
+              "nodeType": "Block",
+              "src": "357:76:7",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        "id": 1060,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "id": 1058,
+                          "name": "stateFrozen",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1516,
+                          "src": "375:11:7",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "hexValue": "66616c7365",
+                          "id": 1059,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "bool",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "390:5:7",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          },
+                          "value": "false"
+                        },
+                        "src": "375:20:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "53544154455f49535f46524f5a454e",
+                        "id": 1061,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "397:17:7",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_bc3cb7df81b7e2f730e17e980231159241d01a6f1ea346d4d4a5f696130a6c53",
+                          "typeString": "literal_string \"STATE_IS_FROZEN\""
+                        },
+                        "value": "STATE_IS_FROZEN"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_bc3cb7df81b7e2f730e17e980231159241d01a6f1ea346d4d4a5f696130a6c53",
+                          "typeString": "literal_string \"STATE_IS_FROZEN\""
+                        }
+                      ],
+                      "id": 1057,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        5801,
+                        5802
+                      ],
+                      "referencedDeclaration": 5802,
+                      "src": "367:7:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 1062,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "367:48:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1063,
+                  "nodeType": "ExpressionStatement",
+                  "src": "367:48:7"
+                },
+                {
+                  "id": 1064,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "425:1:7"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1066,
+            "name": "notFrozen",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 1056,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "350:2:7"
+            },
+            "src": "332:101:7",
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 1076,
+              "nodeType": "Block",
+              "src": "465:76:7",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        "id": 1071,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "id": 1069,
+                          "name": "stateFrozen",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1516,
+                          "src": "483:11:7",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "hexValue": "74727565",
+                          "id": 1070,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "bool",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "498:4:7",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          },
+                          "value": "true"
+                        },
+                        "src": "483:19:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "53544154455f4e4f545f46524f5a454e",
+                        "id": 1072,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "504:18:7",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_da0bb0df12917375f53fad2aade3778c5c519429d9702fb0e9cf3730ae95a0ce",
+                          "typeString": "literal_string \"STATE_NOT_FROZEN\""
+                        },
+                        "value": "STATE_NOT_FROZEN"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_da0bb0df12917375f53fad2aade3778c5c519429d9702fb0e9cf3730ae95a0ce",
+                          "typeString": "literal_string \"STATE_NOT_FROZEN\""
+                        }
+                      ],
+                      "id": 1068,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        5801,
+                        5802
+                      ],
+                      "referencedDeclaration": 5802,
+                      "src": "475:7:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 1073,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "475:48:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1074,
+                  "nodeType": "ExpressionStatement",
+                  "src": "475:48:7"
+                },
+                {
+                  "id": 1075,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "533:1:7"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1077,
+            "name": "onlyFrozen",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 1067,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "458:2:7"
+            },
+            "src": "439:102:7",
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 1086,
+              "nodeType": "Block",
+              "src": "619:37:7",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1084,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 1082,
+                      "name": "frozen",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1080,
+                      "src": "629:6:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 1083,
+                      "name": "stateFrozen",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1516,
+                      "src": "638:11:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "src": "629:20:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 1085,
+                  "nodeType": "ExpressionStatement",
+                  "src": "629:20:7"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1087,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isFrozen",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1078,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "564:2:7"
+            },
+            "returnParameters": {
+              "id": 1081,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1080,
+                  "name": "frozen",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1087,
+                  "src": "606:11:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 1079,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "606:4:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "605:13:7"
+            },
+            "scope": 1137,
+            "src": "547:109:7",
+            "stateMutability": "view",
+            "superFunction": 4986,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 1105,
+              "nodeType": "Block",
+              "src": "721:217:7",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1096,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 1092,
+                      "name": "unFreezeTime",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1518,
+                      "src": "793:12:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "commonType": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "id": 1095,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "leftExpression": {
+                        "argumentTypes": null,
+                        "id": 1093,
+                        "name": "now",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5800,
+                        "src": "808:3:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "nodeType": "BinaryOperation",
+                      "operator": "+",
+                      "rightExpression": {
+                        "argumentTypes": null,
+                        "id": 1094,
+                        "name": "UNFREEZE_DELAY",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5114,
+                        "src": "814:14:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "src": "808:20:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "793:35:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 1097,
+                  "nodeType": "ExpressionStatement",
+                  "src": "793:35:7"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1100,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 1098,
+                      "name": "stateFrozen",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1516,
+                      "src": "864:11:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "74727565",
+                      "id": 1099,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "878:4:7",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "true"
+                    },
+                    "src": "864:18:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 1101,
+                  "nodeType": "ExpressionStatement",
+                  "src": "864:18:7"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "id": 1102,
+                      "name": "LogFrozen",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1053,
+                      "src": "920:9:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$__$returns$__$",
+                        "typeString": "function ()"
+                      }
+                    },
+                    "id": 1103,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "920:11:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1104,
+                  "nodeType": "EmitStatement",
+                  "src": "915:16:7"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1106,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": [],
+                "id": 1090,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 1089,
+                  "name": "notFrozen",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 1066,
+                  "src": "705:9:7",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "705:11:7"
+              }
+            ],
+            "name": "freeze",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1088,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "677:2:7"
+            },
+            "returnParameters": {
+              "id": 1091,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "721:0:7"
+            },
+            "scope": 1137,
+            "src": "662:276:7",
+            "stateMutability": "nonpayable",
+            "superFunction": 4981,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 1135,
+              "nodeType": "Block",
+              "src": "1031:361:7",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 1116,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "id": 1114,
+                          "name": "now",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 5800,
+                          "src": "1111:3:7",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": ">=",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "id": 1115,
+                          "name": "unFreezeTime",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1518,
+                          "src": "1118:12:7",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "src": "1111:19:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "554e465245455a455f4e4f545f414c4c4f5745445f594554",
+                        "id": 1117,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1132:26:7",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_f42b07b5c6949f268a36e2220d5da580ea5ac5ae4b31e0d29e2a2419d19313b7",
+                          "typeString": "literal_string \"UNFREEZE_NOT_ALLOWED_YET\""
+                        },
+                        "value": "UNFREEZE_NOT_ALLOWED_YET"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_f42b07b5c6949f268a36e2220d5da580ea5ac5ae4b31e0d29e2a2419d19313b7",
+                          "typeString": "literal_string \"UNFREEZE_NOT_ALLOWED_YET\""
+                        }
+                      ],
+                      "id": 1113,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        5801,
+                        5802
+                      ],
+                      "referencedDeclaration": 5802,
+                      "src": "1103:7:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 1118,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1103:56:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1119,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1103:56:7"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1122,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 1120,
+                      "name": "stateFrozen",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1516,
+                      "src": "1195:11:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "66616c7365",
+                      "id": 1121,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1209:5:7",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "false"
+                    },
+                    "src": "1195:19:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 1123,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1195:19:7"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1126,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 1124,
+                      "name": "vaultRoot",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1556,
+                      "src": "1296:9:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "+=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "31",
+                      "id": 1125,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1309:1:7",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_1_by_1",
+                        "typeString": "int_const 1"
+                      },
+                      "value": "1"
+                    },
+                    "src": "1296:14:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 1127,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1296:14:7"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1130,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 1128,
+                      "name": "orderRoot",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1560,
+                      "src": "1320:9:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "+=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "31",
+                      "id": 1129,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1333:1:7",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_1_by_1",
+                        "typeString": "int_const 1"
+                      },
+                      "value": "1"
+                    },
+                    "src": "1320:14:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 1131,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1320:14:7"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "id": 1132,
+                      "name": "LogUnFrozen",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1055,
+                      "src": "1372:11:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$__$returns$__$",
+                        "typeString": "function ()"
+                      }
+                    },
+                    "id": 1133,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1372:13:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1134,
+                  "nodeType": "EmitStatement",
+                  "src": "1367:18:7"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1136,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": [],
+                "id": 1109,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 1108,
+                  "name": "onlyFrozen",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 1077,
+                  "src": "989:10:7",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "989:12:7"
+              },
+              {
+                "arguments": [],
+                "id": 1111,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 1110,
+                  "name": "onlyGovernance",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 4997,
+                  "src": "1010:14:7",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1010:16:7"
+              }
+            ],
+            "name": "unFreeze",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1107,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "961:2:7"
+            },
+            "returnParameters": {
+              "id": 1112,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1031:0:7"
+            },
+            "scope": 1137,
+            "src": "944:448:7",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 1138,
+        "src": "204:1191:7"
+      }
+    ],
+    "src": "0:1396:7"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.1",
+  "updatedAt": "2020-10-21T18:42:18.029Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

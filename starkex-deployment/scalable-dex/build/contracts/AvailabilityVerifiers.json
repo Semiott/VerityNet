@@ -1,0 +1,2041 @@
+{
+  "contractName": "AvailabilityVerifiers",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "DEPOSIT_CANCEL_DELAY",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "FREEZE_GRACE_PERIOD",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "MAX_VERIFIER_COUNT",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "UNFREEZE_DELAY",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "VERIFIER_REMOVAL_DELAY",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getRegisteredAvailabilityVerifiers",
+      "outputs": [
+        {
+          "internalType": "address[]",
+          "name": "_verifers",
+          "type": "address[]"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "verifierAddress",
+          "type": "address"
+        }
+      ],
+      "name": "isAvailabilityVerifier",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "verifier",
+          "type": "address"
+        },
+        {
+          "internalType": "string",
+          "name": "identifier",
+          "type": "string"
+        }
+      ],
+      "name": "registerAvailabilityVerifier",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "verifier",
+          "type": "address"
+        }
+      ],
+      "name": "announceAvailabilityVerifierRemovalIntent",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "verifier",
+          "type": "address"
+        }
+      ],
+      "name": "removeAvailabilityVerifier",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"DEPOSIT_CANCEL_DELAY\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"FREEZE_GRACE_PERIOD\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"MAX_VERIFIER_COUNT\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"UNFREEZE_DELAY\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"VERIFIER_REMOVAL_DELAY\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"verifier\",\"type\":\"address\"}],\"name\":\"announceAvailabilityVerifierRemovalIntent\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getRegisteredAvailabilityVerifiers\",\"outputs\":[{\"internalType\":\"address[]\",\"name\":\"_verifers\",\"type\":\"address[]\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"verifierAddress\",\"type\":\"address\"}],\"name\":\"isAvailabilityVerifier\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"verifier\",\"type\":\"address\"},{\"internalType\":\"string\",\"name\":\"identifier\",\"type\":\"string\"}],\"name\":\"registerAvailabilityVerifier\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"verifier\",\"type\":\"address\"}],\"name\":\"removeAvailabilityVerifier\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{},\"notice\":\"A :sol:mod:`Committee` contract is a contract that the exchange service sends committee member signatures to attesting that they have a copy of the data over which a new Merkel root is to be accepted as the new state root. In addition, the exchange contract can call an availability verifier to check if such signatures were indeed provided by a sufficient number of committee members as hard coded in the :sol:mod:`Committee` contract for a given state transition (as reflected by the old and new vault and order roots). The exchange contract will normally query only one :sol:mod:`Committee` contract for data availability checks. However, in the event that the committee needs to be updated, additional availability verifiers may be registered with the exchange contract by the contract :sol:mod:`MainGovernance`. Such new availability verifiers are then also be required to attest to the data availability for state transitions and only if all the availability verifiers attest to it, the state transition is accepted. Removal of availability verifiers is also the responsibility of the :sol:mod:`MainGovernance`. The removal process is more sensitive than availability verifier registration as it may affect the soundness of the system. Hence, this is performed in two steps: 1. The :sol:mod:`MainGovernance` first announces the intent to remove an availability verifier by calling :sol:func:`announceAvailabilityVerifierRemovalIntent` 2. After the expiration of a `VERIFIER_REMOVAL_DELAY` time lock, actual removal may be performed by calling :sol:func:`removeAvailabilityVerifier` The removal delay ensures that a user concerned about the soundness of the system has ample time to leave the exchange.\"}},\"settings\":{\"compilationTarget\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/components/AvailabilityVerifiers.sol\":\"AvailabilityVerifiers\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/components/AvailabilityVerifiers.sol\":{\"keccak256\":\"0x713a868f40f1e732e545a598abec74288b25b1c17579c34a59841460c6fe0fe6\",\"urls\":[\"bzz-raw://a33279210b41b57dac4464c62d40fc4a6989cd66bf8b5d897748a82ecade4638\",\"dweb:/ipfs/QmeNYHj19rmVR5rQLpU2gXVvj98Mp2k3m7zV7DgESURr3v\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/components/GovernanceStorage.sol\":{\"keccak256\":\"0x67fb34740c25832ca4ebe572796b37744173dc6e41bedd89bcf0f86939195400\",\"urls\":[\"bzz-raw://4a4e89a296039dd310be02621be7caf655cd0962369156dce4733031ab2058eb\",\"dweb:/ipfs/QmXQT5hMWxUfRSxDURvKNdEkLUvDPyVSw8ia1NirtFzL3k\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/components/MainStorage.sol\":{\"keccak256\":\"0x714158b6b75b3da83c885e683ca772d104076c825bf8163dfe0d2901ea3c5796\",\"urls\":[\"bzz-raw://e4f33e90aef3cec159bdd2619afc7915392b610be661b070aeceb9ac4656faf2\",\"dweb:/ipfs/QmP7sHr4y1MLw7NUDvLp7YnQawYAKUJ4j1um2BBCFfq2MU\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/IFactRegistry.sol\":{\"keccak256\":\"0x7f4e47365a887730d676a98fa96cee9273abf09655bafe2a224c9a9398732214\",\"urls\":[\"bzz-raw://21223482a9890cd6ba8c733d891923fc12ca1c9d6f147212f77a2f8a0a0af52d\",\"dweb:/ipfs/QmWH8jxhSRVaEMyEY4XjwBPSGNZKM9xY2a7zh2bycKgUjH\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/MApprovalChain.sol\":{\"keccak256\":\"0xb66336a0e5bc2f47be763f6ac478b3fc28fd75eb95bc8818e898431454adc6f8\",\"urls\":[\"bzz-raw://66452a84081bf629520f3fbd6a466e124a9086b0dc82e1e4018ec3cc01466f6d\",\"dweb:/ipfs/Qmawd9BSrJ2P89VRViQb4CoBwYBYPXUJhasb6UyWH3MENm\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/libraries/LibConstants.sol\":{\"keccak256\":\"0x0905a5105cf06fd14f9a8eefba38f312133847a2b5e9484a43fa40257bd2dc6c\",\"urls\":[\"bzz-raw://809c68f2b559249e80850ad3679f808d185c47787f226b69f717a50b2e5ad87a\",\"dweb:/ipfs/QmVrCxxwst8wjrY8WPCRby2uFi2v9jLkxC17Bb9Hq2EjtT\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/upgrade/ProxyStorage.sol\":{\"keccak256\":\"0x8328396a028395d9483b5e445c4ebd5c8b81aaa771b3f1ecbabb8d473fa0c229\",\"urls\":[\"bzz-raw://695e9498cd3f33b420a98a84af3b4634df224dc927cdae153498c5a77edf839c\",\"dweb:/ipfs/QmYhoTao3CDwzbAQeLU1u5oRR2X3PQgBVfk9BVkBkPdoiV\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity ^0.5.2;\n\nimport \"../libraries/LibConstants.sol\";\nimport \"../interfaces/MApprovalChain.sol\";\nimport \"./MainStorage.sol\";\n\n/**\n  A :sol:mod:`Committee` contract is a contract that the exchange service sends committee member\n  signatures to attesting that they have a copy of the data over which a new Merkel root is to be\n  accepted as the new state root. In addition, the exchange contract can call an availability\n  verifier to check if such signatures were indeed provided by a sufficient number of committee\n  members as hard coded in the :sol:mod:`Committee` contract for a given state transition\n  (as reflected by the old and new vault and order roots).\n\n  The exchange contract will normally query only one :sol:mod:`Committee` contract for data\n  availability checks. However, in the event that the committee needs to be updated, additional\n  availability verifiers may be registered with the exchange contract by the\n  contract :sol:mod:`MainGovernance`. Such new availability verifiers are then also be required to\n  attest to the data availability for state transitions and only if all the availability verifiers\n  attest to it, the state transition is accepted.\n\n  Removal of availability verifiers is also the responsibility of the :sol:mod:`MainGovernance`.\n  The removal process is more sensitive than availability verifier registration as it may affect the\n  soundness of the system. Hence, this is performed in two steps:\n\n  1. The :sol:mod:`MainGovernance` first announces the intent to remove an availability verifier by calling :sol:func:`announceAvailabilityVerifierRemovalIntent`\n  2. After the expiration of a `VERIFIER_REMOVAL_DELAY` time lock, actual removal may be performed by calling :sol:func:`removeAvailabilityVerifier`\n\n  The removal delay ensures that a user concerned about the soundness of the system has ample time\n  to leave the exchange.\n*/\ncontract AvailabilityVerifiers is MainStorage, MApprovalChain, LibConstants {\n    function getRegisteredAvailabilityVerifiers()\n        external view\n        returns (address[] memory _verifers)\n    {\n        return availabilityVerifiersChain.list;\n    }\n\n    function isAvailabilityVerifier(address verifierAddress)\n        external view\n        returns (bool)\n    {\n        return findEntry(availabilityVerifiersChain.list, verifierAddress) != ENTRY_NOT_FOUND;\n    }\n\n    function registerAvailabilityVerifier(address verifier, string calldata identifier)\n        external\n    {\n        addEntry(availabilityVerifiersChain, verifier, MAX_VERIFIER_COUNT, identifier);\n    }\n\n    function announceAvailabilityVerifierRemovalIntent(address verifier)\n        external\n    {\n        announceRemovalIntent(availabilityVerifiersChain, verifier, VERIFIER_REMOVAL_DELAY);\n    }\n\n    function removeAvailabilityVerifier(address verifier)\n        external\n    {\n        removeEntry(availabilityVerifiersChain, verifier);\n    }\n}\n",
+  "sourcePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/components/AvailabilityVerifiers.sol",
+  "ast": {
+    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/components/AvailabilityVerifiers.sol",
+    "exportedSymbols": {
+      "AvailabilityVerifiers": [
+        908
+      ]
+    },
+    "id": 909,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 834,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:4"
+      },
+      {
+        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/libraries/LibConstants.sol",
+        "file": "../libraries/LibConstants.sol",
+        "id": 835,
+        "nodeType": "ImportDirective",
+        "scope": 909,
+        "sourceUnit": 5152,
+        "src": "25:39:4",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/MApprovalChain.sol",
+        "file": "../interfaces/MApprovalChain.sol",
+        "id": 836,
+        "nodeType": "ImportDirective",
+        "scope": 909,
+        "sourceUnit": 4961,
+        "src": "65:42:4",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/components/MainStorage.sol",
+        "file": "./MainStorage.sol",
+        "id": 837,
+        "nodeType": "ImportDirective",
+        "scope": 909,
+        "sourceUnit": 1602,
+        "src": "108:27:4",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 838,
+              "name": "MainStorage",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1601,
+              "src": "1928:11:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_MainStorage_$1601",
+                "typeString": "contract MainStorage"
+              }
+            },
+            "id": 839,
+            "nodeType": "InheritanceSpecifier",
+            "src": "1928:11:4"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 840,
+              "name": "MApprovalChain",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 4960,
+              "src": "1941:14:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_MApprovalChain_$4960",
+                "typeString": "contract MApprovalChain"
+              }
+            },
+            "id": 841,
+            "nodeType": "InheritanceSpecifier",
+            "src": "1941:14:4"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 842,
+              "name": "LibConstants",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 5151,
+              "src": "1957:12:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_LibConstants_$5151",
+                "typeString": "contract LibConstants"
+              }
+            },
+            "id": 843,
+            "nodeType": "InheritanceSpecifier",
+            "src": "1957:12:4"
+          }
+        ],
+        "contractDependencies": [
+          1433,
+          1601,
+          4960,
+          5151,
+          5783
+        ],
+        "contractKind": "contract",
+        "documentation": "A :sol:mod:`Committee` contract is a contract that the exchange service sends committee member\nsignatures to attesting that they have a copy of the data over which a new Merkel root is to be\naccepted as the new state root. In addition, the exchange contract can call an availability\nverifier to check if such signatures were indeed provided by a sufficient number of committee\nmembers as hard coded in the :sol:mod:`Committee` contract for a given state transition\n(as reflected by the old and new vault and order roots).\nThe exchange contract will normally query only one :sol:mod:`Committee` contract for data\navailability checks. However, in the event that the committee needs to be updated, additional\navailability verifiers may be registered with the exchange contract by the\ncontract :sol:mod:`MainGovernance`. Such new availability verifiers are then also be required to\nattest to the data availability for state transitions and only if all the availability verifiers\nattest to it, the state transition is accepted.\nRemoval of availability verifiers is also the responsibility of the :sol:mod:`MainGovernance`.\nThe removal process is more sensitive than availability verifier registration as it may affect the\nsoundness of the system. Hence, this is performed in two steps:\n1. The :sol:mod:`MainGovernance` first announces the intent to remove an availability verifier by calling :sol:func:`announceAvailabilityVerifierRemovalIntent`\n2. After the expiration of a `VERIFIER_REMOVAL_DELAY` time lock, actual removal may be performed by calling :sol:func:`removeAvailabilityVerifier`\nThe removal delay ensures that a user concerned about the soundness of the system has ample time\nto leave the exchange.",
+        "fullyImplemented": false,
+        "id": 908,
+        "linearizedBaseContracts": [
+          908,
+          5151,
+          4960,
+          1601,
+          5783,
+          1433
+        ],
+        "name": "AvailabilityVerifiers",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 852,
+              "nodeType": "Block",
+              "src": "2093:55:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 849,
+                      "name": "availabilityVerifiersChain",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1598,
+                      "src": "2110:26:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_ApprovalChainData_$1512_storage",
+                        "typeString": "struct MainStorage.ApprovalChainData storage ref"
+                      }
+                    },
+                    "id": 850,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "list",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 1507,
+                    "src": "2110:31:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage",
+                      "typeString": "address[] storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 848,
+                  "id": 851,
+                  "nodeType": "Return",
+                  "src": "2103:38:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 853,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getRegisteredAvailabilityVerifiers",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 844,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2019:2:4"
+            },
+            "returnParameters": {
+              "id": 848,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 847,
+                  "name": "_verifers",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 853,
+                  "src": "2061:26:4",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 845,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "2061:7:4",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 846,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "2061:9:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2060:28:4"
+            },
+            "scope": 908,
+            "src": "1976:172:4",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 868,
+              "nodeType": "Block",
+              "src": "2260:102:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 866,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 861,
+                            "name": "availabilityVerifiersChain",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 1598,
+                            "src": "2287:26:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_ApprovalChainData_$1512_storage",
+                              "typeString": "struct MainStorage.ApprovalChainData storage ref"
+                            }
+                          },
+                          "id": 862,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "list",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 1507,
+                          "src": "2287:31:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_array$_t_address_$dyn_storage",
+                            "typeString": "address[] storage ref"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 863,
+                          "name": "verifierAddress",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 855,
+                          "src": "2320:15:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_array$_t_address_$dyn_storage",
+                            "typeString": "address[] storage ref"
+                          },
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 860,
+                        "name": "findEntry",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 4922,
+                        "src": "2277:9:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_internal_view$_t_array$_t_address_$dyn_storage_ptr_$_t_address_$returns$_t_uint256_$",
+                          "typeString": "function (address[] storage pointer,address) view returns (uint256)"
+                        }
+                      },
+                      "id": 864,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "2277:59:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "!=",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "id": 865,
+                      "name": "ENTRY_NOT_FOUND",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 4901,
+                      "src": "2340:15:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "2277:78:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 859,
+                  "id": 867,
+                  "nodeType": "Return",
+                  "src": "2270:85:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 869,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isAvailabilityVerifier",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 856,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 855,
+                  "name": "verifierAddress",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 869,
+                  "src": "2186:23:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 854,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2186:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2185:25:4"
+            },
+            "returnParameters": {
+              "id": 859,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 858,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 869,
+                  "src": "2250:4:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 857,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2250:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2249:6:4"
+            },
+            "scope": 908,
+            "src": "2154:208:4",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 883,
+              "nodeType": "Block",
+              "src": "2473:95:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 877,
+                        "name": "availabilityVerifiersChain",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1598,
+                        "src": "2492:26:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_ApprovalChainData_$1512_storage",
+                          "typeString": "struct MainStorage.ApprovalChainData storage ref"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 878,
+                        "name": "verifier",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 871,
+                        "src": "2520:8:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 879,
+                        "name": "MAX_VERIFIER_COUNT",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5119,
+                        "src": "2530:18:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 880,
+                        "name": "identifier",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 873,
+                        "src": "2550:10:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_calldata_ptr",
+                          "typeString": "string calldata"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_ApprovalChainData_$1512_storage",
+                          "typeString": "struct MainStorage.ApprovalChainData storage ref"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_string_calldata_ptr",
+                          "typeString": "string calldata"
+                        }
+                      ],
+                      "id": 876,
+                      "name": "addEntry",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 4912,
+                      "src": "2483:8:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_ApprovalChainData_$1512_storage_ptr_$_t_address_$_t_uint256_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (struct MainStorage.ApprovalChainData storage pointer,address,uint256,string memory)"
+                      }
+                    },
+                    "id": 881,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2483:78:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 882,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2483:78:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 884,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "registerAvailabilityVerifier",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 874,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 871,
+                  "name": "verifier",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 884,
+                  "src": "2406:16:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 870,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2406:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 873,
+                  "name": "identifier",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 884,
+                  "src": "2424:26:4",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_calldata_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 872,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2424:6:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2405:46:4"
+            },
+            "returnParameters": {
+              "id": 875,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2473:0:4"
+            },
+            "scope": 908,
+            "src": "2368:200:4",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 895,
+              "nodeType": "Block",
+              "src": "2664:100:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 890,
+                        "name": "availabilityVerifiersChain",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1598,
+                        "src": "2696:26:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_ApprovalChainData_$1512_storage",
+                          "typeString": "struct MainStorage.ApprovalChainData storage ref"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 891,
+                        "name": "verifier",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 886,
+                        "src": "2724:8:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 892,
+                        "name": "VERIFIER_REMOVAL_DELAY",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5125,
+                        "src": "2734:22:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_ApprovalChainData_$1512_storage",
+                          "typeString": "struct MainStorage.ApprovalChainData storage ref"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 889,
+                      "name": "announceRemovalIntent",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 4941,
+                      "src": "2674:21:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_ApprovalChainData_$1512_storage_ptr_$_t_address_$_t_uint256_$returns$__$",
+                        "typeString": "function (struct MainStorage.ApprovalChainData storage pointer,address,uint256)"
+                      }
+                    },
+                    "id": 893,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2674:83:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 894,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2674:83:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 896,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "announceAvailabilityVerifierRemovalIntent",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 887,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 886,
+                  "name": "verifier",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 896,
+                  "src": "2625:16:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 885,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2625:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2624:18:4"
+            },
+            "returnParameters": {
+              "id": 888,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2664:0:4"
+            },
+            "scope": 908,
+            "src": "2574:190:4",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 906,
+              "nodeType": "Block",
+              "src": "2845:66:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 902,
+                        "name": "availabilityVerifiersChain",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1598,
+                        "src": "2867:26:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_ApprovalChainData_$1512_storage",
+                          "typeString": "struct MainStorage.ApprovalChainData storage ref"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 903,
+                        "name": "verifier",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 898,
+                        "src": "2895:8:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_ApprovalChainData_$1512_storage",
+                          "typeString": "struct MainStorage.ApprovalChainData storage ref"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 901,
+                      "name": "removeEntry",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 4948,
+                      "src": "2855:11:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_ApprovalChainData_$1512_storage_ptr_$_t_address_$returns$__$",
+                        "typeString": "function (struct MainStorage.ApprovalChainData storage pointer,address)"
+                      }
+                    },
+                    "id": 904,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2855:49:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 905,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2855:49:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 907,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "removeAvailabilityVerifier",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 899,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 898,
+                  "name": "verifier",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 907,
+                  "src": "2806:16:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 897,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2806:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2805:18:4"
+            },
+            "returnParameters": {
+              "id": 900,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2845:0:4"
+            },
+            "scope": 908,
+            "src": "2770:141:4",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 909,
+        "src": "1894:1019:4"
+      }
+    ],
+    "src": "0:2914:4"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/components/AvailabilityVerifiers.sol",
+    "exportedSymbols": {
+      "AvailabilityVerifiers": [
+        908
+      ]
+    },
+    "id": 909,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 834,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:4"
+      },
+      {
+        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/libraries/LibConstants.sol",
+        "file": "../libraries/LibConstants.sol",
+        "id": 835,
+        "nodeType": "ImportDirective",
+        "scope": 909,
+        "sourceUnit": 5152,
+        "src": "25:39:4",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/MApprovalChain.sol",
+        "file": "../interfaces/MApprovalChain.sol",
+        "id": 836,
+        "nodeType": "ImportDirective",
+        "scope": 909,
+        "sourceUnit": 4961,
+        "src": "65:42:4",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/components/MainStorage.sol",
+        "file": "./MainStorage.sol",
+        "id": 837,
+        "nodeType": "ImportDirective",
+        "scope": 909,
+        "sourceUnit": 1602,
+        "src": "108:27:4",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 838,
+              "name": "MainStorage",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1601,
+              "src": "1928:11:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_MainStorage_$1601",
+                "typeString": "contract MainStorage"
+              }
+            },
+            "id": 839,
+            "nodeType": "InheritanceSpecifier",
+            "src": "1928:11:4"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 840,
+              "name": "MApprovalChain",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 4960,
+              "src": "1941:14:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_MApprovalChain_$4960",
+                "typeString": "contract MApprovalChain"
+              }
+            },
+            "id": 841,
+            "nodeType": "InheritanceSpecifier",
+            "src": "1941:14:4"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 842,
+              "name": "LibConstants",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 5151,
+              "src": "1957:12:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_LibConstants_$5151",
+                "typeString": "contract LibConstants"
+              }
+            },
+            "id": 843,
+            "nodeType": "InheritanceSpecifier",
+            "src": "1957:12:4"
+          }
+        ],
+        "contractDependencies": [
+          1433,
+          1601,
+          4960,
+          5151,
+          5783
+        ],
+        "contractKind": "contract",
+        "documentation": "A :sol:mod:`Committee` contract is a contract that the exchange service sends committee member\nsignatures to attesting that they have a copy of the data over which a new Merkel root is to be\naccepted as the new state root. In addition, the exchange contract can call an availability\nverifier to check if such signatures were indeed provided by a sufficient number of committee\nmembers as hard coded in the :sol:mod:`Committee` contract for a given state transition\n(as reflected by the old and new vault and order roots).\nThe exchange contract will normally query only one :sol:mod:`Committee` contract for data\navailability checks. However, in the event that the committee needs to be updated, additional\navailability verifiers may be registered with the exchange contract by the\ncontract :sol:mod:`MainGovernance`. Such new availability verifiers are then also be required to\nattest to the data availability for state transitions and only if all the availability verifiers\nattest to it, the state transition is accepted.\nRemoval of availability verifiers is also the responsibility of the :sol:mod:`MainGovernance`.\nThe removal process is more sensitive than availability verifier registration as it may affect the\nsoundness of the system. Hence, this is performed in two steps:\n1. The :sol:mod:`MainGovernance` first announces the intent to remove an availability verifier by calling :sol:func:`announceAvailabilityVerifierRemovalIntent`\n2. After the expiration of a `VERIFIER_REMOVAL_DELAY` time lock, actual removal may be performed by calling :sol:func:`removeAvailabilityVerifier`\nThe removal delay ensures that a user concerned about the soundness of the system has ample time\nto leave the exchange.",
+        "fullyImplemented": false,
+        "id": 908,
+        "linearizedBaseContracts": [
+          908,
+          5151,
+          4960,
+          1601,
+          5783,
+          1433
+        ],
+        "name": "AvailabilityVerifiers",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 852,
+              "nodeType": "Block",
+              "src": "2093:55:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 849,
+                      "name": "availabilityVerifiersChain",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1598,
+                      "src": "2110:26:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_ApprovalChainData_$1512_storage",
+                        "typeString": "struct MainStorage.ApprovalChainData storage ref"
+                      }
+                    },
+                    "id": 850,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "list",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 1507,
+                    "src": "2110:31:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage",
+                      "typeString": "address[] storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 848,
+                  "id": 851,
+                  "nodeType": "Return",
+                  "src": "2103:38:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 853,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getRegisteredAvailabilityVerifiers",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 844,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2019:2:4"
+            },
+            "returnParameters": {
+              "id": 848,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 847,
+                  "name": "_verifers",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 853,
+                  "src": "2061:26:4",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 845,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "2061:7:4",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 846,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "2061:9:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2060:28:4"
+            },
+            "scope": 908,
+            "src": "1976:172:4",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 868,
+              "nodeType": "Block",
+              "src": "2260:102:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 866,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 861,
+                            "name": "availabilityVerifiersChain",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 1598,
+                            "src": "2287:26:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_ApprovalChainData_$1512_storage",
+                              "typeString": "struct MainStorage.ApprovalChainData storage ref"
+                            }
+                          },
+                          "id": 862,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "list",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 1507,
+                          "src": "2287:31:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_array$_t_address_$dyn_storage",
+                            "typeString": "address[] storage ref"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 863,
+                          "name": "verifierAddress",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 855,
+                          "src": "2320:15:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_array$_t_address_$dyn_storage",
+                            "typeString": "address[] storage ref"
+                          },
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 860,
+                        "name": "findEntry",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 4922,
+                        "src": "2277:9:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_internal_view$_t_array$_t_address_$dyn_storage_ptr_$_t_address_$returns$_t_uint256_$",
+                          "typeString": "function (address[] storage pointer,address) view returns (uint256)"
+                        }
+                      },
+                      "id": 864,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "2277:59:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "!=",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "id": 865,
+                      "name": "ENTRY_NOT_FOUND",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 4901,
+                      "src": "2340:15:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "2277:78:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 859,
+                  "id": 867,
+                  "nodeType": "Return",
+                  "src": "2270:85:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 869,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isAvailabilityVerifier",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 856,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 855,
+                  "name": "verifierAddress",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 869,
+                  "src": "2186:23:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 854,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2186:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2185:25:4"
+            },
+            "returnParameters": {
+              "id": 859,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 858,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 869,
+                  "src": "2250:4:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 857,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2250:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2249:6:4"
+            },
+            "scope": 908,
+            "src": "2154:208:4",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 883,
+              "nodeType": "Block",
+              "src": "2473:95:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 877,
+                        "name": "availabilityVerifiersChain",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1598,
+                        "src": "2492:26:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_ApprovalChainData_$1512_storage",
+                          "typeString": "struct MainStorage.ApprovalChainData storage ref"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 878,
+                        "name": "verifier",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 871,
+                        "src": "2520:8:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 879,
+                        "name": "MAX_VERIFIER_COUNT",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5119,
+                        "src": "2530:18:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 880,
+                        "name": "identifier",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 873,
+                        "src": "2550:10:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_calldata_ptr",
+                          "typeString": "string calldata"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_ApprovalChainData_$1512_storage",
+                          "typeString": "struct MainStorage.ApprovalChainData storage ref"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_string_calldata_ptr",
+                          "typeString": "string calldata"
+                        }
+                      ],
+                      "id": 876,
+                      "name": "addEntry",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 4912,
+                      "src": "2483:8:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_ApprovalChainData_$1512_storage_ptr_$_t_address_$_t_uint256_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (struct MainStorage.ApprovalChainData storage pointer,address,uint256,string memory)"
+                      }
+                    },
+                    "id": 881,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2483:78:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 882,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2483:78:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 884,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "registerAvailabilityVerifier",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 874,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 871,
+                  "name": "verifier",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 884,
+                  "src": "2406:16:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 870,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2406:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 873,
+                  "name": "identifier",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 884,
+                  "src": "2424:26:4",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_calldata_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 872,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2424:6:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2405:46:4"
+            },
+            "returnParameters": {
+              "id": 875,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2473:0:4"
+            },
+            "scope": 908,
+            "src": "2368:200:4",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 895,
+              "nodeType": "Block",
+              "src": "2664:100:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 890,
+                        "name": "availabilityVerifiersChain",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1598,
+                        "src": "2696:26:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_ApprovalChainData_$1512_storage",
+                          "typeString": "struct MainStorage.ApprovalChainData storage ref"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 891,
+                        "name": "verifier",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 886,
+                        "src": "2724:8:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 892,
+                        "name": "VERIFIER_REMOVAL_DELAY",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5125,
+                        "src": "2734:22:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_ApprovalChainData_$1512_storage",
+                          "typeString": "struct MainStorage.ApprovalChainData storage ref"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 889,
+                      "name": "announceRemovalIntent",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 4941,
+                      "src": "2674:21:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_ApprovalChainData_$1512_storage_ptr_$_t_address_$_t_uint256_$returns$__$",
+                        "typeString": "function (struct MainStorage.ApprovalChainData storage pointer,address,uint256)"
+                      }
+                    },
+                    "id": 893,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2674:83:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 894,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2674:83:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 896,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "announceAvailabilityVerifierRemovalIntent",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 887,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 886,
+                  "name": "verifier",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 896,
+                  "src": "2625:16:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 885,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2625:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2624:18:4"
+            },
+            "returnParameters": {
+              "id": 888,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2664:0:4"
+            },
+            "scope": 908,
+            "src": "2574:190:4",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 906,
+              "nodeType": "Block",
+              "src": "2845:66:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 902,
+                        "name": "availabilityVerifiersChain",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1598,
+                        "src": "2867:26:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_ApprovalChainData_$1512_storage",
+                          "typeString": "struct MainStorage.ApprovalChainData storage ref"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 903,
+                        "name": "verifier",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 898,
+                        "src": "2895:8:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_ApprovalChainData_$1512_storage",
+                          "typeString": "struct MainStorage.ApprovalChainData storage ref"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 901,
+                      "name": "removeEntry",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 4948,
+                      "src": "2855:11:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_ApprovalChainData_$1512_storage_ptr_$_t_address_$returns$__$",
+                        "typeString": "function (struct MainStorage.ApprovalChainData storage pointer,address)"
+                      }
+                    },
+                    "id": 904,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2855:49:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 905,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2855:49:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 907,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "removeAvailabilityVerifier",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 899,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 898,
+                  "name": "verifier",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 907,
+                  "src": "2806:16:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 897,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2806:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2805:18:4"
+            },
+            "returnParameters": {
+              "id": 900,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2845:0:4"
+            },
+            "scope": 908,
+            "src": "2770:141:4",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 909,
+        "src": "1894:1019:4"
+      }
+    ],
+    "src": "0:2914:4"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.1",
+  "updatedAt": "2020-10-21T18:42:18.023Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {},
+    "notice": "A :sol:mod:`Committee` contract is a contract that the exchange service sends committee member signatures to attesting that they have a copy of the data over which a new Merkel root is to be accepted as the new state root. In addition, the exchange contract can call an availability verifier to check if such signatures were indeed provided by a sufficient number of committee members as hard coded in the :sol:mod:`Committee` contract for a given state transition (as reflected by the old and new vault and order roots). The exchange contract will normally query only one :sol:mod:`Committee` contract for data availability checks. However, in the event that the committee needs to be updated, additional availability verifiers may be registered with the exchange contract by the contract :sol:mod:`MainGovernance`. Such new availability verifiers are then also be required to attest to the data availability for state transitions and only if all the availability verifiers attest to it, the state transition is accepted. Removal of availability verifiers is also the responsibility of the :sol:mod:`MainGovernance`. The removal process is more sensitive than availability verifier registration as it may affect the soundness of the system. Hence, this is performed in two steps: 1. The :sol:mod:`MainGovernance` first announces the intent to remove an availability verifier by calling :sol:func:`announceAvailabilityVerifierRemovalIntent` 2. After the expiration of a `VERIFIER_REMOVAL_DELAY` time lock, actual removal may be performed by calling :sol:func:`removeAvailabilityVerifier` The removal delay ensures that a user concerned about the soundness of the system has ample time to leave the exchange."
+  }
+}

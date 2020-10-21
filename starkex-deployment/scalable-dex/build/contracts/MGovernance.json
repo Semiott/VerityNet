@@ -1,0 +1,282 @@
+{
+  "contractName": "MGovernance",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/MGovernance.sol\":\"MGovernance\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/MGovernance.sol\":{\"keccak256\":\"0x3872018f4f55249e9e6953d6d5632647404071e7671a07f403172230fe4ca42c\",\"urls\":[\"bzz-raw://47f3dfb21c81c0bd28094b7814b1bbbf371d37a89d8c95cd989dec7fb8299be1\",\"dweb:/ipfs/QmfFb67L91g5hApjGcQFsZBUDW9qLw9KFbrapqSxwPLDmT\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603e80601d6000396000f3fe6080604052600080fdfea265627a7a723158201db7df7a3a38e9f07c4b185278c0a094e5bf0e0f8aa1b20e51170e26d378817564736f6c63430005100032",
+  "deployedBytecode": "0x6080604052600080fdfea265627a7a723158201db7df7a3a38e9f07c4b185278c0a094e5bf0e0f8aa1b20e51170e26d378817564736f6c63430005100032",
+  "sourceMap": "25:285:32:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;25:285:32;;;;;;;",
+  "deployedSourceMap": "25:285:32:-;;;;;",
+  "source": "pragma solidity ^0.5.2;\n\ncontract MGovernance {\n    /*\n      Allows calling the function only by a Governor.\n    */\n    modifier onlyGovernance()\n    {\n        // Pure modifier declarations are not supported. Instead we provide\n        // a dummy definition.\n        revert(\"UNIMPLEMENTED\");\n        _;\n    }\n}\n",
+  "sourcePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/MGovernance.sol",
+  "ast": {
+    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/MGovernance.sol",
+    "exportedSymbols": {
+      "MGovernance": [
+        4998
+      ]
+    },
+    "id": 4999,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 4989,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:32"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 4998,
+        "linearizedBaseContracts": [
+          4998
+        ],
+        "name": "MGovernance",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 4996,
+              "nodeType": "Block",
+              "src": "150:158:32",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "554e494d504c454d454e544544",
+                        "id": 4992,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "274:15:32",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_8c564a77208356051586f074eb0024dc5ad62f6408ee7fbf7aef39d7281998bc",
+                          "typeString": "literal_string \"UNIMPLEMENTED\""
+                        },
+                        "value": "UNIMPLEMENTED"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_8c564a77208356051586f074eb0024dc5ad62f6408ee7fbf7aef39d7281998bc",
+                          "typeString": "literal_string \"UNIMPLEMENTED\""
+                        }
+                      ],
+                      "id": 4991,
+                      "name": "revert",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        5803,
+                        5804
+                      ],
+                      "referencedDeclaration": 5804,
+                      "src": "267:6:32",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_revert_pure$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (string memory) pure"
+                      }
+                    },
+                    "id": 4993,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "267:23:32",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 4994,
+                  "nodeType": "ExpressionStatement",
+                  "src": "267:23:32"
+                },
+                {
+                  "id": 4995,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "300:1:32"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 4997,
+            "name": "onlyGovernance",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 4990,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "143:2:32"
+            },
+            "src": "120:188:32",
+            "visibility": "internal"
+          }
+        ],
+        "scope": 4999,
+        "src": "25:285:32"
+      }
+    ],
+    "src": "0:311:32"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/MGovernance.sol",
+    "exportedSymbols": {
+      "MGovernance": [
+        4998
+      ]
+    },
+    "id": 4999,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 4989,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:32"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 4998,
+        "linearizedBaseContracts": [
+          4998
+        ],
+        "name": "MGovernance",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 4996,
+              "nodeType": "Block",
+              "src": "150:158:32",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "554e494d504c454d454e544544",
+                        "id": 4992,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "274:15:32",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_8c564a77208356051586f074eb0024dc5ad62f6408ee7fbf7aef39d7281998bc",
+                          "typeString": "literal_string \"UNIMPLEMENTED\""
+                        },
+                        "value": "UNIMPLEMENTED"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_8c564a77208356051586f074eb0024dc5ad62f6408ee7fbf7aef39d7281998bc",
+                          "typeString": "literal_string \"UNIMPLEMENTED\""
+                        }
+                      ],
+                      "id": 4991,
+                      "name": "revert",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        5803,
+                        5804
+                      ],
+                      "referencedDeclaration": 5804,
+                      "src": "267:6:32",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_revert_pure$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (string memory) pure"
+                      }
+                    },
+                    "id": 4993,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "267:23:32",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 4994,
+                  "nodeType": "ExpressionStatement",
+                  "src": "267:23:32"
+                },
+                {
+                  "id": 4995,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "300:1:32"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 4997,
+            "name": "onlyGovernance",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 4990,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "143:2:32"
+            },
+            "src": "120:188:32",
+            "visibility": "internal"
+          }
+        ],
+        "scope": 4999,
+        "src": "25:285:32"
+      }
+    ],
+    "src": "0:311:32"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.1",
+  "updatedAt": "2020-10-21T18:42:18.123Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

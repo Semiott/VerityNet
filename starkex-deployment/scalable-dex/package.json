@@ -1,0 +1,26 @@
+{
+  "name": "scalable-dex",
+  "version": "1.0.0",
+  "description": "StarkEx is a STARK-powered scalability engine for crypto exchanges. StarkEx uses cryptographic proofs to attest to the validity of a batch of transactions (such as trades and transfers) and updates a commitment to the state of the exchange onchain.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Semiott/VerityNet.git"
+  },
+  "keywords": [
+    "Verity",
+    "Semiott"
+  ],
+  "author": "Gokul Alex",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Semiott/VerityNet/issues"
+  },
+  "homepage": "https://github.com/Semiott/VerityNet#readme",
+  "devDependencies": {
+    "truffle": "^5.1.49"
+  }
+}

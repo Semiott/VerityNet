@@ -1,0 +1,401 @@
+{
+  "contractName": "IAvailabilityVerifier",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "newVaultRoot",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "heightVaultTree",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "sequenceNumber",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "opaqueAvailabilityProofs",
+          "type": "bytes"
+        }
+      ],
+      "name": "verifyAvailabilityProof",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"newVaultRoot\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"heightVaultTree\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"sequenceNumber\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"opaqueAvailabilityProofs\",\"type\":\"bytes\"}],\"name\":\"verifyAvailabilityProof\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/IAvailabilityVerifier.sol\":\"IAvailabilityVerifier\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/IAvailabilityVerifier.sol\":{\"keccak256\":\"0xd645fe7e228bd1d55729cd334030d171dc3781673fec6077f3d4373d7b7e2f0f\",\"urls\":[\"bzz-raw://f3b444847f3f87c71fbc2d822bf024972ff0d0599ddeb633a7367909bdb85bc3\",\"dweb:/ipfs/QmY81Z8UVKagwSwkvbarrTcf6RFux1De1rxWuTnQ2pQ2bQ\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity ^0.5.2;\n\ncontract IAvailabilityVerifier {\n    function verifyAvailabilityProof(\n        uint256 newVaultRoot,\n        uint256 heightVaultTree,\n        uint256 sequenceNumber,\n        bytes calldata opaqueAvailabilityProofs\n    )\n        external view;\n}\n",
+  "sourcePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/IAvailabilityVerifier.sol",
+  "ast": {
+    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/IAvailabilityVerifier.sol",
+    "exportedSymbols": {
+      "IAvailabilityVerifier": [
+        4768
+      ]
+    },
+    "id": 4769,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 4756,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:23"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 4768,
+        "linearizedBaseContracts": [
+          4768
+        ],
+        "name": "IAvailabilityVerifier",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "id": 4767,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "verifyAvailabilityProof",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4765,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4758,
+                  "name": "newVaultRoot",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4767,
+                  "src": "104:20:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 4757,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "104:7:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4760,
+                  "name": "heightVaultTree",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4767,
+                  "src": "134:23:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 4759,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "134:7:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4762,
+                  "name": "sequenceNumber",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4767,
+                  "src": "167:22:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 4761,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "167:7:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4764,
+                  "name": "opaqueAvailabilityProofs",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4767,
+                  "src": "199:39:23",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 4763,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "199:5:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "94:150:23"
+            },
+            "returnParameters": {
+              "id": 4766,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "266:0:23"
+            },
+            "scope": 4768,
+            "src": "62:205:23",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 4769,
+        "src": "25:244:23"
+      }
+    ],
+    "src": "0:270:23"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/IAvailabilityVerifier.sol",
+    "exportedSymbols": {
+      "IAvailabilityVerifier": [
+        4768
+      ]
+    },
+    "id": 4769,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 4756,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:23"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 4768,
+        "linearizedBaseContracts": [
+          4768
+        ],
+        "name": "IAvailabilityVerifier",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "id": 4767,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "verifyAvailabilityProof",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4765,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4758,
+                  "name": "newVaultRoot",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4767,
+                  "src": "104:20:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 4757,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "104:7:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4760,
+                  "name": "heightVaultTree",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4767,
+                  "src": "134:23:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 4759,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "134:7:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4762,
+                  "name": "sequenceNumber",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4767,
+                  "src": "167:22:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 4761,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "167:7:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4764,
+                  "name": "opaqueAvailabilityProofs",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4767,
+                  "src": "199:39:23",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 4763,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "199:5:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "94:150:23"
+            },
+            "returnParameters": {
+              "id": 4766,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "266:0:23"
+            },
+            "scope": 4768,
+            "src": "62:205:23",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 4769,
+        "src": "25:244:23"
+      }
+    ],
+    "src": "0:270:23"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.1",
+  "updatedAt": "2020-10-21T18:42:18.113Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

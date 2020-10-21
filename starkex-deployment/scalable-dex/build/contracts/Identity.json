@@ -1,0 +1,230 @@
+{
+  "contractName": "Identity",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "identify",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "pure",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"identify\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/Identity.sol\":\"Identity\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/Identity.sol\":{\"keccak256\":\"0x64414c0fc8b27a00d8197eafc6061eeb81206b4aff9f6872bcfc55d6b44b7153\",\"urls\":[\"bzz-raw://095f9f7378a8ad7962a114b86dc471f46c727a1200b46d2590b7ad4d23315b93\",\"dweb:/ipfs/QmU32Bep13DqwpemCdny8VyoRj4X8aU34VoWpHVi3Cc5ou\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity ^0.5.2;\n\ncontract Identity {\n\n    /*\n      Allows a caller, typically another contract,\n      to ensure that the provided address is of the expected type and version.\n    */\n    function identify()\n        external pure\n        returns(string memory);\n}\n",
+  "sourcePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/Identity.sol",
+  "ast": {
+    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/Identity.sol",
+    "exportedSymbols": {
+      "Identity": [
+        4890
+      ]
+    },
+    "id": 4891,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 4884,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:29"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 4890,
+        "linearizedBaseContracts": [
+          4890
+        ],
+        "name": "Identity",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "id": 4889,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "identify",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4885,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "211:2:29"
+            },
+            "returnParameters": {
+              "id": 4888,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4887,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4889,
+                  "src": "252:13:29",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 4886,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "252:6:29",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "251:15:29"
+            },
+            "scope": 4890,
+            "src": "194:73:29",
+            "stateMutability": "pure",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 4891,
+        "src": "25:244:29"
+      }
+    ],
+    "src": "0:270:29"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/Identity.sol",
+    "exportedSymbols": {
+      "Identity": [
+        4890
+      ]
+    },
+    "id": 4891,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 4884,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:29"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 4890,
+        "linearizedBaseContracts": [
+          4890
+        ],
+        "name": "Identity",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "id": 4889,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "identify",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4885,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "211:2:29"
+            },
+            "returnParameters": {
+              "id": 4888,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4887,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4889,
+                  "src": "252:13:29",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 4886,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "252:6:29",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "251:15:29"
+            },
+            "scope": 4890,
+            "src": "194:73:29",
+            "stateMutability": "pure",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 4891,
+        "src": "25:244:29"
+      }
+    ],
+    "src": "0:270:29"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.1",
+  "updatedAt": "2020-10-21T18:42:18.120Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

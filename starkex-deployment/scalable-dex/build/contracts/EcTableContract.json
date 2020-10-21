@@ -1,0 +1,192 @@
+{
+  "contractName": "EcTableContract",
+  "abi": [
+    {
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "fallback"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"fallback\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/components/EcTableContract.sol\":\"EcTableContract\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/components/EcTableContract.sol\":{\"keccak256\":\"0x50ab5e58f36959040cb41e04615608eb648365c9709bc152bc328948131f0027\",\"urls\":[\"bzz-raw://b39a62b1fe26980a71d627b6a82526a4595afb28b223ce00d6b890faebbab142\",\"dweb:/ipfs/QmenrzXjr66GHUzDPChL4bNd2XP2gLZQfjBGpcEUNCFMX5\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506102bf806100206000396000f3fe608060405234801561001057600080fd5b506140003803604060003560f81c60061b82016000396040803560f81c60061b8201604039604060803560f81c60061b8201608039604060c03560f81c60061b820160c03960406101003560f81c60061b82016101003960406101403560f81c60061b82016101403960406101803560f81c60061b82016101803960406101c03560f81c60061b82016101c03960406102003560f81c60061b82016102003960406102403560f81c60061b82016102403960406102803560f81c60061b82016102803960406102c03560f81c60061b82016102c03960406103003560f81c60061b82016103003960406103403560f81c60061b82016103403960406103803560f81c60061b82016103803960406103c03560f81c60061b82016103c03960406104003560f81c60061b82016104003960406104403560f81c60061b82016104403960406104803560f81c60061b82016104803960406104c03560f81c60061b82016104c03960406105003560f81c60061b82016105003960406105403560f81c60061b82016105403960406105803560f81c60061b82016105803960406105c03560f81c60061b82016105c03960406106003560f81c60061b82016106003960406106403560f81c60061b82016106403960406106803560f81c60061b82016106803960406106c03560f81c60061b82016106c03960406107003560f81c60061b82016107003960406107403560f81c60061b82016107403960406107803560f81c60061b82016107803960406107c03560f81c60061b82016107c03960406108003560f81c60061b8201610800396108405b36811015610284576040813560f81c60061b83018239604081019050610263565b50366000f3fea265627a7a72315820c35e4c3d7a8a68b38a8fa836e5418880e38d6daeaf033276dfce933b1a47dd0e64736f6c63430005100032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506140003803604060003560f81c60061b82016000396040803560f81c60061b8201604039604060803560f81c60061b8201608039604060c03560f81c60061b820160c03960406101003560f81c60061b82016101003960406101403560f81c60061b82016101403960406101803560f81c60061b82016101803960406101c03560f81c60061b82016101c03960406102003560f81c60061b82016102003960406102403560f81c60061b82016102403960406102803560f81c60061b82016102803960406102c03560f81c60061b82016102c03960406103003560f81c60061b82016103003960406103403560f81c60061b82016103403960406103803560f81c60061b82016103803960406103c03560f81c60061b82016103c03960406104003560f81c60061b82016104003960406104403560f81c60061b82016104403960406104803560f81c60061b82016104803960406104c03560f81c60061b82016104c03960406105003560f81c60061b82016105003960406105403560f81c60061b82016105403960406105803560f81c60061b82016105803960406105c03560f81c60061b82016105c03960406106003560f81c60061b82016106003960406106403560f81c60061b82016106403960406106803560f81c60061b82016106803960406106c03560f81c60061b82016106c03960406107003560f81c60061b82016107003960406107403560f81c60061b82016107403960406107803560f81c60061b82016107803960406107c03560f81c60061b82016107c03960406108003560f81c60061b8201610800396108405b36811015610284576040813560f81c60061b83018239604081019050610263565b50366000f3fea265627a7a72315820c35e4c3d7a8a68b38a8fa836e5418880e38d6daeaf033276dfce933b1a47dd0e64736f6c63430005100032",
+  "sourceMap": "25:4281:5:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;25:4281:5;;;;;;;",
+  "deployedSourceMap": "25:4281:5:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;25:4281:5;601:6;574:8;570:38;1008:4;999:3;986:17;980:4;976:28;973:1;969:36;956:11;952:54;947:3;938:75;1098:4;1088;1075:18;1069:4;1065:29;1062:1;1058:37;1045:11;1041:55;1035:4;1026:77;1188:4;1178;1165:18;1159:4;1155:29;1152:1;1148:37;1135:11;1131:55;1125:4;1116:77;1278:4;1268;1255:18;1249:4;1245:29;1242:1;1238:37;1225:11;1221:55;1215:4;1206:77;1370:4;1359:5;1346:19;1340:4;1336:30;1333:1;1329:38;1316:11;1312:56;1305:5;1296:79;1462:4;1451:5;1438:19;1432:4;1428:30;1425:1;1421:38;1408:11;1404:56;1397:5;1388:79;1554:4;1543:5;1530:19;1524:4;1520:30;1517:1;1513:38;1500:11;1496:56;1489:5;1480:79;1646:4;1635:5;1622:19;1616:4;1612:30;1609:1;1605:38;1592:11;1588:56;1581:5;1572:79;1738:4;1727:5;1714:19;1708:4;1704:30;1701:1;1697:38;1684:11;1680:56;1673:5;1664:79;1830:4;1819:5;1806:19;1800:4;1796:30;1793:1;1789:38;1776:11;1772:56;1765:5;1756:79;1922:4;1911:5;1898:19;1892:4;1888:30;1885:1;1881:38;1868:11;1864:56;1857:5;1848:79;2014:4;2003:5;1990:19;1984:4;1980:30;1977:1;1973:38;1960:11;1956:56;1949:5;1940:79;2106:4;2095:5;2082:19;2076:4;2072:30;2069:1;2065:38;2052:11;2048:56;2041:5;2032:79;2198:4;2187:5;2174:19;2168:4;2164:30;2161:1;2157:38;2144:11;2140:56;2133:5;2124:79;2290:4;2279:5;2266:19;2260:4;2256:30;2253:1;2249:38;2236:11;2232:56;2225:5;2216:79;2382:4;2371:5;2358:19;2352:4;2348:30;2345:1;2341:38;2328:11;2324:56;2317:5;2308:79;2474:4;2463:5;2450:19;2444:4;2440:30;2437:1;2433:38;2420:11;2416:56;2409:5;2400:79;2566:4;2555:5;2542:19;2536:4;2532:30;2529:1;2525:38;2512:11;2508:56;2501:5;2492:79;2658:4;2647:5;2634:19;2628:4;2624:30;2621:1;2617:38;2604:11;2600:56;2593:5;2584:79;2750:4;2739:5;2726:19;2720:4;2716:30;2713:1;2709:38;2696:11;2692:56;2685:5;2676:79;2842:4;2831:5;2818:19;2812:4;2808:30;2805:1;2801:38;2788:11;2784:56;2777:5;2768:79;2934:4;2923:5;2910:19;2904:4;2900:30;2897:1;2893:38;2880:11;2876:56;2869:5;2860:79;3026:4;3015:5;3002:19;2996:4;2992:30;2989:1;2985:38;2972:11;2968:56;2961:5;2952:79;3118:4;3107:5;3094:19;3088:4;3084:30;3081:1;3077:38;3064:11;3060:56;3053:5;3044:79;3210:4;3199:5;3186:19;3180:4;3176:30;3173:1;3169:38;3156:11;3152:56;3145:5;3136:79;3302:4;3291:5;3278:19;3272:4;3268:30;3265:1;3261:38;3248:11;3244:56;3237:5;3228:79;3394:4;3383:5;3370:19;3364:4;3360:30;3357:1;3353:38;3340:11;3336:56;3329:5;3320:79;3486:4;3475:5;3462:19;3456:4;3452:30;3449:1;3445:38;3432:11;3428:56;3421:5;3412:79;3578:4;3567:5;3554:19;3548:4;3544:30;3541:1;3537:38;3524:11;3520:56;3513:5;3504:79;3670:4;3659:5;3646:19;3640:4;3636:30;3633:1;3629:38;3616:11;3612:56;3605:5;3596:79;3762:4;3751:5;3738:19;3732:4;3728:30;3725:1;3721:38;3708:11;3704:56;3697:5;3688:79;3854:4;3843:5;3830:19;3824:4;3820:30;3817:1;3813:38;3800:11;3796:56;3789:5;3780:79;3946:4;3935:5;3922:19;3916:4;3912:30;3909:1;3905:38;3892:11;3888:56;3881:5;3872:79;4072:5;4052:198;4091:12;4083:6;4080:24;4052:198;;;4231:4;4219:6;4206:20;4200:4;4196:31;4193:1;4189:39;4176:11;4172:57;4164:6;4155:81;4129:4;4121:6;4117:17;4107:27;;4052:198;;;4056:23;4275:12;4272:1;4264:24",
+  "source": "pragma solidity ^0.5.2;\n\ncontract EcTableContract {\n    /*\n      Given n 512 bit words, performs n lookups.\n      The lookups are done for the first byte of each 512 bit word in the input.\n\n      The result of each lookup is 512 bits so the input and the output are of the same size.\n\n      This function assumes that the deployment script appends an 0x4000 bytes lookup table to the\n      end of the code in the contract.\n    */\n    function() external {\n        // solium-disable-next-line security/no-inline-assembly\n        assembly {\n            let tableOffset := sub(codesize, /* table size */ 0x4000)\n\n            // The lookup loop is unrolled 33 times as it saves ~90k gas in the expected use case.\n            // The first lookup index is at byte offset shl(6, shr(0xf8, calldataload(0x0))\n            // into the lookup table.\n            // codecopy(...) copies the 64 bytes at that offset into the output array.\n            codecopy(0x0, add(tableOffset, shl(6, shr(0xf8, calldataload(0x0)))), 0x40)\n            codecopy(0x40, add(tableOffset, shl(6, shr(0xf8, calldataload(0x40)))), 0x40)\n            codecopy(0x80, add(tableOffset, shl(6, shr(0xf8, calldataload(0x80)))), 0x40)\n            codecopy(0xc0, add(tableOffset, shl(6, shr(0xf8, calldataload(0xc0)))), 0x40)\n            codecopy(0x100, add(tableOffset, shl(6, shr(0xf8, calldataload(0x100)))), 0x40)\n            codecopy(0x140, add(tableOffset, shl(6, shr(0xf8, calldataload(0x140)))), 0x40)\n            codecopy(0x180, add(tableOffset, shl(6, shr(0xf8, calldataload(0x180)))), 0x40)\n            codecopy(0x1c0, add(tableOffset, shl(6, shr(0xf8, calldataload(0x1c0)))), 0x40)\n            codecopy(0x200, add(tableOffset, shl(6, shr(0xf8, calldataload(0x200)))), 0x40)\n            codecopy(0x240, add(tableOffset, shl(6, shr(0xf8, calldataload(0x240)))), 0x40)\n            codecopy(0x280, add(tableOffset, shl(6, shr(0xf8, calldataload(0x280)))), 0x40)\n            codecopy(0x2c0, add(tableOffset, shl(6, shr(0xf8, calldataload(0x2c0)))), 0x40)\n            codecopy(0x300, add(tableOffset, shl(6, shr(0xf8, calldataload(0x300)))), 0x40)\n            codecopy(0x340, add(tableOffset, shl(6, shr(0xf8, calldataload(0x340)))), 0x40)\n            codecopy(0x380, add(tableOffset, shl(6, shr(0xf8, calldataload(0x380)))), 0x40)\n            codecopy(0x3c0, add(tableOffset, shl(6, shr(0xf8, calldataload(0x3c0)))), 0x40)\n            codecopy(0x400, add(tableOffset, shl(6, shr(0xf8, calldataload(0x400)))), 0x40)\n            codecopy(0x440, add(tableOffset, shl(6, shr(0xf8, calldataload(0x440)))), 0x40)\n            codecopy(0x480, add(tableOffset, shl(6, shr(0xf8, calldataload(0x480)))), 0x40)\n            codecopy(0x4c0, add(tableOffset, shl(6, shr(0xf8, calldataload(0x4c0)))), 0x40)\n            codecopy(0x500, add(tableOffset, shl(6, shr(0xf8, calldataload(0x500)))), 0x40)\n            codecopy(0x540, add(tableOffset, shl(6, shr(0xf8, calldataload(0x540)))), 0x40)\n            codecopy(0x580, add(tableOffset, shl(6, shr(0xf8, calldataload(0x580)))), 0x40)\n            codecopy(0x5c0, add(tableOffset, shl(6, shr(0xf8, calldataload(0x5c0)))), 0x40)\n            codecopy(0x600, add(tableOffset, shl(6, shr(0xf8, calldataload(0x600)))), 0x40)\n            codecopy(0x640, add(tableOffset, shl(6, shr(0xf8, calldataload(0x640)))), 0x40)\n            codecopy(0x680, add(tableOffset, shl(6, shr(0xf8, calldataload(0x680)))), 0x40)\n            codecopy(0x6c0, add(tableOffset, shl(6, shr(0xf8, calldataload(0x6c0)))), 0x40)\n            codecopy(0x700, add(tableOffset, shl(6, shr(0xf8, calldataload(0x700)))), 0x40)\n            codecopy(0x740, add(tableOffset, shl(6, shr(0xf8, calldataload(0x740)))), 0x40)\n            codecopy(0x780, add(tableOffset, shl(6, shr(0xf8, calldataload(0x780)))), 0x40)\n            codecopy(0x7c0, add(tableOffset, shl(6, shr(0xf8, calldataload(0x7c0)))), 0x40)\n            codecopy(0x800, add(tableOffset, shl(6, shr(0xf8, calldataload(0x800)))), 0x40)\n\n            // If the calldatasize > 0x40 * 33, do the remaining lookups using a loop.\n            for { let offset := 0x840 } lt(offset, calldatasize) { offset := add(offset, 0x40) } {\n                codecopy(offset, add(tableOffset, shl(6, shr(0xf8, calldataload(offset)))), 0x40)\n            }\n\n            return (0, calldatasize)\n        }\n    }\n}\n",
+  "sourcePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/components/EcTableContract.sol",
+  "ast": {
+    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/components/EcTableContract.sol",
+    "exportedSymbols": {
+      "EcTableContract": [
+        916
+      ]
+    },
+    "id": 917,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 910,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:5"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 916,
+        "linearizedBaseContracts": [
+          916
+        ],
+        "name": "EcTableContract",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 914,
+              "nodeType": "Block",
+              "src": "454:3850:5",
+              "statements": [
+                {
+                  "externalReferences": [],
+                  "id": 913,
+                  "nodeType": "InlineAssembly",
+                  "operations": "{\n    let tableOffset := sub(codesize(), 0x4000)\n    codecopy(0x0, add(tableOffset, shl(6, shr(0xf8, calldataload(0x0)))), 0x40)\n    codecopy(0x40, add(tableOffset, shl(6, shr(0xf8, calldataload(0x40)))), 0x40)\n    codecopy(0x80, add(tableOffset, shl(6, shr(0xf8, calldataload(0x80)))), 0x40)\n    codecopy(0xc0, add(tableOffset, shl(6, shr(0xf8, calldataload(0xc0)))), 0x40)\n    codecopy(0x100, add(tableOffset, shl(6, shr(0xf8, calldataload(0x100)))), 0x40)\n    codecopy(0x140, add(tableOffset, shl(6, shr(0xf8, calldataload(0x140)))), 0x40)\n    codecopy(0x180, add(tableOffset, shl(6, shr(0xf8, calldataload(0x180)))), 0x40)\n    codecopy(0x1c0, add(tableOffset, shl(6, shr(0xf8, calldataload(0x1c0)))), 0x40)\n    codecopy(0x200, add(tableOffset, shl(6, shr(0xf8, calldataload(0x200)))), 0x40)\n    codecopy(0x240, add(tableOffset, shl(6, shr(0xf8, calldataload(0x240)))), 0x40)\n    codecopy(0x280, add(tableOffset, shl(6, shr(0xf8, calldataload(0x280)))), 0x40)\n    codecopy(0x2c0, add(tableOffset, shl(6, shr(0xf8, calldataload(0x2c0)))), 0x40)\n    codecopy(0x300, add(tableOffset, shl(6, shr(0xf8, calldataload(0x300)))), 0x40)\n    codecopy(0x340, add(tableOffset, shl(6, shr(0xf8, calldataload(0x340)))), 0x40)\n    codecopy(0x380, add(tableOffset, shl(6, shr(0xf8, calldataload(0x380)))), 0x40)\n    codecopy(0x3c0, add(tableOffset, shl(6, shr(0xf8, calldataload(0x3c0)))), 0x40)\n    codecopy(0x400, add(tableOffset, shl(6, shr(0xf8, calldataload(0x400)))), 0x40)\n    codecopy(0x440, add(tableOffset, shl(6, shr(0xf8, calldataload(0x440)))), 0x40)\n    codecopy(0x480, add(tableOffset, shl(6, shr(0xf8, calldataload(0x480)))), 0x40)\n    codecopy(0x4c0, add(tableOffset, shl(6, shr(0xf8, calldataload(0x4c0)))), 0x40)\n    codecopy(0x500, add(tableOffset, shl(6, shr(0xf8, calldataload(0x500)))), 0x40)\n    codecopy(0x540, add(tableOffset, shl(6, shr(0xf8, calldataload(0x540)))), 0x40)\n    codecopy(0x580, add(tableOffset, shl(6, shr(0xf8, calldataload(0x580)))), 0x40)\n    codecopy(0x5c0, add(tableOffset, shl(6, shr(0xf8, calldataload(0x5c0)))), 0x40)\n    codecopy(0x600, add(tableOffset, shl(6, shr(0xf8, calldataload(0x600)))), 0x40)\n    codecopy(0x640, add(tableOffset, shl(6, shr(0xf8, calldataload(0x640)))), 0x40)\n    codecopy(0x680, add(tableOffset, shl(6, shr(0xf8, calldataload(0x680)))), 0x40)\n    codecopy(0x6c0, add(tableOffset, shl(6, shr(0xf8, calldataload(0x6c0)))), 0x40)\n    codecopy(0x700, add(tableOffset, shl(6, shr(0xf8, calldataload(0x700)))), 0x40)\n    codecopy(0x740, add(tableOffset, shl(6, shr(0xf8, calldataload(0x740)))), 0x40)\n    codecopy(0x780, add(tableOffset, shl(6, shr(0xf8, calldataload(0x780)))), 0x40)\n    codecopy(0x7c0, add(tableOffset, shl(6, shr(0xf8, calldataload(0x7c0)))), 0x40)\n    codecopy(0x800, add(tableOffset, shl(6, shr(0xf8, calldataload(0x800)))), 0x40)\n    for { let offset := 0x840 }\n    lt(offset, calldatasize())\n    { offset := add(offset, 0x40) }\n    {\n        codecopy(offset, add(tableOffset, shl(6, shr(0xf8, calldataload(offset)))), 0x40)\n    }\n    return(0, calldatasize())\n}",
+                  "src": "528:3770:5"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 915,
+            "implemented": true,
+            "kind": "fallback",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 911,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "442:2:5"
+            },
+            "returnParameters": {
+              "id": 912,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "454:0:5"
+            },
+            "scope": 916,
+            "src": "434:3870:5",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 917,
+        "src": "25:4281:5"
+      }
+    ],
+    "src": "0:4307:5"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/components/EcTableContract.sol",
+    "exportedSymbols": {
+      "EcTableContract": [
+        916
+      ]
+    },
+    "id": 917,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 910,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:5"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 916,
+        "linearizedBaseContracts": [
+          916
+        ],
+        "name": "EcTableContract",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 914,
+              "nodeType": "Block",
+              "src": "454:3850:5",
+              "statements": [
+                {
+                  "externalReferences": [],
+                  "id": 913,
+                  "nodeType": "InlineAssembly",
+                  "operations": "{\n    let tableOffset := sub(codesize(), 0x4000)\n    codecopy(0x0, add(tableOffset, shl(6, shr(0xf8, calldataload(0x0)))), 0x40)\n    codecopy(0x40, add(tableOffset, shl(6, shr(0xf8, calldataload(0x40)))), 0x40)\n    codecopy(0x80, add(tableOffset, shl(6, shr(0xf8, calldataload(0x80)))), 0x40)\n    codecopy(0xc0, add(tableOffset, shl(6, shr(0xf8, calldataload(0xc0)))), 0x40)\n    codecopy(0x100, add(tableOffset, shl(6, shr(0xf8, calldataload(0x100)))), 0x40)\n    codecopy(0x140, add(tableOffset, shl(6, shr(0xf8, calldataload(0x140)))), 0x40)\n    codecopy(0x180, add(tableOffset, shl(6, shr(0xf8, calldataload(0x180)))), 0x40)\n    codecopy(0x1c0, add(tableOffset, shl(6, shr(0xf8, calldataload(0x1c0)))), 0x40)\n    codecopy(0x200, add(tableOffset, shl(6, shr(0xf8, calldataload(0x200)))), 0x40)\n    codecopy(0x240, add(tableOffset, shl(6, shr(0xf8, calldataload(0x240)))), 0x40)\n    codecopy(0x280, add(tableOffset, shl(6, shr(0xf8, calldataload(0x280)))), 0x40)\n    codecopy(0x2c0, add(tableOffset, shl(6, shr(0xf8, calldataload(0x2c0)))), 0x40)\n    codecopy(0x300, add(tableOffset, shl(6, shr(0xf8, calldataload(0x300)))), 0x40)\n    codecopy(0x340, add(tableOffset, shl(6, shr(0xf8, calldataload(0x340)))), 0x40)\n    codecopy(0x380, add(tableOffset, shl(6, shr(0xf8, calldataload(0x380)))), 0x40)\n    codecopy(0x3c0, add(tableOffset, shl(6, shr(0xf8, calldataload(0x3c0)))), 0x40)\n    codecopy(0x400, add(tableOffset, shl(6, shr(0xf8, calldataload(0x400)))), 0x40)\n    codecopy(0x440, add(tableOffset, shl(6, shr(0xf8, calldataload(0x440)))), 0x40)\n    codecopy(0x480, add(tableOffset, shl(6, shr(0xf8, calldataload(0x480)))), 0x40)\n    codecopy(0x4c0, add(tableOffset, shl(6, shr(0xf8, calldataload(0x4c0)))), 0x40)\n    codecopy(0x500, add(tableOffset, shl(6, shr(0xf8, calldataload(0x500)))), 0x40)\n    codecopy(0x540, add(tableOffset, shl(6, shr(0xf8, calldataload(0x540)))), 0x40)\n    codecopy(0x580, add(tableOffset, shl(6, shr(0xf8, calldataload(0x580)))), 0x40)\n    codecopy(0x5c0, add(tableOffset, shl(6, shr(0xf8, calldataload(0x5c0)))), 0x40)\n    codecopy(0x600, add(tableOffset, shl(6, shr(0xf8, calldataload(0x600)))), 0x40)\n    codecopy(0x640, add(tableOffset, shl(6, shr(0xf8, calldataload(0x640)))), 0x40)\n    codecopy(0x680, add(tableOffset, shl(6, shr(0xf8, calldataload(0x680)))), 0x40)\n    codecopy(0x6c0, add(tableOffset, shl(6, shr(0xf8, calldataload(0x6c0)))), 0x40)\n    codecopy(0x700, add(tableOffset, shl(6, shr(0xf8, calldataload(0x700)))), 0x40)\n    codecopy(0x740, add(tableOffset, shl(6, shr(0xf8, calldataload(0x740)))), 0x40)\n    codecopy(0x780, add(tableOffset, shl(6, shr(0xf8, calldataload(0x780)))), 0x40)\n    codecopy(0x7c0, add(tableOffset, shl(6, shr(0xf8, calldataload(0x7c0)))), 0x40)\n    codecopy(0x800, add(tableOffset, shl(6, shr(0xf8, calldataload(0x800)))), 0x40)\n    for { let offset := 0x840 }\n    lt(offset, calldatasize())\n    { offset := add(offset, 0x40) }\n    {\n        codecopy(offset, add(tableOffset, shl(6, shr(0xf8, calldataload(offset)))), 0x40)\n    }\n    return(0, calldatasize())\n}",
+                  "src": "528:3770:5"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 915,
+            "implemented": true,
+            "kind": "fallback",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 911,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "442:2:5"
+            },
+            "returnParameters": {
+              "id": 912,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "454:0:5"
+            },
+            "scope": 916,
+            "src": "434:3870:5",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 917,
+        "src": "25:4281:5"
+      }
+    ],
+    "src": "0:4307:5"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.1",
+  "updatedAt": "2020-10-21T18:42:18.025Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

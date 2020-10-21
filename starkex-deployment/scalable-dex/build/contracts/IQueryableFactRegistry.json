@@ -1,0 +1,317 @@
+{
+  "contractName": "IQueryableFactRegistry",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "fact",
+          "type": "bytes32"
+        }
+      ],
+      "name": "isValid",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "hasRegisteredFact",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"hasRegisteredFact\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"fact\",\"type\":\"bytes32\"}],\"name\":\"isValid\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/IQueryableFactRegistry.sol\":\"IQueryableFactRegistry\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/IFactRegistry.sol\":{\"keccak256\":\"0x7f4e47365a887730d676a98fa96cee9273abf09655bafe2a224c9a9398732214\",\"urls\":[\"bzz-raw://21223482a9890cd6ba8c733d891923fc12ca1c9d6f147212f77a2f8a0a0af52d\",\"dweb:/ipfs/QmWH8jxhSRVaEMyEY4XjwBPSGNZKM9xY2a7zh2bycKgUjH\"]},\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/IQueryableFactRegistry.sol\":{\"keccak256\":\"0xafd25334915b194bf743d05a8d1fc5431d08b9473489afe9e7807fa969b73a51\",\"urls\":[\"bzz-raw://766c3a42089372363f1b09d239ff5a85133179547055cae4db3c4ddd2bbf9517\",\"dweb:/ipfs/Qme7DFmZD3Agw2cY6gpDDUVSV3JhEYoNUrd2Tz9LdChAv1\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity ^0.5.2;\n\nimport \"./IFactRegistry.sol\";\n\n/*\n  Extends the IFactRegistry interface with a query method that indicates\n  whether the fact registry has successfully registered any fact or is still empty of such facts.\n*/\ncontract IQueryableFactRegistry is IFactRegistry {\n\n    /*\n      Returns true if at least one fact has been registered.\n    */\n    function hasRegisteredFact()\n        external view\n        returns(bool);\n\n}\n",
+  "sourcePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/IQueryableFactRegistry.sol",
+  "ast": {
+    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/IQueryableFactRegistry.sol",
+    "exportedSymbols": {
+      "IQueryableFactRegistry": [
+        4811
+      ]
+    },
+    "id": 4812,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 4802,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:26"
+      },
+      {
+        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/IFactRegistry.sol",
+        "file": "./IFactRegistry.sol",
+        "id": 4803,
+        "nodeType": "ImportDirective",
+        "scope": 4812,
+        "sourceUnit": 4801,
+        "src": "25:29:26",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 4804,
+              "name": "IFactRegistry",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 4800,
+              "src": "268:13:26",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IFactRegistry_$4800",
+                "typeString": "contract IFactRegistry"
+              }
+            },
+            "id": 4805,
+            "nodeType": "InheritanceSpecifier",
+            "src": "268:13:26"
+          }
+        ],
+        "contractDependencies": [
+          4800
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 4811,
+        "linearizedBaseContracts": [
+          4811,
+          4800
+        ],
+        "name": "IQueryableFactRegistry",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "id": 4810,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "hasRegisteredFact",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4806,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "390:2:26"
+            },
+            "returnParameters": {
+              "id": 4809,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4808,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4810,
+                  "src": "431:4:26",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 4807,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "431:4:26",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "430:6:26"
+            },
+            "scope": 4811,
+            "src": "364:73:26",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 4812,
+        "src": "233:207:26"
+      }
+    ],
+    "src": "0:441:26"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/IQueryableFactRegistry.sol",
+    "exportedSymbols": {
+      "IQueryableFactRegistry": [
+        4811
+      ]
+    },
+    "id": 4812,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 4802,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:26"
+      },
+      {
+        "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/IFactRegistry.sol",
+        "file": "./IFactRegistry.sol",
+        "id": 4803,
+        "nodeType": "ImportDirective",
+        "scope": 4812,
+        "sourceUnit": 4801,
+        "src": "25:29:26",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 4804,
+              "name": "IFactRegistry",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 4800,
+              "src": "268:13:26",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IFactRegistry_$4800",
+                "typeString": "contract IFactRegistry"
+              }
+            },
+            "id": 4805,
+            "nodeType": "InheritanceSpecifier",
+            "src": "268:13:26"
+          }
+        ],
+        "contractDependencies": [
+          4800
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 4811,
+        "linearizedBaseContracts": [
+          4811,
+          4800
+        ],
+        "name": "IQueryableFactRegistry",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "id": 4810,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "hasRegisteredFact",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4806,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "390:2:26"
+            },
+            "returnParameters": {
+              "id": 4809,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4808,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4810,
+                  "src": "431:4:26",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 4807,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "431:4:26",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "430:6:26"
+            },
+            "scope": 4811,
+            "src": "364:73:26",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 4812,
+        "src": "233:207:26"
+      }
+    ],
+    "src": "0:441:26"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.1",
+  "updatedAt": "2020-10-21T18:42:18.116Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

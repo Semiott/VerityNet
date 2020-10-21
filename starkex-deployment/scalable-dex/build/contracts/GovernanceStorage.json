@@ -1,0 +1,418 @@
+{
+  "contractName": "GovernanceStorage",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/components/GovernanceStorage.sol\":\"GovernanceStorage\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/components/GovernanceStorage.sol\":{\"keccak256\":\"0x67fb34740c25832ca4ebe572796b37744173dc6e41bedd89bcf0f86939195400\",\"urls\":[\"bzz-raw://4a4e89a296039dd310be02621be7caf655cd0962369156dce4733031ab2058eb\",\"dweb:/ipfs/QmXQT5hMWxUfRSxDURvKNdEkLUvDPyVSw8ia1NirtFzL3k\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603e80601d6000396000f3fe6080604052600080fdfea265627a7a7231582034620414127707ae3d059d6c88f9efd4159c0e4c9246d4baf8c5bc580873b60a64736f6c63430005100032",
+  "deployedBytecode": "0x6080604052600080fdfea265627a7a7231582034620414127707ae3d059d6c88f9efd4159c0e4c9246d4baf8c5bc580873b60a64736f6c63430005100032",
+  "sourceMap": "117:323:9:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;117:323:9;;;;;;;",
+  "deployedSourceMap": "117:323:9:-;;;;;",
+  "source": "pragma solidity ^0.5.2;\n\n/*\n  Holds the governance slots for ALL entities, including proxy and the main contract.\n*/\ncontract GovernanceStorage {\n\n    struct GovernanceInfoStruct {\n        mapping (address => bool) effectiveGovernors;\n        address candidateGovernor;\n        bool initialized;\n    }\n\n    // A map from a Governor tag to its own GovernanceInfoStruct.\n    mapping (string => GovernanceInfoStruct) internal governanceInfo;\n}\n",
+  "sourcePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/components/GovernanceStorage.sol",
+  "ast": {
+    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/components/GovernanceStorage.sol",
+    "exportedSymbols": {
+      "GovernanceStorage": [
+        1433
+      ]
+    },
+    "id": 1434,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1419,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:9"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1433,
+        "linearizedBaseContracts": [
+          1433
+        ],
+        "name": "GovernanceStorage",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "GovernanceStorage.GovernanceInfoStruct",
+            "id": 1428,
+            "members": [
+              {
+                "constant": false,
+                "id": 1423,
+                "name": "effectiveGovernors",
+                "nodeType": "VariableDeclaration",
+                "scope": 1428,
+                "src": "189:44:9",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                  "typeString": "mapping(address => bool)"
+                },
+                "typeName": {
+                  "id": 1422,
+                  "keyType": {
+                    "id": 1420,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "198:7:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "nodeType": "Mapping",
+                  "src": "189:25:9",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                    "typeString": "mapping(address => bool)"
+                  },
+                  "valueType": {
+                    "id": 1421,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "209:4:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1425,
+                "name": "candidateGovernor",
+                "nodeType": "VariableDeclaration",
+                "scope": 1428,
+                "src": "243:25:9",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 1424,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "243:7:9",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1427,
+                "name": "initialized",
+                "nodeType": "VariableDeclaration",
+                "scope": 1428,
+                "src": "278:16:9",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 1426,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "278:4:9",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "GovernanceInfoStruct",
+            "nodeType": "StructDefinition",
+            "scope": 1433,
+            "src": "151:150:9",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 1432,
+            "name": "governanceInfo",
+            "nodeType": "VariableDeclaration",
+            "scope": 1433,
+            "src": "373:64:9",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_GovernanceInfoStruct_$1428_storage_$",
+              "typeString": "mapping(string => struct GovernanceStorage.GovernanceInfoStruct)"
+            },
+            "typeName": {
+              "id": 1431,
+              "keyType": {
+                "id": 1429,
+                "name": "string",
+                "nodeType": "ElementaryTypeName",
+                "src": "382:6:9",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "373:40:9",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_GovernanceInfoStruct_$1428_storage_$",
+                "typeString": "mapping(string => struct GovernanceStorage.GovernanceInfoStruct)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 1430,
+                "name": "GovernanceInfoStruct",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 1428,
+                "src": "392:20:9",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_GovernanceInfoStruct_$1428_storage_ptr",
+                  "typeString": "struct GovernanceStorage.GovernanceInfoStruct"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 1434,
+        "src": "117:323:9"
+      }
+    ],
+    "src": "0:441:9"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/components/GovernanceStorage.sol",
+    "exportedSymbols": {
+      "GovernanceStorage": [
+        1433
+      ]
+    },
+    "id": 1434,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1419,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:9"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1433,
+        "linearizedBaseContracts": [
+          1433
+        ],
+        "name": "GovernanceStorage",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "GovernanceStorage.GovernanceInfoStruct",
+            "id": 1428,
+            "members": [
+              {
+                "constant": false,
+                "id": 1423,
+                "name": "effectiveGovernors",
+                "nodeType": "VariableDeclaration",
+                "scope": 1428,
+                "src": "189:44:9",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                  "typeString": "mapping(address => bool)"
+                },
+                "typeName": {
+                  "id": 1422,
+                  "keyType": {
+                    "id": 1420,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "198:7:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "nodeType": "Mapping",
+                  "src": "189:25:9",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                    "typeString": "mapping(address => bool)"
+                  },
+                  "valueType": {
+                    "id": 1421,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "209:4:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1425,
+                "name": "candidateGovernor",
+                "nodeType": "VariableDeclaration",
+                "scope": 1428,
+                "src": "243:25:9",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 1424,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "243:7:9",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1427,
+                "name": "initialized",
+                "nodeType": "VariableDeclaration",
+                "scope": 1428,
+                "src": "278:16:9",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 1426,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "278:4:9",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "GovernanceInfoStruct",
+            "nodeType": "StructDefinition",
+            "scope": 1433,
+            "src": "151:150:9",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 1432,
+            "name": "governanceInfo",
+            "nodeType": "VariableDeclaration",
+            "scope": 1433,
+            "src": "373:64:9",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_GovernanceInfoStruct_$1428_storage_$",
+              "typeString": "mapping(string => struct GovernanceStorage.GovernanceInfoStruct)"
+            },
+            "typeName": {
+              "id": 1431,
+              "keyType": {
+                "id": 1429,
+                "name": "string",
+                "nodeType": "ElementaryTypeName",
+                "src": "382:6:9",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "373:40:9",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_GovernanceInfoStruct_$1428_storage_$",
+                "typeString": "mapping(string => struct GovernanceStorage.GovernanceInfoStruct)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 1430,
+                "name": "GovernanceInfoStruct",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 1428,
+                "src": "392:20:9",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_GovernanceInfoStruct_$1428_storage_ptr",
+                  "typeString": "struct GovernanceStorage.GovernanceInfoStruct"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 1434,
+        "src": "117:323:9"
+      }
+    ],
+    "src": "0:441:9"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.1",
+  "updatedAt": "2020-10-21T18:42:18.036Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

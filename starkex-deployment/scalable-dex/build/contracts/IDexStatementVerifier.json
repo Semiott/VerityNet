@@ -1,0 +1,599 @@
+{
+  "contractName": "IDexStatementVerifier",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256[]",
+          "name": "proofParams",
+          "type": "uint256[]"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "proof",
+          "type": "uint256[]"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "publicInput",
+          "type": "uint256[]"
+        }
+      ],
+      "name": "verifyProofAndRegister",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "fact",
+          "type": "bytes32"
+        }
+      ],
+      "name": "isValid",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"fact\",\"type\":\"bytes32\"}],\"name\":\"isValid\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256[]\",\"name\":\"proofParams\",\"type\":\"uint256[]\"},{\"internalType\":\"uint256[]\",\"name\":\"proof\",\"type\":\"uint256[]\"},{\"internalType\":\"uint256[]\",\"name\":\"publicInput\",\"type\":\"uint256[]\"}],\"name\":\"verifyProofAndRegister\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"verifyProofAndRegister(uint256[],uint256[],uint256[])\":{\"params\":{\"proof\":\"The binary STARK proof. It's exact description is beyond the scope of this documentation.\",\"proofParams\":\"In the format as follows (each row represents a 256-bit word): +-------------------------------------------------------------------+ | Blowup factor                                                     | +-------------------------------------------------------------------+ | Number of PoW bits                                                | +-------------------------------------------------------------------+ | Log last FRI layer degree bound                                   | +-------------------------------------------------------------------+ | Number of FRI steps (S)                                           | +-------------------------------------------------------------------+ | FRI step 0 size                                                   | +-------------------------------------------------------------------+ | ...                                                               | +-------------------------------------------------------------------+ | FRI step S-1 size                                                 | +-------------------------------------------------------------------+ - The number of queries to meet the verifier's security parameter will be derived from the blowup factor and number of PoW bits. - The sum of the FRI steps and the log of the last layer degree should equal the log of the expected STARK proof trace length. - Additional restrictions on the FRI step sizes may also be enforced by the verifier.\",\"publicInput\":\"In the format as follows (each row represents a 256-bit word): +-------------------------------------------------------------------+ | Batch size                                                        | +-------------------------------------------------------------------+ | Number of transactions                                            | +-------------------------------------------------------------------+ | Global expiration timestamp                                       | +-------------------------------------------------------------------+ | Intial vault root                                                 | +-------------------------------------------------------------------+ | Final vault root                                                  | +-------------------------------------------------------------------+ | Intial order root                                                 | +-------------------------------------------------------------------+ | Final order root                                                  | +-------------------------------------------------------------------+ | Vault Merkle tree height                                          | +-------------------------------------------------------------------+ | Order Merkle tree height                                          | +-------------------------------------------------------------------+ | Ramping operation 0 Stark Key                                     | +-------------------------------------------------------------------+ | Ramping operation 0 Token ID                                      | +-------------------------------------------------------------------+ | Ramping operation 0 Additional Info                               | +-------------------------------------------------------------------+ | ...                                                               | +-------------------------------------------------------------------+ | Ramping operation N Stark Key                                     | +-------------------------------------------------------------------+ | Ramping operation N Token ID                                      | +-------------------------------------------------------------------+ | Ramping operation N Additional Info                               | +-------------------------------------------------------------------+ Three words per ramping operation should be provided where Additional Info has the following format (numbers indicate field sizes in bits): +-------------+------------+---------------+----------+---------------+ | Amount      | Amount     | Vault ID (32) | Row (16) | Reserved (80) | |             |            |               |          |               | | before (64) | after (64) |               |          |               | +-------------+------------+---------------+----------+---------------+ The Row parameter refers to the index of the ramping operation within the batch.\"}}}},\"userdoc\":{\"methods\":{\"verifyProofAndRegister(uint256[],uint256[],uint256[])\":{\"notice\":\"Verifies that a STARK proof for an exchange state update is valid (see :sol:mod:`UpdateState`). The state update with respect to a batch of transactions is defined by a transition from a previous Merkle root to a new Merkle root as calculated over a series of off-chain vaults. It is considered to be valid as long as: - The transactions in the batch result in an update of the vault and order Merkle roots as they appear in the `publicInput`. - The transactions are valid. - For ramping transactions (deposits, withdrawals, full withdrawals), the proof is consistent with the transaction parameters that appear in the `publicInput` - The submitted STARK proof is accepted based on a set of valid proof parameters. The transactions currently supported include ramping transactions, token transfers (from one off-chain vault to another) and exchange settlements pairing two valid orders. If a state update is accepted, this is registered under the following claim hash that may later be queried for validity: `claimHash = keccak256(abi.encodePacked(publicInput))` For a high level overview of the system state, see this `StarkWare blog post <https://medium.com/starkware/starkdex-deep-dive-contracts-statement-3b500cf143c9>`_.\"}}}},\"settings\":{\"compilationTarget\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/IDexStatementVerifier.sol\":\"IDexStatementVerifier\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/IDexStatementVerifier.sol\":{\"keccak256\":\"0x7b6a94b069de7ed4eaf380d82e485e74efeb597cd7aca116b3dcf8e6c9d0bc62\",\"urls\":[\"bzz-raw://8c9d7e45ca8f8b762a6dccb8aea7aaee4b1faf65fc400d67c00a4d379d3d7245\",\"dweb:/ipfs/QmWqvwKTNYyd7YewnRahUnSrsDysMd57PnBYBZjpkUfEUG\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity ^0.5.2;\n\n\ncontract IDexStatementVerifier {\n\n    /**\n      Verifies that a STARK proof for an exchange state update is valid\n      (see :sol:mod:`UpdateState`).\n\n      The state update with respect to a batch of transactions is defined by a transition from a\n      previous Merkle root to a new Merkle root as calculated over a series of off-chain vaults.\n      It is considered to be valid as long as:\n\n      - The transactions in the batch result in an update of the vault and order Merkle roots as they appear in the `publicInput`.\n      - The transactions are valid.\n      - For ramping transactions (deposits, withdrawals, full withdrawals), the proof is consistent with the transaction parameters that appear in the `publicInput`\n      - The submitted STARK proof is accepted based on a set of valid proof parameters.\n\n      The transactions currently supported include ramping transactions, token transfers (from one\n      off-chain vault to another) and exchange settlements pairing two valid orders.\n\n      If a state update is accepted, this is registered under the following claim hash that may\n      later be queried for validity:\n\n      `claimHash = keccak256(abi.encodePacked(publicInput))`\n\n      For a high level overview of the system state, see\n      this `StarkWare blog post <https://medium.com/starkware/starkdex-deep-dive-contracts-statement-3b500cf143c9>`_.\n\n      @param proofParams In the format as follows (each row represents a 256-bit word):\n\n          +-------------------------------------------------------------------+\n          | Blowup factor                                                     |\n          +-------------------------------------------------------------------+\n          | Number of PoW bits                                                |\n          +-------------------------------------------------------------------+\n          | Log last FRI layer degree bound                                   |\n          +-------------------------------------------------------------------+\n          | Number of FRI steps (S)                                           |\n          +-------------------------------------------------------------------+\n          | FRI step 0 size                                                   |\n          +-------------------------------------------------------------------+\n          | ...                                                               |\n          +-------------------------------------------------------------------+\n          | FRI step S-1 size                                                 |\n          +-------------------------------------------------------------------+\n\n          - The number of queries to meet the verifier's security parameter will be derived from the blowup factor and number of PoW bits.\n          - The sum of the FRI steps and the log of the last layer degree should equal the log of the expected STARK proof trace length.\n          - Additional restrictions on the FRI step sizes may also be enforced by the verifier.\n\n      @param publicInput In the format as follows (each row represents a 256-bit word):\n\n          +-------------------------------------------------------------------+\n          | Batch size                                                        |\n          +-------------------------------------------------------------------+\n          | Number of transactions                                            |\n          +-------------------------------------------------------------------+\n          | Global expiration timestamp                                       |\n          +-------------------------------------------------------------------+\n          | Intial vault root                                                 |\n          +-------------------------------------------------------------------+\n          | Final vault root                                                  |\n          +-------------------------------------------------------------------+\n          | Intial order root                                                 |\n          +-------------------------------------------------------------------+\n          | Final order root                                                  |\n          +-------------------------------------------------------------------+\n          | Vault Merkle tree height                                          |\n          +-------------------------------------------------------------------+\n          | Order Merkle tree height                                          |\n          +-------------------------------------------------------------------+\n          | Ramping operation 0 Stark Key                                     |\n          +-------------------------------------------------------------------+\n          | Ramping operation 0 Token ID                                      |\n          +-------------------------------------------------------------------+\n          | Ramping operation 0 Additional Info                               |\n          +-------------------------------------------------------------------+\n          | ...                                                               |\n          +-------------------------------------------------------------------+\n          | Ramping operation N Stark Key                                     |\n          +-------------------------------------------------------------------+\n          | Ramping operation N Token ID                                      |\n          +-------------------------------------------------------------------+\n          | Ramping operation N Additional Info                               |\n          +-------------------------------------------------------------------+\n\n          Three words per ramping operation should be provided where Additional Info has the\n          following format (numbers indicate field sizes in bits):\n\n          +-------------+------------+---------------+----------+---------------+\n          | Amount      | Amount     | Vault ID (32) | Row (16) | Reserved (80) |\n          |             |            |               |          |               |\n          | before (64) | after (64) |               |          |               |\n          +-------------+------------+---------------+----------+---------------+\n\n          The Row parameter refers to the index of the ramping operation within the batch.\n\n      @param proof The binary STARK proof. It's exact description is beyond the scope of this\n        documentation.\n    */\n    function verifyProofAndRegister(\n        uint256[] calldata proofParams,\n        uint256[] calldata proof,\n        uint256[] calldata publicInput\n    )\n        external;\n\n    function isValid(bytes32 fact)\n        external view\n        returns(bool);\n}\n",
+  "sourcePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/IDexStatementVerifier.sol",
+  "ast": {
+    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/IDexStatementVerifier.sol",
+    "exportedSymbols": {
+      "IDexStatementVerifier": [
+        4790
+      ]
+    },
+    "id": 4791,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 4770,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:24"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 4790,
+        "linearizedBaseContracts": [
+          4790
+        ],
+        "name": "IDexStatementVerifier",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "Verifies that a STARK proof for an exchange state update is valid\n(see :sol:mod:`UpdateState`).\nThe state update with respect to a batch of transactions is defined by a transition from a\nprevious Merkle root to a new Merkle root as calculated over a series of off-chain vaults.\nIt is considered to be valid as long as:\n- The transactions in the batch result in an update of the vault and order Merkle roots as they appear in the `publicInput`.\n- The transactions are valid.\n- For ramping transactions (deposits, withdrawals, full withdrawals), the proof is consistent with the transaction parameters that appear in the `publicInput`\n- The submitted STARK proof is accepted based on a set of valid proof parameters.\nThe transactions currently supported include ramping transactions, token transfers (from one\noff-chain vault to another) and exchange settlements pairing two valid orders.\nIf a state update is accepted, this is registered under the following claim hash that may\nlater be queried for validity:\n`claimHash = keccak256(abi.encodePacked(publicInput))`\nFor a high level overview of the system state, see\nthis `StarkWare blog post <https://medium.com/starkware/starkdex-deep-dive-contracts-statement-3b500cf143c9>`_.\n@param proofParams In the format as follows (each row represents a 256-bit word):\n+-------------------------------------------------------------------+\n| Blowup factor                                                     |\n+-------------------------------------------------------------------+\n| Number of PoW bits                                                |\n+-------------------------------------------------------------------+\n| Log last FRI layer degree bound                                   |\n+-------------------------------------------------------------------+\n| Number of FRI steps (S)                                           |\n+-------------------------------------------------------------------+\n| FRI step 0 size                                                   |\n+-------------------------------------------------------------------+\n| ...                                                               |\n+-------------------------------------------------------------------+\n| FRI step S-1 size                                                 |\n+-------------------------------------------------------------------+\n- The number of queries to meet the verifier's security parameter will be derived from the blowup factor and number of PoW bits.\n- The sum of the FRI steps and the log of the last layer degree should equal the log of the expected STARK proof trace length.\n- Additional restrictions on the FRI step sizes may also be enforced by the verifier.\n@param publicInput In the format as follows (each row represents a 256-bit word):\n+-------------------------------------------------------------------+\n| Batch size                                                        |\n+-------------------------------------------------------------------+\n| Number of transactions                                            |\n+-------------------------------------------------------------------+\n| Global expiration timestamp                                       |\n+-------------------------------------------------------------------+\n| Intial vault root                                                 |\n+-------------------------------------------------------------------+\n| Final vault root                                                  |\n+-------------------------------------------------------------------+\n| Intial order root                                                 |\n+-------------------------------------------------------------------+\n| Final order root                                                  |\n+-------------------------------------------------------------------+\n| Vault Merkle tree height                                          |\n+-------------------------------------------------------------------+\n| Order Merkle tree height                                          |\n+-------------------------------------------------------------------+\n| Ramping operation 0 Stark Key                                     |\n+-------------------------------------------------------------------+\n| Ramping operation 0 Token ID                                      |\n+-------------------------------------------------------------------+\n| Ramping operation 0 Additional Info                               |\n+-------------------------------------------------------------------+\n| ...                                                               |\n+-------------------------------------------------------------------+\n| Ramping operation N Stark Key                                     |\n+-------------------------------------------------------------------+\n| Ramping operation N Token ID                                      |\n+-------------------------------------------------------------------+\n| Ramping operation N Additional Info                               |\n+-------------------------------------------------------------------+\nThree words per ramping operation should be provided where Additional Info has the\nfollowing format (numbers indicate field sizes in bits):\n+-------------+------------+---------------+----------+---------------+\n| Amount      | Amount     | Vault ID (32) | Row (16) | Reserved (80) |\n|             |            |               |          |               |\n| before (64) | after (64) |               |          |               |\n+-------------+------------+---------------+----------+---------------+\nThe Row parameter refers to the index of the ramping operation within the batch.\n@param proof The binary STARK proof. It's exact description is beyond the scope of this\ndocumentation.",
+            "id": 4782,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "verifyProofAndRegister",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4780,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4773,
+                  "name": "proofParams",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4782,
+                  "src": "6623:30:24",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_calldata_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 4771,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "6623:7:24",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 4772,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "6623:9:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4776,
+                  "name": "proof",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4782,
+                  "src": "6663:24:24",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_calldata_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 4774,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "6663:7:24",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 4775,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "6663:9:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4779,
+                  "name": "publicInput",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4782,
+                  "src": "6697:30:24",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_calldata_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 4777,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "6697:7:24",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 4778,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "6697:9:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6613:120:24"
+            },
+            "returnParameters": {
+              "id": 4781,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "6750:0:24"
+            },
+            "scope": 4790,
+            "src": "6582:169:24",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 4789,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isValid",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4785,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4784,
+                  "name": "fact",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4789,
+                  "src": "6774:12:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 4783,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6774:7:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6773:14:24"
+            },
+            "returnParameters": {
+              "id": 4788,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4787,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4789,
+                  "src": "6826:4:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 4786,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6826:4:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6825:6:24"
+            },
+            "scope": 4790,
+            "src": "6757:75:24",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 4791,
+        "src": "26:6808:24"
+      }
+    ],
+    "src": "0:6835:24"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/gokulalex/Apps/eth_apps/VerityNet/starkex-deployment/scalable-dex/contracts/interfaces/IDexStatementVerifier.sol",
+    "exportedSymbols": {
+      "IDexStatementVerifier": [
+        4790
+      ]
+    },
+    "id": 4791,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 4770,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:24"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 4790,
+        "linearizedBaseContracts": [
+          4790
+        ],
+        "name": "IDexStatementVerifier",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "Verifies that a STARK proof for an exchange state update is valid\n(see :sol:mod:`UpdateState`).\nThe state update with respect to a batch of transactions is defined by a transition from a\nprevious Merkle root to a new Merkle root as calculated over a series of off-chain vaults.\nIt is considered to be valid as long as:\n- The transactions in the batch result in an update of the vault and order Merkle roots as they appear in the `publicInput`.\n- The transactions are valid.\n- For ramping transactions (deposits, withdrawals, full withdrawals), the proof is consistent with the transaction parameters that appear in the `publicInput`\n- The submitted STARK proof is accepted based on a set of valid proof parameters.\nThe transactions currently supported include ramping transactions, token transfers (from one\noff-chain vault to another) and exchange settlements pairing two valid orders.\nIf a state update is accepted, this is registered under the following claim hash that may\nlater be queried for validity:\n`claimHash = keccak256(abi.encodePacked(publicInput))`\nFor a high level overview of the system state, see\nthis `StarkWare blog post <https://medium.com/starkware/starkdex-deep-dive-contracts-statement-3b500cf143c9>`_.\n@param proofParams In the format as follows (each row represents a 256-bit word):\n+-------------------------------------------------------------------+\n| Blowup factor                                                     |\n+-------------------------------------------------------------------+\n| Number of PoW bits                                                |\n+-------------------------------------------------------------------+\n| Log last FRI layer degree bound                                   |\n+-------------------------------------------------------------------+\n| Number of FRI steps (S)                                           |\n+-------------------------------------------------------------------+\n| FRI step 0 size                                                   |\n+-------------------------------------------------------------------+\n| ...                                                               |\n+-------------------------------------------------------------------+\n| FRI step S-1 size                                                 |\n+-------------------------------------------------------------------+\n- The number of queries to meet the verifier's security parameter will be derived from the blowup factor and number of PoW bits.\n- The sum of the FRI steps and the log of the last layer degree should equal the log of the expected STARK proof trace length.\n- Additional restrictions on the FRI step sizes may also be enforced by the verifier.\n@param publicInput In the format as follows (each row represents a 256-bit word):\n+-------------------------------------------------------------------+\n| Batch size                                                        |\n+-------------------------------------------------------------------+\n| Number of transactions                                            |\n+-------------------------------------------------------------------+\n| Global expiration timestamp                                       |\n+-------------------------------------------------------------------+\n| Intial vault root                                                 |\n+-------------------------------------------------------------------+\n| Final vault root                                                  |\n+-------------------------------------------------------------------+\n| Intial order root                                                 |\n+-------------------------------------------------------------------+\n| Final order root                                                  |\n+-------------------------------------------------------------------+\n| Vault Merkle tree height                                          |\n+-------------------------------------------------------------------+\n| Order Merkle tree height                                          |\n+-------------------------------------------------------------------+\n| Ramping operation 0 Stark Key                                     |\n+-------------------------------------------------------------------+\n| Ramping operation 0 Token ID                                      |\n+-------------------------------------------------------------------+\n| Ramping operation 0 Additional Info                               |\n+-------------------------------------------------------------------+\n| ...                                                               |\n+-------------------------------------------------------------------+\n| Ramping operation N Stark Key                                     |\n+-------------------------------------------------------------------+\n| Ramping operation N Token ID                                      |\n+-------------------------------------------------------------------+\n| Ramping operation N Additional Info                               |\n+-------------------------------------------------------------------+\nThree words per ramping operation should be provided where Additional Info has the\nfollowing format (numbers indicate field sizes in bits):\n+-------------+------------+---------------+----------+---------------+\n| Amount      | Amount     | Vault ID (32) | Row (16) | Reserved (80) |\n|             |            |               |          |               |\n| before (64) | after (64) |               |          |               |\n+-------------+------------+---------------+----------+---------------+\nThe Row parameter refers to the index of the ramping operation within the batch.\n@param proof The binary STARK proof. It's exact description is beyond the scope of this\ndocumentation.",
+            "id": 4782,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "verifyProofAndRegister",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4780,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4773,
+                  "name": "proofParams",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4782,
+                  "src": "6623:30:24",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_calldata_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 4771,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "6623:7:24",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 4772,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "6623:9:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4776,
+                  "name": "proof",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4782,
+                  "src": "6663:24:24",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_calldata_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 4774,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "6663:7:24",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 4775,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "6663:9:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4779,
+                  "name": "publicInput",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4782,
+                  "src": "6697:30:24",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_calldata_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 4777,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "6697:7:24",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 4778,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "6697:9:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6613:120:24"
+            },
+            "returnParameters": {
+              "id": 4781,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "6750:0:24"
+            },
+            "scope": 4790,
+            "src": "6582:169:24",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 4789,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isValid",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4785,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4784,
+                  "name": "fact",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4789,
+                  "src": "6774:12:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 4783,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6774:7:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6773:14:24"
+            },
+            "returnParameters": {
+              "id": 4788,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4787,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4789,
+                  "src": "6826:4:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 4786,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6826:4:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6825:6:24"
+            },
+            "scope": 4790,
+            "src": "6757:75:24",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 4791,
+        "src": "26:6808:24"
+      }
+    ],
+    "src": "0:6835:24"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.1",
+  "updatedAt": "2020-10-21T18:42:18.114Z",
+  "devdoc": {
+    "methods": {
+      "verifyProofAndRegister(uint256[],uint256[],uint256[])": {
+        "params": {
+          "proof": "The binary STARK proof. It's exact description is beyond the scope of this documentation.",
+          "proofParams": "In the format as follows (each row represents a 256-bit word): +-------------------------------------------------------------------+ | Blowup factor                                                     | +-------------------------------------------------------------------+ | Number of PoW bits                                                | +-------------------------------------------------------------------+ | Log last FRI layer degree bound                                   | +-------------------------------------------------------------------+ | Number of FRI steps (S)                                           | +-------------------------------------------------------------------+ | FRI step 0 size                                                   | +-------------------------------------------------------------------+ | ...                                                               | +-------------------------------------------------------------------+ | FRI step S-1 size                                                 | +-------------------------------------------------------------------+ - The number of queries to meet the verifier's security parameter will be derived from the blowup factor and number of PoW bits. - The sum of the FRI steps and the log of the last layer degree should equal the log of the expected STARK proof trace length. - Additional restrictions on the FRI step sizes may also be enforced by the verifier.",
+          "publicInput": "In the format as follows (each row represents a 256-bit word): +-------------------------------------------------------------------+ | Batch size                                                        | +-------------------------------------------------------------------+ | Number of transactions                                            | +-------------------------------------------------------------------+ | Global expiration timestamp                                       | +-------------------------------------------------------------------+ | Intial vault root                                                 | +-------------------------------------------------------------------+ | Final vault root                                                  | +-------------------------------------------------------------------+ | Intial order root                                                 | +-------------------------------------------------------------------+ | Final order root                                                  | +-------------------------------------------------------------------+ | Vault Merkle tree height                                          | +-------------------------------------------------------------------+ | Order Merkle tree height                                          | +-------------------------------------------------------------------+ | Ramping operation 0 Stark Key                                     | +-------------------------------------------------------------------+ | Ramping operation 0 Token ID                                      | +-------------------------------------------------------------------+ | Ramping operation 0 Additional Info                               | +-------------------------------------------------------------------+ | ...                                                               | +-------------------------------------------------------------------+ | Ramping operation N Stark Key                                     | +-------------------------------------------------------------------+ | Ramping operation N Token ID                                      | +-------------------------------------------------------------------+ | Ramping operation N Additional Info                               | +-------------------------------------------------------------------+ Three words per ramping operation should be provided where Additional Info has the following format (numbers indicate field sizes in bits): +-------------+------------+---------------+----------+---------------+ | Amount      | Amount     | Vault ID (32) | Row (16) | Reserved (80) | |             |            |               |          |               | | before (64) | after (64) |               |          |               | +-------------+------------+---------------+----------+---------------+ The Row parameter refers to the index of the ramping operation within the batch."
+        }
+      }
+    }
+  },
+  "userdoc": {
+    "methods": {
+      "verifyProofAndRegister(uint256[],uint256[],uint256[])": {
+        "notice": "Verifies that a STARK proof for an exchange state update is valid (see :sol:mod:`UpdateState`). The state update with respect to a batch of transactions is defined by a transition from a previous Merkle root to a new Merkle root as calculated over a series of off-chain vaults. It is considered to be valid as long as: - The transactions in the batch result in an update of the vault and order Merkle roots as they appear in the `publicInput`. - The transactions are valid. - For ramping transactions (deposits, withdrawals, full withdrawals), the proof is consistent with the transaction parameters that appear in the `publicInput` - The submitted STARK proof is accepted based on a set of valid proof parameters. The transactions currently supported include ramping transactions, token transfers (from one off-chain vault to another) and exchange settlements pairing two valid orders. If a state update is accepted, this is registered under the following claim hash that may later be queried for validity: `claimHash = keccak256(abi.encodePacked(publicInput))` For a high level overview of the system state, see this `StarkWare blog post <https://medium.com/starkware/starkdex-deep-dive-contracts-statement-3b500cf143c9>`_."
+      }
+    }
+  }
+}
