@@ -4,10 +4,13 @@ Financial Fairness Algorithms and Architectures built on AAVE Tokens with Centri
 # Components
 - Iden3 Circom Circuit based Financial Fairness Proofs 
 - SnarkJS based Fairness zk SNARK Verifiers 
-- Fairness Verifiers on Layer 2 using Simple ZK Rollups 
+- Fairness Verifiers on Layer 2 Simple ZK Rollups 
+- Fairness Verifiers on Layer 2 Optimistic Rollups
 - Tinlake ERC20 and ERC721 TokenSwap with AAVE Tokens
 - RANDAO Secured using StarkWare Veedo VDF
 - AAVE Protocol Governance using VDF Powered RANDAO 
+- Compound Protocol Governance using VDF Powered RANDAO
+- Tellor Dispute Oracle Verifiers Data Dispute Proofs
 - Chainlink Market Adapter Validation using Staking Validators
 - Quadratic Voting and Voting Verifiers on Graph protocol
 - Tinklake Token integration with StarkEx 
